@@ -555,6 +555,24 @@ section[id],header[id]{scroll-margin-top:62px}
 .sc-list .nm b{display:block;font-size:16.5px;color:var(--ink)!important;line-height:1.35}
 .sc-list .nm small{display:block;font-size:12.5px;font-weight:500;color:var(--muted);line-height:1.4}
 .sc-list .am{font-family:var(--num);font-weight:700;font-size:22px;color:var(--teal);white-space:nowrap}
+
+/* 1日の流れ：2×2の中央揃えカード */
+.day{width:auto;max-width:none;margin:30px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.day li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:20px 8px 18px;border:0;border-radius:18px;background:#fff;box-shadow:0 0 0 1px var(--line-soft)}
+.day li:last-child{border-bottom:0}
+.day li > span:last-child{display:flex;flex-direction:column;align-items:center}
+.day .c{width:72px;height:72px;font-size:34px}
+.day .t{font-size:14px;letter-spacing:.15em}
+.day .w{font-size:19px;line-height:1.4;white-space:nowrap}
+.day li.plus{background:var(--teal);box-shadow:none}
+.day li.plus .c{background:#fff;color:var(--teal);border-color:#fff}
+.day li.plus .t,.day li.plus .w{color:#fff}
+.day li.plus small{display:table;margin:6px auto 0;font-size:14px;font-weight:700;color:var(--teal);background:var(--lemon);padding:3px 12px;border-radius:999px}
+.buy-set.wide{margin-top:36px;padding:16px 16px;border-width:2.5px;text-align:left}
+.buy-set.wide .bs-t{font-size:13px}
+.buy-set.wide .bs-t b{font-size:19px}
+.buy-set.wide .bs-t small{display:block;font-size:11.5px;margin-top:2px}
+.buy-set.wide .bs-p{font-size:24px}
 </style>
 </head>
 <body>
@@ -659,10 +677,10 @@ section[id],header[id]{scroll-margin-top:62px}
     <h2 class="h2" id="intro-h"><span class="ps">「</span>ずっと元気でいてね」を<span class="pe">、</span><br>毎日の<em>小さな習慣</em>に<span class="pe">。</span></h2>
     <p class="lead">健康づくりの土台は、いつものごはん、散歩や遊び、ぐっすり眠る時間。サプリメントは、その毎日にそっと添える“もうひとつの習慣”です。</p>
     <ol class="day" aria-label="いつもの一日">
-      <li class="plus"><span class="c"><svg class="ic"><use href="#i-bowl"/></svg></span><span><span class="t">あさ</span><span class="w">ごはん<small>＋ いつものフードに、サプリをひとつ</small></span></span></li>
-      <li><span class="c"><svg class="ic"><use href="#i-paw"/></svg></span><span><span class="t">ひる</span><span class="w">おさんぽ・あそび</span></span></li>
-      <li><span class="c"><svg class="ic"><use href="#i-sunset"/></svg></span><span><span class="t">ゆうがた</span><span class="w">ひなたで、ひとやすみ</span></span></li>
-      <li><span class="c"><svg class="ic"><use href="#i-moon"/></svg></span><span><span class="t">よる</span><span class="w">ごはん、そしてぐっすり</span></span></li>
+      <li class="plus"><span class="c"><svg class="ic"><use href="#i-bowl"/></svg></span><span><span class="t">あさ</span><span class="w">ごはん<small>＋サプリをひとつ</small></span></span></li>
+      <li><span class="c"><svg class="ic"><use href="#i-paw"/></svg></span><span><span class="t">ひる</span><span class="w">おさんぽ<br>あそび</span></span></li>
+      <li><span class="c"><svg class="ic"><use href="#i-sunset"/></svg></span><span><span class="t">ゆうがた</span><span class="w">ひなたで<br>ひとやすみ</span></span></li>
+      <li><span class="c"><svg class="ic"><use href="#i-moon"/></svg></span><span><span class="t">よる</span><span class="w">ごはん<br>そしてぐっすり</span></span></li>
     </ol>
     <div class="intro-photos">
       <figure class="a"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&q=75&auto=format&fit=crop" alt="並んで小道を歩く2匹の犬" loading="lazy"><figcaption>いつものおさんぽ道も、</figcaption></figure>
@@ -713,7 +731,7 @@ section[id],header[id]{scroll-margin-top:62px}
             <a class="btn try" href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/"><span class="tg">単品お試し</span><span>コルディカプセル 16粒<small class="v">猫パッケージ</small></span><span class="pr">1,500<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/cordyg30/"><span class="tg">通常</span><span>コルディM／G 30g</span><span class="pr">6,800<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/cordyg100/"><span class="tg">大容量</span><span>コルディM／G 100g</span><span class="pr">21,000<small>円</small></span></a>
-          </div><a class="buy-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">5%OFFクーポン対象</span><span class="bs-t">4種類まとめて試すなら<b>お試し4点セット</b></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a></dd></span></div>
+          </div></dd></span></div>
       </dl>
     </article>
 
@@ -742,7 +760,7 @@ section[id],header[id]{scroll-margin-top:62px}
             <a class="btn try" href="https://item.rakuten.co.jp/cordy/krilloil35/"><span class="tg">単品お試し</span><span>クリルオイル 30粒</span><span class="pr">1,650<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/krilloil180/"><span class="tg">通常</span><span>クリルオイル 180粒</span><span class="pr">6,700<small>円</small></span></a>
             <a class="btn sub" href="https://item.rakuten.co.jp/cordy/krilloil_ex/"><span class="tg">液体</span><span>クリルオイルEX（ポンプ式）</span><span class="pr">4,200<small>円</small></span></a>
-          </div><a class="buy-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">5%OFFクーポン対象</span><span class="bs-t">4種類まとめて試すなら<b>お試し4点セット</b></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a></dd></span></div>
+          </div></dd></span></div>
       </dl>
     </article>
 
@@ -770,9 +788,10 @@ section[id],header[id]{scroll-margin-top:62px}
           <dd><div class="buy">
             <a class="btn try" href="https://item.rakuten.co.jp/cordy/placenta5g/"><span class="tg">単品お試し</span><span>プラセンタ12000 5g</span><span class="pr">1,800<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/placenta30g/"><span class="tg">通常</span><span>プラセンタ12000 30g</span><span class="pr">7,800<small>円</small></span></a>
-          </div><a class="buy-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">5%OFFクーポン対象</span><span class="bs-t">4種類まとめて試すなら<b>お試し4点セット</b></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a></dd></span></div>
+          </div></dd></span></div>
       </dl>
     </article>
+    <a class="buy-set wide" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">5%OFFクーポン対象</span><span class="bs-t">迷ったら、まとめて試せる<b>お試し4点セット</b><small>コルディM・クリルオイル・アミノファイン・プラセンタ</small></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a>
     <p class="pricenote">※価格は税込、配送方法「追跡可能メール便」選択時（2026年10月12日時点の商品ページ表示）。「宅配便」選択時は＋600円です。最新の価格・在庫は各商品ページでご確認ください。</p>
   </div>
 </section>
