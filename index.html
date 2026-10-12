@@ -824,6 +824,17 @@ section[id],header[id]{scroll-margin-top:62px}
 .elig-h span{font-size:clamp(16px,4.6vw,20px)!important}
 .elig-h b{font-size:clamp(20px,5.8vw,27px)!important;white-space:nowrap}
 .elig-set .es-b .n{word-break:keep-all;text-wrap:balance}
+/* 項目：見出しと答えはセンター、説明文は左 */
+.spec>div{display:flex!important;flex-wrap:wrap;justify-content:center;align-items:center;column-gap:12px!important;row-gap:12px!important}
+.spec dd{flex:0 0 100%;text-align:center}
+.spec>div{flex-direction:column}
+.spec dt{text-align:center;max-width:100%;margin-top:-4px}
+.spec dd{align-self:stretch}
+.spec .big{text-align:center}
+.spec .sm,.spec .mg,.spec ul,.spec .checks{text-align:left}
+/* ドーンをゆっくり */
+.js-don .don .p9-new,.js-don .don .bb-num{animation:don 1.5s .25s cubic-bezier(.2,1.25,.35,1) both!important}
+.js-don .don.p999,.js-don .don.bs-big{animation:donShake .6s .95s ease-out both!important}
 </style>
 </head>
 <body>
@@ -1230,7 +1241,7 @@ section[id],header[id]{scroll-margin-top:62px}
 (function(){
   if(!('IntersectionObserver' in window))return;
   document.documentElement.classList.add('js-don');
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('don');io.unobserve(e.target);}});},{threshold:.5});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('don');io.unobserve(e.target);}});},{threshold:.75});
   document.querySelectorAll('.p999,.bs-big').forEach(function(el){io.observe(el);});
 })();
 </script>
