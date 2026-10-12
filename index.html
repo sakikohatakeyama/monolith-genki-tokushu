@@ -363,6 +363,27 @@ a{color:inherit}
 .cp-lab,.ch-lab,.ch-go,.cpn-bar .pct{color:var(--orange-d)!important}
 .next .h2 em{color:var(--orange-d)}
 .flow .st{color:var(--orange-d)}
+
+/* 追従メニュー */
+.fab{position:fixed;z-index:50;right:max(14px,calc(50% - 250px + 14px));bottom:18px}
+.fab summary{list-style:none;cursor:pointer;width:64px;height:64px;border-radius:50%;background:var(--teal);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;box-shadow:0 6px 18px rgba(29,92,89,.35);border:3px solid #fff}
+.fab summary::-webkit-details-marker{display:none}
+.fab summary .ic{font-size:28px}
+.fab-t{font-family:var(--en);font-weight:800;font-size:9px;letter-spacing:.12em}
+.fab[open] summary{background:var(--ink)}
+.fab[open] summary .ic{transform:rotate(-20deg)}
+.fab summary .ic{transition:transform .25s}
+.fab:not([open]) summary{animation:floaty 2.6s ease-in-out infinite}
+.fab-menu{position:absolute;right:0;bottom:76px;width:min(300px,calc(100vw - 28px));background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);animation:fadeUp .25s ease both;text-align:left}
+.fab-h{margin:2px 6px 8px;font-family:var(--en);font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--muted)}
+.fab-menu a{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:12px;text-decoration:none;font-size:14.5px;font-weight:700;line-height:1.4}
+.fab-menu a+a{border-top:1px dashed var(--line-soft)}
+.fab-menu a .ic{font-size:30px;padding:6px;border-radius:50%;background:var(--aqua);color:var(--teal)}
+.fab-menu a:hover{background:var(--sand)}
+.fab-menu a.cp{background:var(--orange);color:#fff;border-top:0;margin-top:4px}
+.fab-menu a.cp .ic{background:#fff;color:var(--orange-d)}
+.fab-menu a.cp+a{border-top:0}
+section[id],header[id]{scroll-margin-top:8px}
 </style>
 </head>
 <body>
@@ -396,7 +417,7 @@ a{color:inherit}
 <div class="shopbar"><strong>人とペットのサプリ専門店 モノリス</strong><span>FEATURE</span></div>
 
 <!-- ① FV -->
-<header class="fv">
+<header class="fv" id="top">
   <div class="fv-stage">
     <div class="fv-photo">
       <img src="img/fv-249645861.jpg" alt="顔を寄せ合う犬と猫">
@@ -811,7 +832,7 @@ a{color:inherit}
       <li><b>写真</b>FVはAdobe Stock（249645861→341735787→168600257）の3枚スライドに差し替え済み。お試しセクションは支給画像（ChatGPT生成画像）に差し替え済み。導入の犬猫写真はUnsplashの仮素材のため、使用する写真のご支給をお願いします。</li>
       <li><b>アイコン</b>線画アイコンはすべて本ページ用に作成したSVGです（外部素材・絵文字は不使用）。</li>
       <li><b>商品画像</b>楽天キャビネット内の既存画像をトリミング・加工なしで表示しています。</li>
-      <li><b>楽天掲載時</b>JavaScriptは使用していません（FVのスライド・各種の動きはCSSアニメーション、FAQはHTML標準の開閉）。スクロールで現れる動きはCSSのスクロール連動アニメーションを使用し、非対応ブラウザでは動きなしで通常表示されます。掲載方式（R-Storefront／GOLD／画像化）に合わせて組み直します。</li>
+      <li><b>楽天掲載時</b>JavaScriptは使用していません（FVのスライド・各種の動きはCSSアニメーション、FAQはHTML標準の開閉）。右下の肉球メニューはHTML標準の開閉で動き、リンクを押すと閉じる処理だけ短いJSを使っています（JSが使えない環境では、肉球をもう一度押すと閉じます）。スクロールで現れる動きはCSSのスクロール連動アニメーションを使用し、非対応ブラウザでは動きなしで通常表示されます。掲載方式（R-Storefront／GOLD／画像化）に合わせて組み直します。</li>
     </ol>
 
     <h3>確認した掲載情報（参照元）</h3>
@@ -824,6 +845,20 @@ a{color:inherit}
     </table>
   </div>
 </section>
+
+<!-- 追従メニュー（肉球ボタン） -->
+<details class="fab" id="fab">
+  <summary aria-label="メニューを開く"><svg class="ic"><use href="#i-paw"/></svg><span class="fab-t">MENU</span></summary>
+  <nav class="fab-menu" aria-label="ページ内メニュー">
+    <p class="fab-h">メニュー</p>
+    <a href="#top" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-sun"/></svg>トップ</a>
+    <a href="#pick" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-paw"/></svg>うちの子には、どれがいい？</a>
+    <a href="#dose" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-scale"/></svg>毎日続けるなら、どのくらい？</a>
+    <a href="#trial" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>まずは、お試しサイズから</a>
+    <a href="#next" class="cp" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポン</a>
+    <a href="#faq" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-qa"/></svg>よくある質問</a>
+  </nav>
+</details>
 
 </div>
 </body>
