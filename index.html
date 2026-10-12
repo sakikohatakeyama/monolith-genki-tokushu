@@ -174,7 +174,7 @@ a{color:inherit}
 
 /* ===== ④ 目安量 ===== */
 .five-cap{margin:12px 0 0;font-size:12px;color:var(--muted)}
-.dt{margin-top:22px;background:#fff;border-radius:20px;padding:20px 14px 16px;text-align:left}
+.dt{margin-top:22px;background:#fff;border-radius:20px;padding:20px 10px 16px;text-align:left}
 .dt-head{display:flex;align-items:center;gap:12px}
 .dt-head .ic{font-size:44px;padding:9px;border-radius:50%;color:#fff}
 .dt-head h3{margin:0;font-size:18px;line-height:1.4;display:block}
@@ -186,14 +186,27 @@ a{color:inherit}
 .dt-sub{margin:16px 0 0;font-size:13px;font-weight:700;text-align:center}
 .dt h3{margin:0;font-size:19px;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:2px 10px}
 .dt h3 span{font-size:12.5px;color:var(--muted);font-weight:500}
-.tbl{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px;font-size:13.5px;background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden}
-.tbl th,.tbl td{padding:11px 6px;text-align:center;border-bottom:1px solid var(--line-soft);line-height:1.45}
-.tbl thead th{background:var(--teal);color:#fff;font-size:12px;font-weight:700}
-.tbl tbody th{font-weight:700;font-size:12.5px;text-align:left;padding-left:12px;white-space:nowrap}
-.tbl td b{display:block;font-size:15px}
-.tbl td em{font-style:normal;display:block;font-size:11.5px;color:var(--muted)}
-.tbl tr.hl th,.tbl tr.hl td{background:#fff8dc}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;margin-top:8px;font-size:14px;background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden;table-layout:fixed}
+.tbl th,.tbl td{padding:12px 2px;text-align:center;border-bottom:1px solid var(--line-soft);line-height:1.4;vertical-align:middle}
+.tbl th:first-child{width:24%}
+.tbl thead th{background:var(--aqua);color:var(--teal-d);font-size:12px;font-weight:700;padding:9px 4px;border-bottom:1.5px solid var(--line)}
+.tbl tbody th{font-weight:700;font-size:12.5px;text-align:left;padding-left:8px;color:var(--ink);white-space:nowrap;letter-spacing:0}
+.tbl tbody th small{white-space:normal}
+.tbl td{font-weight:500}
+.tbl td.amt b{display:block;font-family:var(--en);font-size:18px;font-weight:800;color:var(--teal)}
+.tbl td.amt em{font-style:normal;display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.tbl td.yen{font-weight:700;color:var(--coral-d)}
+.tbl tbody tr:nth-child(even) th,.tbl tbody tr:nth-child(even) td{background:#fbf9f5}
+.tbl tr.hl th,.tbl tr.hl td{background:#fff3c4!important}
+.tbl tr.hl th::after{content:"例";display:inline-block;margin-left:4px;font-size:10px;background:var(--coral);color:#fff;border-radius:999px;padding:0 6px;vertical-align:1px}
 .tbl tr:last-child th,.tbl tr:last-child td{border-bottom:0}
+.tbl thead th small{display:block;font-size:10px;font-weight:500}
+.tbl tbody th small{display:block;font-size:10.5px;font-weight:500;color:var(--muted);line-height:1.3;margin-top:2px}
+.tbl td{font-size:12px;white-space:nowrap;letter-spacing:0}
+.tbl td.amt b{font-size:17px}
+.tbl td.amt.rg b{font-size:14px;letter-spacing:-.02em}
+.stg{display:inline-block;background:var(--teal);color:#fff;font-size:13px;padding:4px 14px 3px;border-radius:999px}
+.stg.sn{background:var(--coral)}
 .dt .note{margin:10px 0 0;font-size:12.5px;color:var(--muted);line-height:1.8;text-align:left}
 .hl-key{display:inline-block;width:12px;height:12px;background:#fff8dc;border:1px solid var(--line-soft);vertical-align:-1px;margin-right:4px}
 
@@ -550,13 +563,22 @@ a{color:inherit}
     <div class="dt">
       <div class="dt-head"><svg class="ic" style="background:var(--teal)"><use href="#i-leaf"/></svg><div><h3>コルディ 30g</h3><span class="dt-p">6,800円</span></div></div>
       <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v"><small>成長期</small>約45<small>円/日</small></span><span class="ex-v"><small>シニア期</small>約113<small>円/日</small></span></div>
-      <p class="dt-sub">元気いっぱいな子の1日の目安量</p>
+      <p class="dt-sub"><span class="stg">元気いっぱいな幼少期・成長期</span></p>
       <table class="tbl">
-        <thead><tr><th>体重</th><th>元気いっぱいな<br>幼少期・成長期</th><th>元気いっぱいな<br>シニア期</th></tr></thead>
+        <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
         <tbody>
-          <tr><th>2.5kg</th><td><b>0.1g</b><em>約300日分</em><em>約23円/日</em></td><td><b>0.25g</b><em>約120日分</em><em>約57円/日</em></td></tr>
-          <tr class="hl"><th>5kg</th><td><b>0.2g</b><em>約150日分</em><em>約45円/日</em></td><td><b>0.5g</b><em>約60日分</em><em>約113円/日</em></td></tr>
-          <tr><th>10kg</th><td><b>0.4g</b><em>約75日分</em><em>約91円/日</em></td><td><b>1g</b><em>約30日分</em><em>約227円/日</em></td></tr>
+          <tr><th>2.5kg</th><td class="amt"><b>0.1g</b></td><td>300日</td><td class="yen">23円</td></tr>
+          <tr class="hl"><th>5kg</th><td class="amt"><b>0.2g</b></td><td>150日</td><td class="yen">45円</td></tr>
+          <tr><th>10kg</th><td class="amt"><b>0.4g</b></td><td>75日</td><td class="yen">91円</td></tr>
+        </tbody>
+      </table>
+      <p class="dt-sub"><span class="stg sn">元気いっぱいなシニア期</span></p>
+      <table class="tbl">
+        <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
+        <tbody>
+          <tr><th>2.5kg</th><td class="amt"><b>0.25g</b></td><td>120日</td><td class="yen">57円</td></tr>
+          <tr class="hl"><th>5kg</th><td class="amt"><b>0.5g</b></td><td>60日</td><td class="yen">113円</td></tr>
+          <tr><th>10kg</th><td class="amt"><b>1g</b></td><td>30日</td><td class="yen">227円</td></tr>
         </tbody>
       </table>
       <p class="note">付属の緑スプーンすりきり約1g、白スプーンすりきり約0.1g。ショップでは、1日の量を朝・昼・夜などに小分けして与えること、与え始めの時期はできる限り多めに与えることをおすすめしています（与え方ページの「おすすめ」量：2.5kgで1g、5kgで2g、10kgで4g）。10kgを超える子の量は<a href="https://www.rakuten.co.jp/cordy/contents/howtofeed/">与え方ページ</a>またはショップへご相談ください。</p>
@@ -566,12 +588,12 @@ a{color:inherit}
       <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v">約37〜74<small>円/日</small></span></div>
       <p class="dt-sub">1日の目安量</p>
       <table class="tbl">
-        <thead><tr><th>体格・体重</th><th>1日</th><th>180粒で</th><th>1日あたり</th></tr></thead>
+        <thead><tr><th>体重</th><th>1日の量</th><th>180粒で<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
         <tbody>
-          <tr class="hl"><th>超小型犬・猫<br>〜5kg</th><td><b>1〜2粒</b></td><td>90〜180日</td><td>約37〜74円</td></tr>
-          <tr><th>小〜中型犬<br>〜10kg</th><td><b>2〜4粒</b></td><td>45〜90日</td><td>約74〜149円</td></tr>
-          <tr><th>中〜大型犬<br>〜20kg</th><td><b>4〜8粒</b></td><td>22〜45日</td><td>約149〜298円</td></tr>
-          <tr><th>大〜超大型犬<br>30kg〜</th><td><b>6〜12粒</b></td><td>15〜30日</td><td>約223〜447円</td></tr>
+          <tr class="hl"><th>〜5kg<small>超小型犬・猫</small></th><td class="amt rg"><b>1〜2粒</b></td><td>90〜180日</td><td class="yen">37〜74円</td></tr>
+          <tr><th>〜10kg<small>小〜中型犬</small></th><td class="amt rg"><b>2〜4粒</b></td><td>45〜90日</td><td class="yen">74〜149円</td></tr>
+          <tr><th>〜20kg<small>中〜大型犬</small></th><td class="amt rg"><b>4〜8粒</b></td><td>22〜45日</td><td class="yen">149〜298円</td></tr>
+          <tr><th>30kg〜<small>大〜超大型犬</small></th><td class="amt rg"><b>6〜12粒</b></td><td>15〜30日</td><td class="yen">223〜447円</td></tr>
         </tbody>
       </table>
       <p class="note">体調に合わせて量を増減しても問題ありません（ショップ記載）。お試しの30粒（1,650円）なら、〜5kgの子で15〜30日分です。</p>
@@ -581,13 +603,13 @@ a{color:inherit}
       <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v">約26〜52<small>円/日</small></span></div>
       <p class="dt-sub">1日の目安量</p>
       <table class="tbl">
-        <thead><tr><th>体重</th><th>1日</th><th>30gで</th><th>1日あたり</th></tr></thead>
+        <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
         <tbody>
-          <tr class="hl"><th>〜5kg</th><td><b>0.1〜0.2g</b><em>白 約1〜2杯</em></td><td>150〜300日</td><td>約26〜52円</td></tr>
-          <tr><th>5〜10kg</th><td><b>0.2〜0.3g</b><em>白 約2〜3杯</em></td><td>100〜150日</td><td>約52〜78円</td></tr>
-          <tr><th>10〜20kg</th><td><b>0.3〜0.5g</b><em>白 約3〜5杯</em></td><td>60〜100日</td><td>約78〜130円</td></tr>
-          <tr><th>20〜40kg</th><td><b>0.5〜1.0g</b><em>緑 約0.5〜1杯</em></td><td>30〜60日</td><td>約130〜260円</td></tr>
-          <tr><th>40kg〜</th><td><b>1.0g〜</b><em>緑 約1杯〜</em></td><td>〜30日</td><td>約260円〜</td></tr>
+          <tr class="hl"><th>〜5kg</th><td class="amt rg"><b>0.1〜0.2g</b><em>白 約1〜2杯</em></td><td>150〜300日</td><td class="yen">26〜52円</td></tr>
+          <tr><th>5〜10kg</th><td class="amt rg"><b>0.2〜0.3g</b><em>白 約2〜3杯</em></td><td>100〜150日</td><td class="yen">52〜78円</td></tr>
+          <tr><th>10〜20kg</th><td class="amt rg"><b>0.3〜0.5g</b><em>白 約3〜5杯</em></td><td>60〜100日</td><td class="yen">78〜130円</td></tr>
+          <tr><th>20〜40kg</th><td class="amt rg"><b>0.5〜1.0g</b><em>緑 約0.5〜1杯</em></td><td>30〜60日</td><td class="yen">130〜260円</td></tr>
+          <tr><th>40kg〜</th><td class="amt rg"><b>1.0g〜</b><em>緑 約1杯〜</em></td><td>〜30日</td><td class="yen">260円〜</td></tr>
         </tbody>
       </table>
       <p class="note">お試しの5g（1,800円）は、5kg程度の子で約1ヶ月、20kgの子で約2週間使えます（商品ページ記載）。</p>
