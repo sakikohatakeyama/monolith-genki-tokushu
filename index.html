@@ -543,6 +543,18 @@ section[id],header[id]{scroll-margin-top:62px}
 
 /* スマホ：ブラウザのバー周りが水色にならないよう背景をページ色に */
 @media (max-width:600px){html,body{background:var(--base)}}
+
+/* セット内容 */
+.sc-h{margin:16px 0 0;font-size:14px;font-weight:700;color:var(--teal);text-align:center}
+.sc-h span{display:flex;align-items:center;gap:10px}
+.sc-h span::before,.sc-h span::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.sc-list{grid-template-columns:1fr!important;gap:0!important;margin-top:6px!important}
+.sc-list li{display:grid!important;grid-template-columns:34px 1fr auto;gap:12px;align-items:center;background:none!important;border-radius:0!important;padding:12px 2px!important;border-bottom:1px dashed var(--line-soft)}
+.sc-list li:last-child{border-bottom:0}
+.sc-list .sw{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-family:var(--num);font-weight:700;font-size:15px;border:1px solid rgba(0,0,0,.08)}
+.sc-list .nm b{display:block;font-size:16.5px;color:var(--ink)!important;line-height:1.35}
+.sc-list .nm small{display:block;font-size:12.5px;font-weight:500;color:var(--muted);line-height:1.4}
+.sc-list .am{font-family:var(--num);font-weight:700;font-size:22px;color:var(--teal);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -629,7 +641,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <span class="sc-b">
         <span class="n">サプリメント お試し4点セット</span>
         <span class="d">4種類のサプリを少しずつ試せるセット</span>
-        <ul class="sc-list"><li>コルディM<b>3g</b></li><li>クリルオイル<b>6粒</b></li><li>アミノファイン<b>5g</b></li><li>プラセンタ12000<b>1g</b></li></ul>
+        <p class="sc-h"><span>セット内容（4種類）</span></p><ul class="sc-list"><li><span class="sw" style="background:#e9eef7;color:#2a3f86">1</span><span class="nm"><b>コルディM</b><small>冬虫夏草で毎日の健康維持に</small></span><span class="am">3g</span></li><li><span class="sw" style="background:#1f6fd1;color:#fff">2</span><span class="nm"><b>アミノファイン</b><small>必須アミノ酸・BCAA</small></span><span class="am">5g</span></li><li><span class="sw" style="background:#d42a2a;color:#fff">3</span><span class="nm"><b>クリルオイル</b><small>関節・心血管・脳の健康維持に</small></span><span class="am">6粒</span></li><li><span class="sw" style="background:#8cc63f;color:#fff">4</span><span class="nm"><b>プラセンタ12000</b><small>肝臓・皮膚・毛並みの健康維持に</small></span><span class="am">1g</span></li></ul>
         <span class="pr">1,580<small>円</small></span>
         <span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span>
       </span>
