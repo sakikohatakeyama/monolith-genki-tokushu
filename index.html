@@ -274,6 +274,62 @@ a{color:inherit}
 .memo table{width:100%;border-collapse:collapse;font-size:12px;background:#fff;margin-top:8px}
 .memo th,.memo td{border:1px solid #cfc8b8;padding:6px;text-align:left;vertical-align:top}
 .memo th{background:#f3f0e8}
+
+/* ===== 動き（JS不使用・CSSのみ） ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes popIn{0%{opacity:0;transform:scale(.6)}70%{opacity:1;transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+@keyframes slideL{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+@keyframes shine{0%{left:-60%}55%,100%{left:130%}}
+@keyframes wiggle{0%,86%,100%{transform:rotate(0)}89%{transform:rotate(-3deg)}92%{transform:rotate(3deg)}95%{transform:rotate(-2deg)}}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(238,129,82,.45)}100%{box-shadow:0 0 0 14px rgba(238,129,82,0)}}
+
+/* 読み込み時：FVのコピー */
+.fv-copy h1 span{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+.fv-copy h1 span+span{animation-delay:.25s}
+.fv-under>*{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.fv-under>*:nth-child(1){animation-delay:.45s}
+.fv-under>*:nth-child(2){animation-delay:.55s}
+.fv-under>*:nth-child(3){animation-delay:.65s}
+.fv-under>*:nth-child(4){animation-delay:.75s}
+.fv-under>*:nth-child(5){animation-delay:.85s}
+
+/* ずっと動くもの */
+.points li:nth-child(1) .ic{animation:floaty 3s ease-in-out infinite}
+.points li:nth-child(2) .ic{animation:floaty 3s ease-in-out .4s infinite}
+.points li:nth-child(3) .ic{animation:floaty 3s ease-in-out .8s infinite}
+.points li:nth-child(4) .ic{animation:floaty 3s ease-in-out 1.2s infinite}
+.fv-nav a .ic,.chooser .go{animation:bob 1.6s ease-in-out infinite}
+.cpn-bar{overflow:hidden}
+.cpn-bar::after{content:"";position:absolute;top:0;bottom:0;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);animation:shine 3.2s ease-in-out infinite;pointer-events:none}
+.cpn-bar .pct{animation:beat 1.6s ease-in-out infinite}
+.cpn-bar>.ic,.closing .links a .ic,.ti .go .ic{animation:nudge 1.4s ease-in-out infinite}
+.coupon{animation:wiggle 5s ease-in-out infinite}
+.cp-val{display:inline-block;animation:beat 1.8s ease-in-out infinite;transform-origin:left center}
+.btn.try{animation:ring 2s ease-out infinite}
+.flow li.hl .ic{animation:floaty 2.4s ease-in-out infinite}
+
+/* 押したとき・ホバー */
+.btn,.ti,.chooser a,.cpn-bar,.fv-nav a,.closing .links a{transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover,.ti:hover,.chooser a:hover,.cpn-bar:hover,.fv-nav a:hover,.closing .links a:hover{transform:translateY(-3px)}
+.btn:active,.ti:active,.chooser a:active,.cpn-bar:active{transform:translateY(1px) scale(.99)}
+
+/* スクロールで現れる（対応ブラウザのみ。非対応でも表示は崩れません） */
+@supports (animation-timeline: view()){
+  .en{animation:slideL linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  .num,.h2,.lead,.chooser a,.prod,.prod-imgs,.spec>div,.dt,.trial-photo,.checks li,.trial-items .ti,.coupon,.flow li,.pairs,.tbd,.faq details,.closing .links a,.intro-photos figure,.day li,.cpn-bar,.five-cap,.pricenote{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+  .day .c,.spec .ci,.dt-head .ic,.chooser>a>.ic:first-child{animation:popIn linear both;animation-timeline:view();animation-range:entry 10% cover 30%}
+  .coupon{animation:fadeUp linear both,wiggle 5s ease-in-out 1s infinite;animation-timeline:view(),auto;animation-range:entry 0% cover 25%,normal}
+  .cpn-bar{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% cover 20%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .fv-photo img:first-child{opacity:1}
+}
 </style>
 </head>
 <body>
@@ -707,7 +763,7 @@ a{color:inherit}
       <li><b>写真</b>FV（4枚スライド）・導入・お試しの犬猫写真はUnsplashの仮素材です。実際に使う写真（店舗所有・購入素材）のご支給をお願いします。</li>
       <li><b>アイコン</b>線画アイコンはすべて本ページ用に作成したSVGです（外部素材・絵文字は不使用）。</li>
       <li><b>商品画像</b>楽天キャビネット内の既存画像をトリミング・加工なしで表示しています。</li>
-      <li><b>楽天掲載時</b>JavaScriptは使用していません（FVのスライドはCSSアニメーション、FAQはHTML標準の開閉）。掲載方式（R-Storefront／GOLD／画像化）に合わせて組み直します。</li>
+      <li><b>楽天掲載時</b>JavaScriptは使用していません（FVのスライド・各種の動きはCSSアニメーション、FAQはHTML標準の開閉）。スクロールで現れる動きはCSSのスクロール連動アニメーションを使用し、非対応ブラウザでは動きなしで通常表示されます。掲載方式（R-Storefront／GOLD／画像化）に合わせて組み直します。</li>
     </ol>
 
     <h3>確認した掲載情報（参照元）</h3>
