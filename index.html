@@ -42,7 +42,6 @@ a{color:inherit}
 .draftband b{color:var(--lemon)}
 .shopbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line)}
 .shopbar strong{font-weight:700;color:var(--ink)}
-.shopbar span{font-family:var(--en);font-weight:700;letter-spacing:.15em;font-size:11px;background:var(--lemon);color:var(--ink);padding:2px 10px 1px;border-radius:999px}
 
 /* ===== 共通 ===== */
 .sec{padding:72px 0 76px;text-align:center}
@@ -364,26 +363,25 @@ a{color:inherit}
 .next .h2 em{color:var(--orange-d)}
 .flow .st{color:var(--orange-d)}
 
-/* 追従メニュー */
-.fab{position:fixed;z-index:50;right:max(14px,calc(50% - 250px + 14px));bottom:18px}
-.fab summary{list-style:none;cursor:pointer;width:64px;height:64px;border-radius:50%;background:var(--teal);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;box-shadow:0 6px 18px rgba(29,92,89,.35);border:3px solid #fff}
+/* ヘッダー固定＋肉球メニュー */
+.shopbar{position:sticky;top:0;z-index:50;background:rgba(251,248,243,.96);backdrop-filter:blur(6px);padding:8px 12px 8px 20px}
+.fab{position:relative}
+.fab summary{list-style:none;cursor:pointer;width:46px;height:46px;border-radius:50%;background:var(--teal);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
 .fab summary::-webkit-details-marker{display:none}
-.fab summary .ic{font-size:28px}
-.fab-t{font-family:var(--en);font-weight:800;font-size:9px;letter-spacing:.12em}
+.fab summary .ic{font-size:22px;transition:transform .25s}
+.fab-t{font-family:var(--en);font-weight:800;font-size:7.5px;letter-spacing:.1em;line-height:1}
 .fab[open] summary{background:var(--ink)}
 .fab[open] summary .ic{transform:rotate(-20deg)}
-.fab summary .ic{transition:transform .25s}
-.fab:not([open]) summary{animation:floaty 2.6s ease-in-out infinite}
-.fab-menu{position:absolute;right:0;bottom:76px;width:min(300px,calc(100vw - 28px));background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);animation:fadeUp .25s ease both;text-align:left}
+.fab-menu{position:absolute;right:-4px;top:56px;width:min(300px,calc(100vw - 24px));background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);animation:fadeUp .25s ease both;text-align:left}
 .fab-h{margin:2px 6px 8px;font-family:var(--en);font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--muted)}
-.fab-menu a{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:12px;text-decoration:none;font-size:14.5px;font-weight:700;line-height:1.4}
+.fab-menu a{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:12px;text-decoration:none;font-size:14.5px;font-weight:700;line-height:1.4;color:var(--ink)}
 .fab-menu a+a{border-top:1px dashed var(--line-soft)}
 .fab-menu a .ic{font-size:30px;padding:6px;border-radius:50%;background:var(--aqua);color:var(--teal)}
 .fab-menu a:hover{background:var(--sand)}
 .fab-menu a.cp{background:var(--orange);color:#fff;border-top:0;margin-top:4px}
 .fab-menu a.cp .ic{background:#fff;color:var(--orange-d)}
 .fab-menu a.cp+a{border-top:0}
-section[id],header[id]{scroll-margin-top:8px}
+section[id],header[id]{scroll-margin-top:62px}
 </style>
 </head>
 <body>
@@ -414,7 +412,20 @@ section[id],header[id]{scroll-margin-top:8px}
 <div class="page">
 
 <div class="draftband"><b>確認用ページ</b>｜掲載前の制作案です。FV以外の写真は仮素材、⑥の5%OFFクーポンは開催前の企画案です。</div>
-<div class="shopbar"><strong>人とペットのサプリ専門店 モノリス</strong><span>FEATURE</span></div>
+<div class="shopbar"><strong>人とペットのサプリ専門店 モノリス</strong>
+<details class="fab" id="fab">
+  <summary aria-label="メニューを開く"><svg class="ic"><use href="#i-paw"/></svg><span class="fab-t">MENU</span></summary>
+  <nav class="fab-menu" aria-label="ページ内メニュー">
+    <p class="fab-h">メニュー</p>
+    <a href="#top" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-sun"/></svg>トップ</a>
+    <a href="#pick" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-paw"/></svg>うちの子には、どれがいい？</a>
+    <a href="#dose" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-scale"/></svg>毎日続けるなら、どのくらい？</a>
+    <a href="#trial" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>まずは、お試しサイズから</a>
+    <a href="#next" class="cp" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポン</a>
+    <a href="#faq" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-qa"/></svg>よくある質問</a>
+  </nav>
+</details>
+</div>
 
 <!-- ① FV -->
 <header class="fv" id="top">
@@ -595,7 +606,7 @@ section[id],header[id]{scroll-margin-top:8px}
     <div class="dt">
       <div class="dt-head"><svg class="ic" style="background:var(--teal)"><use href="#i-leaf"/></svg><div><h3>コルディ 30g</h3><span class="dt-p">6,800円</span></div></div>
       <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v"><small>成長期</small>約45<small>円/日</small></span><span class="ex-v"><small>シニア期</small>約113<small>円/日</small></span></div>
-      <p class="dt-sub"><span class="stg">元気いっぱいな幼少期・成長期</span></p>
+      <p class="dt-sub"><span class="stg">幼少期・成長期</span></p>
       <table class="tbl">
         <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
         <tbody>
@@ -604,7 +615,7 @@ section[id],header[id]{scroll-margin-top:8px}
           <tr><th>10kg</th><td class="amt"><b>0.4g</b></td><td>75日</td><td class="yen">91円</td></tr>
         </tbody>
       </table>
-      <p class="dt-sub"><span class="stg sn">元気いっぱいなシニア期</span></p>
+      <p class="dt-sub"><span class="stg sn">シニア期</span></p>
       <table class="tbl">
         <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
         <tbody>
@@ -807,7 +818,7 @@ section[id],header[id]{scroll-margin-top:8px}
 
     <h3>B. 健康維持目的の目安量・価格</h3>
     <ol>
-      <li><b>コルディの目安量の見せ方</b>与え方ページの表には「おすすめ（ほとんどの方はこの量）」列と「元気いっぱいな幼少期・成長期」「元気いっぱいなシニア期」列があります。本特集は元気な子向けのため後者2列を主に掲載し、「おすすめ」量と「与え始めは多めに」は注記にしました。この見せ方でよいか。<span class="src">（表内「ほとんどの方は子の量を」は「この量」の誤記と思われます）</span></li>
+      <li><b>コルディの目安量の見せ方</b>与え方ページの表には「おすすめ（ほとんどの方はこの量）」列と「元気いっぱいな幼少期・成長期」「元気いっぱいなシニア期」列があります。本特集は元気な子向けのため後者2列を主に掲載し、「おすすめ」量と「与え始めは多めに」は注記にしました。この見せ方でよいか。また特集内では表記を簡潔にするため「元気いっぱいな」を省き「幼少期・成長期」「シニア期」としています。<span class="src">（表内「ほとんどの方は子の量を」は「この量」の誤記と思われます）</span></li>
       <li><b>コルディ 10kg超の目安量</b>表は2.5kg・5kg・10kgのみ。中・大型犬の健康維持量が必要な場合はご提供ください（数字は作成していません）。</li>
       <li><b>クリルオイル・プラセンタ12000</b>与え方ページの目安量には目的別（健康維持／その他）の区分がありません。健康維持目的でもこの目安量で案内してよいか。</li>
       <li><b>日数・1日あたりの金額</b>「目安量 × 通常サイズ価格」からの試算です。開封後の推奨使用期間の記載がないため、300日分など長期になる場合の注意書きの要否。</li>
@@ -832,7 +843,7 @@ section[id],header[id]{scroll-margin-top:8px}
       <li><b>写真</b>FVはAdobe Stock（249645861→341735787→168600257）の3枚スライドに差し替え済み。お試しセクションは支給画像（ChatGPT生成画像）に差し替え済み。導入の犬猫写真はUnsplashの仮素材のため、使用する写真のご支給をお願いします。</li>
       <li><b>アイコン</b>線画アイコンはすべて本ページ用に作成したSVGです（外部素材・絵文字は不使用）。</li>
       <li><b>商品画像</b>楽天キャビネット内の既存画像をトリミング・加工なしで表示しています。</li>
-      <li><b>楽天掲載時</b>JavaScriptは使用していません（FVのスライド・各種の動きはCSSアニメーション、FAQはHTML標準の開閉）。右下の肉球メニューはHTML標準の開閉で動き、リンクを押すと閉じる処理だけ短いJSを使っています（JSが使えない環境では、肉球をもう一度押すと閉じます）。スクロールで現れる動きはCSSのスクロール連動アニメーションを使用し、非対応ブラウザでは動きなしで通常表示されます。掲載方式（R-Storefront／GOLD／画像化）に合わせて組み直します。</li>
+      <li><b>楽天掲載時</b>JavaScriptは使用していません（FVのスライド・各種の動きはCSSアニメーション、FAQはHTML標準の開閉）。ヘッダー右の肉球メニューはHTML標準の開閉で動き、リンクを押すと閉じる処理だけ短いJSを使っています（JSが使えない環境では、肉球をもう一度押すと閉じます）。スクロールで現れる動きはCSSのスクロール連動アニメーションを使用し、非対応ブラウザでは動きなしで通常表示されます。掲載方式（R-Storefront／GOLD／画像化）に合わせて組み直します。</li>
     </ol>
 
     <h3>確認した掲載情報（参照元）</h3>
@@ -846,19 +857,6 @@ section[id],header[id]{scroll-margin-top:8px}
   </div>
 </section>
 
-<!-- 追従メニュー（肉球ボタン） -->
-<details class="fab" id="fab">
-  <summary aria-label="メニューを開く"><svg class="ic"><use href="#i-paw"/></svg><span class="fab-t">MENU</span></summary>
-  <nav class="fab-menu" aria-label="ページ内メニュー">
-    <p class="fab-h">メニュー</p>
-    <a href="#top" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-sun"/></svg>トップ</a>
-    <a href="#pick" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-paw"/></svg>うちの子には、どれがいい？</a>
-    <a href="#dose" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-scale"/></svg>毎日続けるなら、どのくらい？</a>
-    <a href="#trial" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>まずは、お試しサイズから</a>
-    <a href="#next" class="cp" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポン</a>
-    <a href="#faq" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-qa"/></svg>よくある質問</a>
-  </nav>
-</details>
 
 </div>
 </body>
