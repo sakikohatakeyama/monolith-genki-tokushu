@@ -806,6 +806,24 @@ section[id],header[id]{scroll-margin-top:62px}
 .js-don .don.p999,.js-don .don.bs-big{animation:donShake .45s .3s ease-out both!important}
 @keyframes donShake{0%,100%{transform:none}20%{transform:translate(-4px,2px) rotate(-1deg)}45%{transform:translate(4px,-2px) rotate(1deg)}70%{transform:translate(-2px,1px)}}
 @media (prefers-reduced-motion:reduce){.js-don .p9-new,.js-don .bb-num{opacity:1;transform:none;animation:none!important}}
+/* クーポン対象：お試し4種セット 縦長で大きく */
+.elig-h{flex-direction:row;align-items:flex-start;justify-content:center}
+.elig-h span{text-align:center;font-size:clamp(17px,5vw,21px)!important;line-height:1.45}
+.elig-h b{display:block;margin-top:6px;font-size:clamp(22px,6.6vw,28px);color:var(--ink);font-weight:900}
+.elig-set{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:16px!important;background:#fff!important}
+.elig-set img{width:100%!important;height:auto!important;aspect-ratio:1/1;object-fit:cover;border-radius:14px!important;max-width:none!important}
+.elig-set .es-b{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:14px}
+.elig-set .es-b .n{font-size:clamp(20px,5.8vw,24px)!important;font-weight:900}
+.elig-set .es-b .d{font-size:clamp(13px,3.8vw,15px)!important;margin-top:4px;word-break:keep-all;text-wrap:balance}
+.elig-set .es-b .pr{font-size:clamp(44px,13vw,60px)!important;line-height:1.1;margin-top:8px}
+.elig-set .es-b .pr s{font-size:15px!important}
+.elig-set .es-b .pr small{font-size:.4em}
+.elig-set .es-b .go{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin-top:14px;padding:15px;border-radius:999px;background:var(--orange);color:#fff!important;font-size:17px!important;font-weight:800;box-shadow:0 5px 0 var(--orange-s)}
+.elig-h{flex-direction:column!important;align-items:center!important;gap:6px!important}
+.elig-h .ic{font-size:30px!important}
+.elig-h span{font-size:clamp(16px,4.6vw,20px)!important}
+.elig-h b{font-size:clamp(20px,5.8vw,27px)!important;white-space:nowrap}
+.elig-set .es-b .n{word-break:keep-all;text-wrap:balance}
 </style>
 </head>
 <body>
@@ -1117,10 +1135,10 @@ section[id],header[id]{scroll-margin-top:62px}
     </ol>
 
     <div class="elig">
-      <p class="elig-h"><svg class="ic"><use href="#i-gift"/></svg><span>次回使える5%OFFクーポン<br>プレゼント対象商品</span></p>
+      <p class="elig-h"><svg class="ic"><use href="#i-gift"/></svg><span>次回使える5%OFFクーポンが<br>もらえる対象商品<b>お試し4種セットはこちら</b></span></p>
       <a class="elig-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
         <img src="img/set4.png?v=1" alt="サプリメント お試し4種セット" loading="lazy">
-        <span class="es-b"><span class="n">サプリメント お試し4種セット</span><span class="d">コルディM 3g・クリルオイル 6粒・アミノファイン 5g・プラセンタ12000 1g</span><span class="pr"><s>1,580円</s>999<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
+        <span class="es-b"><span class="n">サプリメント お試し4種セット</span><span class="d">コルディM 3g・クリルオイル 6粒・アミノファイン 5g・プラセンタ12000 1g</span><span class="pr"><s>1,580円</s>999<small>円</small></span><span class="go">購入はこちら<svg class="ic"><use href="#i-right"/></svg></span></span>
       </a>
     </div>
 
