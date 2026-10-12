@@ -95,7 +95,7 @@ a{color:inherit}
 .ch-big em{font-style:normal;display:block;font-size:18px;letter-spacing:.1em}
 .ch-go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#fff;color:var(--coral-d);font-weight:700;font-size:14px;padding:8px 22px;border-radius:999px}
 .ch-go .ic{font-size:14px;animation:bob 1.6s ease-in-out infinite}
-.fv-nav{margin:24px 0 0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.fv-nav{margin:24px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .fv-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;height:70px;text-decoration:none;font-size:12px;font-weight:700;line-height:1.2;background:#fff;border:1.5px solid var(--line);border-radius:14px}
 .fv-nav a .ic{font-size:24px;color:var(--teal)}
 .fv-nav a.plan{background:var(--coral);border-color:var(--coral);color:#fff}
@@ -685,7 +685,6 @@ section[id],header[id]{scroll-margin-top:62px}
     <a href="#top" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-sun"/></svg>トップ</a>
     <a href="#items" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>お試し4点セット</a>
     <a href="#pick" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-paw"/></svg>うちの子には、どれがいい？</a>
-    <a href="#dose" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-scale"/></svg>毎日続けるなら、どのくらい？</a>
     <a href="#trial" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>まずは、お試しサイズから</a>
     <a href="#next" class="cp" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポン</a>
     <a href="#faq" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-qa"/></svg>よくある質問</a>
@@ -712,7 +711,6 @@ section[id],header[id]{scroll-margin-top:62px}
     <p class="fv-lead">サプリメントは、体調が気になってから探すものだけではありません。元気な今だからこそ、いつものごはんにひとつ足して、毎日の健康維持に。</p>
     <nav class="fv-nav" aria-label="ページ内リンク">
       <a href="#pick"><svg class="ic"><use href="#i-paw"/></svg>選び方</a>
-      <a href="#dose"><svg class="ic"><use href="#i-scale"/></svg>目安量</a>
       <a href="#trial"><svg class="ic"><use href="#i-bag"/></svg>お試し</a>
       <a href="#next" class="plan"><svg class="ic"><use href="#i-gift"/></svg>クーポン</a>
       <a href="#faq"><svg class="ic"><use href="#i-qa"/></svg>Q&amp;A</a>
@@ -877,78 +875,11 @@ section[id],header[id]{scroll-margin-top:62px}
   </div>
 </section>
 
-<!-- ④ 目安量 -->
-<section class="sec aqua" id="dose" aria-labelledby="dose-h">
-  <div class="wrap">
-    <span class="en">EVERY DAY</span>
-    <div class="num">03 つづけるなら</div>
-    <h2 class="h2" id="dose-h">毎日続けるなら<span class="pe">、</span><br>どのくらい？</h2>
-    <p class="lead">体重別の1日の目安量は、ショップの「与え方・目安量」ページの数値です。1袋で使える日数と1日あたりの金額は、目安量と通常サイズの価格から計算した参考値です。</p>
-
-    <p class="five-cap">※金額は1円未満を四捨五入した参考値です。実際の量はその子の体調・食欲に合わせて調整してください。</p>
-
-    <div class="dt">
-      <div class="dt-head"><img class="dt-img" src="https://image.rakuten.co.jp/cordy/cabinet/item_img/cordymg/cordy_s1-m30.jpg" alt="" loading="lazy"><div><h3>コルディ 30g</h3><span class="dt-p">6,800円</span></div></div>
-      <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v"><small>成長期</small>約45<small>円/日</small></span><span class="ex-v"><small>シニア期</small>約113<small>円/日</small></span></div>
-      <p class="dt-sub"><span class="stg">幼少期・成長期</span></p>
-      <table class="tbl">
-        <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
-        <tbody>
-          <tr><th>2.5kg</th><td class="amt"><b>0.1g</b></td><td>300日</td><td class="yen">23円</td></tr>
-          <tr><th>5kg</th><td class="amt"><b>0.2g</b></td><td>150日</td><td class="yen">45円</td></tr>
-          <tr><th>10kg</th><td class="amt"><b>0.4g</b></td><td>75日</td><td class="yen">91円</td></tr>
-        </tbody>
-      </table>
-      <p class="dt-sub"><span class="stg sn">シニア期</span></p>
-      <table class="tbl">
-        <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
-        <tbody>
-          <tr><th>2.5kg</th><td class="amt"><b>0.25g</b></td><td>120日</td><td class="yen">57円</td></tr>
-          <tr><th>5kg</th><td class="amt"><b>0.5g</b></td><td>60日</td><td class="yen">113円</td></tr>
-          <tr><th>10kg</th><td class="amt"><b>1g</b></td><td>30日</td><td class="yen">227円</td></tr>
-        </tbody>
-      </table>
-      <p class="note">付属の緑スプーンすりきり約1g、白スプーンすりきり約0.1g。ショップでは、1日の量を朝・昼・夜などに小分けして与えること、与え始めの時期はできる限り多めに与えることをおすすめしています（与え方ページの「おすすめ」量：2.5kgで1g、5kgで2g、10kgで4g）。10kgを超える子の量は<a href="https://www.rakuten.co.jp/cordy/contents/howtofeed/">与え方ページ</a>またはショップへご相談ください。</p>
-    </div>
-    <div class="dt">
-      <div class="dt-head"><img class="dt-img" src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil180sum3.jpg" alt="" loading="lazy"><div><h3>クリルオイル 180粒</h3><span class="dt-p">6,700円</span></div></div>
-      <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v">約37〜74<small>円/日</small></span></div>
-      <p class="dt-sub">1日の目安量</p>
-      <table class="tbl">
-        <thead><tr><th>体重</th><th>1日の量</th><th>180粒で<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
-        <tbody>
-          <tr><th>〜5kg<small>超小型犬・猫</small></th><td class="amt rg"><b>1〜2粒</b></td><td>90〜180日</td><td class="yen">37〜74円</td></tr>
-          <tr><th>〜10kg<small>小〜中型犬</small></th><td class="amt rg"><b>2〜4粒</b></td><td>45〜90日</td><td class="yen">74〜149円</td></tr>
-          <tr><th>〜20kg<small>中〜大型犬</small></th><td class="amt rg"><b>4〜8粒</b></td><td>22〜45日</td><td class="yen">149〜298円</td></tr>
-          <tr><th>30kg〜<small>大〜超大型犬</small></th><td class="amt rg"><b>6〜12粒</b></td><td>15〜30日</td><td class="yen">223〜447円</td></tr>
-        </tbody>
-      </table>
-      <p class="note">体調に合わせて量を増減しても問題ありません（ショップ記載）。お試しの30粒（1,650円）なら、〜5kgの子で15〜30日分です。</p>
-    </div>
-    <div class="dt">
-      <div class="dt-head"><img class="dt-img" src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-30.jpg" alt="" loading="lazy"><div><h3>プラセンタ12000 30g</h3><span class="dt-p">7,800円</span></div></div>
-      <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v">約26〜52<small>円/日</small></span></div>
-      <p class="dt-sub">1日の目安量</p>
-      <table class="tbl">
-        <thead><tr><th>体重</th><th>1日の量</th><th>30gで<small>（約）</small></th><th>1日あたり<small>（約）</small></th></tr></thead>
-        <tbody>
-          <tr><th>〜5kg</th><td class="amt rg"><b>0.1〜0.2g</b><em>白スプーン<br>約1〜2杯</em></td><td>150〜300日</td><td class="yen">26〜52円</td></tr>
-          <tr><th>5〜10kg</th><td class="amt rg"><b>0.2〜0.3g</b><em>白スプーン<br>約2〜3杯</em></td><td>100〜150日</td><td class="yen">52〜78円</td></tr>
-          <tr><th>10〜20kg</th><td class="amt rg"><b>0.3〜0.5g</b><em>白スプーン<br>約3〜5杯</em></td><td>60〜100日</td><td class="yen">78〜130円</td></tr>
-          <tr><th>20〜40kg</th><td class="amt rg"><b>0.5〜1.0g</b><em>緑スプーン<br>約0.5〜1杯</em></td><td>30〜60日</td><td class="yen">130〜260円</td></tr>
-          <tr><th>40kg〜</th><td class="amt rg"><b>1.0g〜</b><em>緑スプーン<br>約1杯〜</em></td><td>〜30日</td><td class="yen">260円〜</td></tr>
-        </tbody>
-      </table>
-      <p class="note"><b>スプーンについて：</b>プラセンタ12000には計量スプーンが付いています。白スプーンはすりきり約0.1g、緑スプーンはすりきり約1gです。<br>お試しの5g（1,800円）は、5kg程度の子で約1ヶ月、20kgの子で約2週間使えます（商品ページ記載）。</p>
-    </div>
-  </div>
-</section>
-
 <!-- ⑤ お試し -->
 <section class="sec sand trial" id="trial" aria-labelledby="trial-h">
   <div class="wrap">
     <span class="en">FIRST TRY</span>
-    <div class="num">04 はじめての方へ</div>
+    <div class="num">03 はじめての方へ</div>
     <h2 class="h2" id="trial-h">まずは<span class="pe">、</span><br>食べてくれるか<span class="pe">。</span><span class="s">与えやすさを確かめる<span class="pe">、</span><br>小さなサイズから<span class="pe">。</span></span></h2>
     <figure class="trial-photo"><img src="img/trial.jpg" alt="こちらを見上げる猫と犬" loading="lazy"></figure>
     <p class="lead">お試しサイズは、短い期間で何かを判断するためのものではありません。うちの子が嫌がらずに食べてくれるか、いつものごはんに合わせやすいか。毎日続けられそうかを確かめる入口です。</p>
@@ -989,7 +920,7 @@ section[id],header[id]{scroll-margin-top:62px}
 <section class="sec next" id="next" aria-labelledby="next-h">
   <div class="wrap">
     <span class="en">COUPON</span>
-    <div class="num">05 つづけたい方へ</div>
+    <div class="num">04 つづけたい方へ</div>
     <h2 class="h2" id="next-h">お試しのあとは<span class="pe">、</span><br><em>対象サプリがおトク</em>に！</h2>
     <p class="lead">気に入ってくれたら、次は続けやすいサイズで。お試しセットをご購入の方に、セットに入っている4種類のサプリに次回使えるクーポンをご用意します。</p>
 
@@ -1044,7 +975,7 @@ section[id],header[id]{scroll-margin-top:62px}
 <section class="sec aqua faq" id="faq" aria-labelledby="faq-h">
   <div class="wrap">
     <span class="en">Q&amp;A</span>
-    <div class="num">06 よくある質問</div>
+    <div class="num">05 よくある質問</div>
     <h2 class="h2" id="faq-h">はじめる前に<span class="pe">、</span><br>気になること<span class="pe">。</span></h2>
     <div class="faq-list">
       <details>
@@ -1076,7 +1007,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <details>
         <summary>継続するときの容量の選び方は？</summary>
         <div class="a">
-          <p>まずはお試しサイズで与えやすさを確かめ、続けられそうなら通常サイズへ。体重と1日の目安量から、1袋で何日使えるかを目安に選ぶのがおすすめです（<a href="#dose">目安量の表</a>）。</p>
+          <p>まずはお試しサイズで与えやすさを確かめ、続けられそうなら通常サイズへ。1日の目安量は、ショップの<a href="https://www.rakuten.co.jp/cordy/contents/howtofeed/">与え方・目安量ページ</a>をご覧ください。</p>
           <ul>
             <li>コルディ：30g（6,800円）／100g（21,000円）</li>
             <li>クリルオイル：30粒（1,650円）／180粒（6,700円）</li>
