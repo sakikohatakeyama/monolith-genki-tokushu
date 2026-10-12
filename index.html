@@ -204,20 +204,14 @@ a{color:inherit}
 .next{background:#fff1e8}
 .next .en{color:#f7d3bf}
 .next .h2 em{font-style:normal;color:var(--coral-d)}
-.coupon{position:relative;margin:30px 0 0;display:grid;grid-template-columns:1fr 92px;background:var(--coral);color:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 0 -4px #d96a3c}
-.coupon::before,.coupon::after{content:"";position:absolute;right:80px;width:24px;height:24px;border-radius:50%;background:#fff1e8}
-.coupon::before{top:-12px}.coupon::after{bottom:-12px}
-.cp-main{padding:22px 10px 20px 20px;text-align:left}
-.cp-lab{display:inline-block;background:#fff;color:var(--coral-d);font-size:12px;font-weight:700;padding:3px 12px 2px;border-radius:999px}
-.cp-val{margin-top:2px;font-family:var(--en);font-weight:800;font-size:76px;line-height:1;letter-spacing:-.01em}
-.cp-val small{font-size:36px;margin-left:2px}
-.cp-val span{font-family:var(--en);font-size:40px;font-weight:800;margin-left:6px}
-.cp-txt{margin:8px 0 0;font-size:15px;font-weight:700;line-height:1.5}
-.cp-pre{margin:10px 0 0;font-size:18px;font-weight:700;line-height:1.3}
-.cp-big{margin:2px 0 0;font-size:34px;font-weight:700;line-height:1.2;letter-spacing:.04em}
-.cp-big small{display:block;font-size:13px;letter-spacing:.02em;margin-top:4px}
-.cp-side{border-left:2px dashed rgba(255,255,255,.7);display:grid;place-items:center;font-weight:700;font-size:14px;line-height:1.3;writing-mode:vertical-rl;letter-spacing:.2em;background:#e9733f}
-.cp-note{margin:14px 0 0;font-size:12px;color:var(--muted)}
+.coupon{margin:30px 0 0;background:var(--coral);color:#fff;border-radius:24px;padding:28px 16px 30px;text-align:center;box-shadow:0 8px 0 -2px #d96a3c}
+.cp-lab{display:inline-block;background:#fff;color:var(--coral-d);font-size:14px;font-weight:700;padding:5px 18px 4px;border-radius:999px}
+.cp-pre{margin:14px 0 0;font-size:20px;font-weight:700;line-height:1.3}
+.cp-val{margin:6px auto 0;font-family:var(--en);font-weight:800;font-size:84px;line-height:1;letter-spacing:-.01em}
+.cp-val small{font-size:40px;margin-left:2px}
+.cp-val span{font-size:46px;margin-left:8px}
+.cp-big{margin:6px 0 0;font-size:40px;font-weight:700;line-height:1.2;letter-spacing:.06em}
+.cp-note{margin:16px 0 0;font-size:12px;color:var(--muted)}
 .cp-note b{display:inline-block;background:var(--ink);color:#fff;font-size:11px;padding:1px 8px;border-radius:999px;margin-right:6px}
 .flow{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:0;text-align:left}
 .flow li{position:relative;display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:12px 14px}
@@ -311,7 +305,7 @@ a{color:inherit}
 .cpn-bar .pct{animation:beat 1.6s ease-in-out infinite}
 .cpn-bar>.ic,.closing .links a .ic,.ti .go .ic{animation:nudge 1.4s ease-in-out infinite}
 .coupon{animation:wiggle 5s ease-in-out infinite}
-.cp-val{display:block;width:max-content;animation:beat 1.8s ease-in-out infinite;transform-origin:left center}
+.cp-val{display:block;width:max-content;animation:beat 1.8s ease-in-out infinite;transform-origin:center}
 .btn.try{animation:ring 2s ease-out infinite}
 .flow li.hl .ic{animation:floaty 2.4s ease-in-out infinite}
 
@@ -626,14 +620,11 @@ a{color:inherit}
     <h2 class="h2" id="next-h">お試しのあとは、<br><em>通常サイズがおトク</em>に！</h2>
     <p class="lead">気に入ってくれたら、次は通常サイズで。<br>お試しサイズをご購入の方に、<br>次回使えるクーポンをご用意します。</p>
 
-    <div class="coupon" role="img" aria-label="お試しサイズ購入で、次回使える5%OFFクーポン（通常商品に）">
-      <div class="cp-main">
-        <span class="cp-lab">お試しサイズ購入で</span>
-        <p class="cp-pre">次回使える</p>
-        <div class="cp-val">5<small>%</small><span>OFF</span></div>
-        <p class="cp-big">クーポン<small>（通常商品に）</small></p>
-      </div>
-      <div class="cp-side">COUPON</div>
+    <div class="coupon" role="img" aria-label="お試しサイズ購入で、次回通常商品に使える5%OFFクーポン">
+      <span class="cp-lab">お試しサイズ購入で</span>
+      <p class="cp-pre">次回通常商品に使える</p>
+      <div class="cp-val">5<small>%</small><span>OFF</span></div>
+      <p class="cp-big">クーポン</p>
     </div>
     <p class="cp-note"><b>企画案</b>開催前の内容です。配布方法・期間などの条件は決まり次第ご案内します。</p>
 
