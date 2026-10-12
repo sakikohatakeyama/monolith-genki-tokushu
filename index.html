@@ -252,6 +252,17 @@ a{color:inherit}
 .memo table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;margin-top:8px}
 .memo th,.memo td{border:1px solid #cfc8b8;padding:8px;text-align:left;vertical-align:top}
 .memo th{background:#f3f0e8;font-weight:700}
+
+/* ===== センター揃え（タイトル・画像） ===== */
+.num,.h2,.lead,.fv-under>div,.fv-lead,.pick-head,.prod-top,.prod-imgs figcaption,.intro-photos figcaption,.dt h3,.closing p.big,.faq-in>div:first-child,.chooser a,.trial .h2{text-align:center}
+.fv-tag{justify-content:center;display:flex}
+.fv-tag::after{content:"";width:28px;height:1px;background:currentColor}
+.fv-nav{justify-content:center}
+.pick-head{margin:0 auto}
+.prod-imgs.one{margin:0 auto;width:100%;max-width:320px;padding-left:0;padding-right:0}
+.prod-imgs{justify-items:center}
+.dt h3{justify-content:center}
+.trial-photo{margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body>
@@ -317,7 +328,7 @@ a{color:inherit}
   <div class="wrap">
     <div class="pick-head">
       <div class="num">02 ─ えらびかた</div>
-      <h2 class="h2" id="pick-h">うちの子には、どれがいい？</h2>
+      <h2 class="h2" id="pick-h">うちの子には、<br>どれがいい？</h2>
       <p class="lead">どんな健康維持を考えたいかで選んでみてください。3つのサプリを、同じ順番・同じ項目でご紹介します。</p>
     </div>
     <div class="chooser">
