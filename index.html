@@ -56,7 +56,7 @@ a{color:inherit}
 
 /* ===== ① FV ===== */
 .fv-stage{display:block}
-.fv-photo{position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:var(--aqua)}
+.fv-photo{position:relative;width:100%;aspect-ratio:1100/1317;overflow:hidden;background:var(--aqua)}
 .fv-photo > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:fvShow 13.5s linear infinite}
 .fv-photo > img:nth-child(1){object-position:40% 50%;transform-origin:42% 45%;animation-delay:-.75s}
 .fv-photo > img:nth-child(2){object-position:42% 50%;transform-origin:42% 45%;animation-delay:3.75s}
@@ -309,9 +309,7 @@ a{color:inherit}
 @keyframes ring{0%{box-shadow:0 0 0 0 rgba(238,129,82,.45)}100%{box-shadow:0 0 0 14px rgba(238,129,82,0)}}
 
 /* 読み込み時：FVのコピー */
-.fv-h1 span{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
-.fv-h1 span+span{animation-delay:.25s}
-.fv-cp{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) .5s both}
+
 .fv-under>*{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
 .fv-under>*:nth-child(1){animation-delay:.45s}
 .fv-under>*:nth-child(2){animation-delay:.55s}
@@ -450,23 +448,36 @@ section[id],header[id]{scroll-margin-top:62px}
 .ti-sep span::before,.ti-sep span::after{content:"";flex:1;height:1px;background:var(--line-soft)}
 .ti-sep small{display:block;margin-top:4px;font-size:12px;font-weight:500;color:var(--muted)}
 
-/* FV：写真の上にコピーとキャンペーン */
+/* FV：支給の文字画像を写真に重ねる */
 .fv-photo{container-type:inline-size}
-.fv-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.32) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 55%,rgba(0,0,0,.42) 100%)}
-.fv-h1{position:absolute;z-index:2;top:7cqw;left:0;right:0;margin:0;text-align:center;color:#fff;font-weight:700;font-size:8.6cqw;line-height:1.35;letter-spacing:.04em;text-shadow:0 2px 14px rgba(0,0,0,.28)}
-.fv-h1 span{display:block}
-.fv-cp{position:absolute;z-index:2;left:4cqw;right:3cqw;bottom:5cqw;display:grid;grid-template-columns:28cqw 1fr;gap:4cqw;align-items:end;text-decoration:none}
-.fv-bub{position:relative;display:flex;flex-direction:column;align-items:center;background:var(--orange);border:.6cqw solid #fff;border-radius:3cqw;padding:3cqw 2cqw 2.4cqw;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18)}
-.fv-bub::after{content:"";position:absolute;right:-3.2cqw;top:30%;border:2.4cqw solid transparent;border-left:3cqw solid #fff}
-.fv-bub::before{content:"";position:absolute;right:-2.2cqw;top:calc(30% + .5cqw);border:1.9cqw solid transparent;border-left:2.4cqw solid var(--orange);z-index:1}
-.fv-bub .bt{font-weight:800;font-size:4.8cqw;line-height:1.3;text-align:center}
-.fv-bub .bimg{display:block;width:100%;aspect-ratio:630/290;overflow:hidden;border-radius:1.4cqw;margin-top:2cqw;background:#fff}
-.fv-bub .bimg img{display:block;width:127%;max-width:none;margin:-40.6% 0 0 -14.3%}
-.fv-off{display:flex;flex-direction:column;align-items:center;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.3);line-height:1}
-.fv-off .o1{font-weight:700;font-size:4.6cqw;letter-spacing:.02em;white-space:nowrap}
-.fv-off .o2{font-family:var(--en);font-weight:800;font-size:20cqw;white-space:nowrap;color:#ffeb3b;letter-spacing:-.02em;margin:1cqw 0 0;animation:beat 1.8s ease-in-out infinite}
-.fv-off .o2 small{font-size:13cqw}
-.fv-off .o3{font-weight:800;font-size:5.9cqw;letter-spacing:0;margin-top:1.5cqw;white-space:nowrap}
+.fv-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.28) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0) 58%,rgba(0,0,0,.34) 100%)}
+.fv-h1{position:absolute;margin:0}
+.fv-over{position:absolute;inset:0;z-index:2;display:block}
+.fv-over img{width:100%;height:100%;display:block;animation:fadeUp 1s cubic-bezier(.2,.7,.2,1) .2s both}
+
+/* クーポンの数字：Helvetica系 */
+:root{--num:"Helvetica Neue",Helvetica,Arial,"Roboto",sans-serif}
+.cp-val,.cp-val small,.cp-val span,.cpn-bar .pct,.cpn-bar .pct small{font-family:var(--num)!important;font-weight:700!important;letter-spacing:-.02em}
+.cp-val{color:#fff23a}
+
+/* メニューボタンの動き */
+@keyframes pawHop{0%,60%,100%{transform:translateY(0) rotate(0)}68%{transform:translateY(-4px) rotate(-12deg)}76%{transform:translateY(0) rotate(8deg)}84%{transform:translateY(-2px) rotate(-4deg)}}
+@keyframes fabRing{0%{box-shadow:0 0 0 0 rgba(43,122,118,.5)}80%,100%{box-shadow:0 0 0 12px rgba(43,122,118,0)}}
+@keyframes spinIn{from{transform:rotate(-180deg) scale(.4);opacity:0}to{transform:none;opacity:1}}
+@keyframes itemIn{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+.fab:not([open]) summary{animation:fabRing 2.2s ease-out infinite}
+.fab:not([open]) summary .ic.op{animation:pawHop 2.2s ease-in-out infinite}
+.fab summary{transition:transform .2s,background .2s}
+.fab summary:hover{transform:scale(1.08)}
+.fab summary:active{transform:scale(.92)}
+.fab[open] summary .ic.cl{animation:spinIn .35s cubic-bezier(.2,.8,.3,1.3) both}
+.fab-menu{transform-origin:top right;animation:menuPop .3s cubic-bezier(.2,.8,.3,1.2) both}
+@keyframes menuPop{from{opacity:0;transform:scale(.85) translateY(-8px)}to{opacity:1;transform:none}}
+.fab-menu a{animation:itemIn .35s ease both}
+.fab-menu a:nth-of-type(1){animation-delay:.05s}.fab-menu a:nth-of-type(2){animation-delay:.09s}.fab-menu a:nth-of-type(3){animation-delay:.13s}.fab-menu a:nth-of-type(4){animation-delay:.17s}.fab-menu a:nth-of-type(5){animation-delay:.21s}.fab-menu a:nth-of-type(6){animation-delay:.25s}.fab-menu a:nth-of-type(7){animation-delay:.29s}
+.fab-menu a .ic{transition:transform .2s}
+.fab-menu a:hover .ic{transform:rotate(-12deg) scale(1.1)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -504,7 +515,7 @@ section[id],header[id]{scroll-margin-top:62px}
   <nav class="fab-menu" aria-label="ページ内メニュー">
     <p class="fab-h">メニュー</p>
     <a href="#top" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-sun"/></svg>トップ</a>
-    <a href="#items" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>クーポン対象：お試し4点セット</a>
+    <a href="#items" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>お試し4点セット</a>
     <a href="#pick" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-paw"/></svg>うちの子には、どれがいい？</a>
     <a href="#dose" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-scale"/></svg>毎日続けるなら、どのくらい？</a>
     <a href="#trial" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>まずは、お試しサイズから</a>
@@ -522,11 +533,8 @@ section[id],header[id]{scroll-margin-top:62px}
       <img src="img/fv-341735787.jpg" alt="飼い主さんの足元に寄り添うゴールデンレトリバー">
       <img src="img/fv-168600257.jpg" alt="飼い主さんの腕の中でくつろぐ猫">
       <span class="fv-scrim" aria-hidden="true"></span>
-      <h1 class="fv-h1"><span>これからも、</span><span>一緒に元気な毎日を。</span></h1>
-      <a class="fv-cp" href="#items" aria-label="お試し4点セット購入で、次回通常商品に使える5%OFFクーポンプレゼント">
-        <span class="fv-bub"><span class="bt">お試し<br>4点セット<br>購入で</span><span class="bimg"><img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt=""></span></span>
-        <span class="fv-off"><span class="o1">次回通常商品に使える</span><span class="o2">5<small>%</small>OFF</span><span class="o3">クーポンプレゼント！</span></span>
-      </a>
+      <h1 class="fv-h1"><span class="sr">これからも、一緒に元気な毎日を。お試し4点セット購入で、次回通常商品に使える5%OFFクーポンプレゼント！</span></h1>
+      <a class="fv-over" href="#items" aria-label="お試し4点セットへ"><img src="img/fv-overlay.png" alt=""></a>
     </div>
   </div>
   <div class="fv-under">
