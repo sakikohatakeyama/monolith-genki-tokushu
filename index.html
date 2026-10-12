@@ -79,7 +79,7 @@ a{color:inherit}
 .fv-nav{margin:26px 0 0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .fv-nav a{display:inline-flex;align-items:center;gap:4px;text-decoration:none;font-size:13px;font-weight:700;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff}
 .fv-nav a .ic{font-size:13px;color:var(--coral)}
-.fv-nav a.plan{border-style:dashed;color:var(--muted)}
+.fv-nav a.plan{background:var(--coral);border-color:var(--coral);color:#fff}.fv-nav a.plan .ic{color:#fff}
 
 /* ===== ② 導入 ===== */
 .intro .h2 em{font-style:normal;color:var(--teal);background:linear-gradient(transparent 62%,var(--lemon) 62%)}
@@ -194,27 +194,46 @@ a{color:inherit}
 .ti .pr small{font-family:var(--sans);font-size:12px}
 .ti .go{display:inline-flex;align-items:center;gap:4px;margin-top:4px;font-size:12.5px;font-weight:700;color:var(--teal)}
 
-/* ===== ⑥ 次回特典（企画案） ===== */
-.plan-box{position:relative;margin-top:32px;border:2px dashed #a99f8d;border-radius:20px;padding:46px 16px 22px;background:#fff;text-align:left}
-.plan-flag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:5px 16px;border-radius:999px}
-.plan-warn{margin:0;font-size:14px;font-weight:700;color:var(--coral-d);line-height:1.7;text-align:center}
-.flow{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:8px}
-.flow li{display:grid;grid-template-columns:46px 1fr;gap:12px;align-items:center;background:var(--sand);border-radius:16px;padding:12px 14px}
-.flow .ic{font-size:46px;padding:10px;border-radius:50%;background:#fff}
-.flow .st{display:block;font-family:var(--en);font-weight:700;font-size:11px;letter-spacing:.15em;color:var(--coral-d)}
-.flow b{display:block;font-size:15px}
-.flow small{display:block;font-size:12px;color:var(--muted)}
-.tbd{margin:20px 0 0;border:1.5px solid var(--line);border-radius:14px;overflow:hidden}
-.tbd div{display:grid;grid-template-columns:8.6em 1fr;font-size:14px;border-bottom:1px solid var(--line-soft)}
+/* ===== ⑥ 次回特典 ===== */
+.next{background:#fff1e8}
+.next .en{color:#f7d3bf}
+.next .h2 em{font-style:normal;color:var(--coral-d)}
+.coupon{position:relative;margin:30px 0 0;display:grid;grid-template-columns:1fr 92px;background:var(--coral);color:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 0 -4px #d96a3c}
+.coupon::before,.coupon::after{content:"";position:absolute;right:80px;width:24px;height:24px;border-radius:50%;background:#fff1e8}
+.coupon::before{top:-12px}.coupon::after{bottom:-12px}
+.cp-main{padding:22px 10px 20px 20px;text-align:left}
+.cp-lab{display:inline-block;background:#fff;color:var(--coral-d);font-size:12px;font-weight:700;padding:3px 12px 2px;border-radius:999px}
+.cp-val{margin-top:6px;font-family:var(--en);font-weight:800;font-size:64px;line-height:1;letter-spacing:-.01em}
+.cp-val small{font-size:30px;margin-left:2px}
+.cp-val span{font-family:var(--sans);font-size:24px;font-weight:700;margin-left:4px}
+.cp-txt{margin:8px 0 0;font-size:14px;font-weight:700;line-height:1.5}
+.cp-side{border-left:2px dashed rgba(255,255,255,.7);display:grid;place-items:center;font-weight:700;font-size:14px;line-height:1.3;writing-mode:vertical-rl;letter-spacing:.2em;background:#e9733f}
+.cp-note{margin:14px 0 0;font-size:12px;color:var(--muted)}
+.cp-note b{display:inline-block;background:var(--ink);color:#fff;font-size:11px;padding:1px 8px;border-radius:999px;margin-right:6px}
+.flow{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:0;text-align:left}
+.flow li{position:relative;display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:12px 14px}
+.flow li+li{margin-top:26px}
+.flow li+li::before{content:"";position:absolute;left:50%;top:-22px;width:16px;height:16px;transform:translateX(-50%) rotate(45deg);border-right:3px solid var(--coral);border-bottom:3px solid var(--coral)}
+.flow .ic{font-size:56px;padding:12px;border-radius:50%;background:var(--aqua);color:var(--teal)}
+.flow li.hl{background:var(--lemon);border-color:var(--lemon)}
+.flow li.hl .ic{background:#fff;color:var(--coral-d)}
+.flow .st{display:block;font-family:var(--en);font-weight:800;font-size:12px;letter-spacing:.12em;color:var(--coral-d)}
+.flow b{display:block;font-size:16px;line-height:1.5}
+.flow small{display:block;font-size:12.5px;color:var(--muted)}
+.pairs{margin:30px 0 0;background:#fff;border-radius:18px;padding:18px 16px;text-align:left}
+.pairs p{margin:0 0 12px;font-weight:700;font-size:15px;text-align:center}
+.pairs ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.pairs li{display:grid;grid-template-columns:1fr 22px 1fr;gap:6px;align-items:center;font-size:13px;font-weight:700;text-align:center}
+.pairs li span{background:var(--sand);padding:8px 6px;border-radius:10px;line-height:1.4}
+.pairs li span.to{background:var(--aqua);color:var(--teal-d)}
+.pairs li .ic{font-size:20px;color:var(--coral)}
+.tbd{margin:18px 0 0;border:1.5px dashed #b9b0a1;border-radius:14px;overflow:hidden;background:#fff}
+.tbd div{display:grid;grid-template-columns:8.6em 1fr;font-size:13.5px;border-bottom:1px solid var(--line-soft)}
 .tbd div:last-child{border-bottom:0}
-.tbd dt{background:var(--sand);padding:10px 12px;font-weight:700}
-.tbd dd{margin:0;padding:10px 12px;color:#9a8f7b;font-weight:700}
-.pairs{margin:20px 0 0;font-size:13.5px}
-.pairs p{margin:0 0 8px;font-weight:700}
-.pairs ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
-.pairs li{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.pairs li span{background:var(--aqua);padding:3px 10px;border-radius:999px}
-.pairs li i{font-style:normal;color:var(--coral)}
+.tbd dt{background:var(--sand);padding:9px 12px;font-weight:700}
+.tbd dd{margin:0;padding:9px 12px;font-weight:700}
+.tbd dd.u{color:#9a8f7b}
+.tbd-cap{margin:18px 0 0;font-size:13px;font-weight:700;text-align:left}
 
 /* ===== ⑦ FAQ ===== */
 .faq-list{margin-top:28px;display:grid;gap:10px;text-align:left}
@@ -277,7 +296,7 @@ a{color:inherit}
 
 <div class="page">
 
-<div class="draftband"><b>確認用ページ</b>｜掲載前の制作案です。写真は仮素材、⑥の次回特典は開催前の企画案です。</div>
+<div class="draftband"><b>確認用ページ</b>｜掲載前の制作案です。写真は仮素材、⑥の5%OFFクーポンは開催前の企画案です。</div>
 <div class="shopbar"><strong>人とペットのサプリ専門店 モノリス</strong><span>FEATURE</span></div>
 
 <!-- ① FV -->
@@ -307,7 +326,7 @@ a{color:inherit}
       <a href="#pick">選び方<svg class="ic"><use href="#i-down"/></svg></a>
       <a href="#dose">目安量<svg class="ic"><use href="#i-down"/></svg></a>
       <a href="#trial">お試し<svg class="ic"><use href="#i-down"/></svg></a>
-      <a href="#next" class="plan">次回特典（企画案）<svg class="ic"><use href="#i-down"/></svg></a>
+      <a href="#next" class="plan">5%OFFクーポン<svg class="ic"><use href="#i-down"/></svg></a>
       <a href="#faq">Q&amp;A<svg class="ic"><use href="#i-down"/></svg></a>
     </nav>
   </div>
@@ -532,36 +551,46 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- ⑥ 次回特典（企画案） -->
-<section class="sec" id="next" aria-labelledby="next-h">
+<!-- ⑥ 次回特典 -->
+<section class="sec next" id="next" aria-labelledby="next-h">
   <div class="wrap">
-    <span class="en">NEXT STEP</span>
+    <span class="en">COUPON</span>
     <div class="num">05 つづけたい方へ</div>
-    <h2 class="h2" id="next-h">気に入ってくれたら、<br>次は通常サイズで。</h2>
-    <div class="plan-box">
-      <div class="plan-flag">開催前の企画案</div>
-      <p class="plan-warn">このセクションは、開催を検討している特典の企画案です。現在ご利用いただける特典ではありません。内容はすべて未確定です。</p>
-      <ol class="flow">
-        <li><svg class="ic"><use href="#i-bag"/></svg><span><span class="st">STEP 1</span><b>お試しサイズを購入</b><small>食べてくれるか・与えやすいかを確認</small></span></li>
-        <li><svg class="ic"><use href="#i-gift"/></svg><span><span class="st">STEP 2</span><b>次回クーポンを受け取る</b><small>配布方法は検討中</small></span></li>
-        <li><svg class="ic"><use href="#i-cart"/></svg><span><span class="st">STEP 3</span><b>通常サイズで使う</b><small>同じ商品の通常サイズが対象（条件は検討中）</small></span></li>
-      </ol>
-      <dl class="tbd">
-        <div><dt>割引額</dt><dd>未定</dd></div>
-        <div><dt>対象商品</dt><dd>未定</dd></div>
-        <div><dt>最低購入金額</dt><dd>未定</dd></div>
-        <div><dt>配布方法</dt><dd>未定</dd></div>
-        <div><dt>利用期限</dt><dd>未定</dd></div>
-      </dl>
-      <div class="pairs">
-        <p>想定している組み合わせ（案）</p>
-        <ul>
-          <li><span>コルディカプセル</span><i>→</i><span>コルディ 30g／100g</span></li>
-          <li><span>クリルオイル 30粒</span><i>→</i><span>クリルオイル 180粒</span></li>
-          <li><span>プラセンタ12000 5g</span><i>→</i><span>プラセンタ12000 30g</span></li>
-        </ul>
+    <h2 class="h2" id="next-h">お試しのあとは、<br><em>通常サイズがおトク</em>に！</h2>
+    <p class="lead">気に入ってくれたら、次は通常サイズで。<br>お試しサイズをご購入の方に、<br>次回使えるクーポンをご用意します。</p>
+
+    <div class="coupon" role="img" aria-label="次回、通常サイズに使える5%OFFクーポン">
+      <div class="cp-main">
+        <span class="cp-lab">次回の通常サイズに使える</span>
+        <div class="cp-val">5<small>%</small><span>OFF</span></div>
+        <p class="cp-txt">クーポンをプレゼント！</p>
       </div>
+      <div class="cp-side">COUPON</div>
     </div>
+    <p class="cp-note"><b>企画案</b>開催前の内容です。配布方法・期間などの条件は決まり次第ご案内します。</p>
+
+    <ol class="flow">
+      <li><svg class="ic"><use href="#i-bag"/></svg><span><span class="st">STEP 1</span><b>お試しサイズを購入</b><small>食べてくれるか・与えやすいかを確認</small></span></li>
+      <li class="hl"><svg class="ic"><use href="#i-gift"/></svg><span><span class="st">STEP 2</span><b>5%OFFクーポンをお届け</b><small>次回のお買い物で使えるクーポン</small></span></li>
+      <li><svg class="ic"><use href="#i-cart"/></svg><span><span class="st">STEP 3</span><b>通常サイズがおトクに</b><small>同じ商品の通常サイズで使えます</small></span></li>
+    </ol>
+
+    <div class="pairs">
+      <p>この組み合わせで使えます</p>
+      <ul>
+        <li><span>コルディカプセル<br>（お試し）</span><svg class="ic"><use href="#i-right"/></svg><span class="to">コルディ<br>30g／100g</span></li>
+        <li><span>クリルオイル<br>30粒</span><svg class="ic"><use href="#i-right"/></svg><span class="to">クリルオイル<br>180粒</span></li>
+        <li><span>プラセンタ12000<br>5g</span><svg class="ic"><use href="#i-right"/></svg><span class="to">プラセンタ12000<br>30g</span></li>
+      </ul>
+    </div>
+
+    <p class="tbd-cap">クーポンの条件（企画中）</p>
+    <dl class="tbd">
+      <div><dt>割引</dt><dd>5%OFF</dd></div>
+      <div><dt>最低購入金額</dt><dd class="u">調整中</dd></div>
+      <div><dt>配布方法</dt><dd class="u">調整中</dd></div>
+      <div><dt>利用期限</dt><dd class="u">調整中</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -632,9 +661,11 @@ a{color:inherit}
     <h2 id="memo-h">制作確認メモ（掲載時は削除）</h2>
     <p class="memo-lead">2026年10月12日時点の楽天市場 商品ページ・与え方ページ（/contents/howtofeed/）を確認して作成しています。下記は先方確認が必要な事項です。</p>
 
-    <h3>A. 次回特典（⑥）── すべて未確定</h3>
+    <h3>A. 次回特典（⑥）── 割引額以外は未確定</h3>
     <ol>
-      <li><b>割引額・対象商品・最低購入金額・配布方法・利用期限</b>ページ上はすべて「未定」表示。確定後に差し替え、「開催前の企画案」表示と確認用バンドを外します。</li>
+      <li><b>割引額</b>5%OFFで掲載（2026年10月12日ご指示）。</li>
+      <li><b>最低購入金額・配布方法・利用期限・開催期間</b>ページ上は「調整中」表示。確定後に差し替え、「企画案」表記と確認用バンドを外します。</li>
+      <li><b>対象商品の組み合わせ</b>「お試し→同じ商品の通常サイズ」の3組で掲載中（コルディは30g・100gとも対象としています）。</li>
       <li><b>対象商品の範囲</b>お試しの「コルディカプセル」はコルディGのみ。通常サイズのコルディM（ブルーラベル）も「同じ商品」として対象にするか。100gも対象か。</li>
       <li><b>定期購入との関係</b>商品ページに「定期購入なら最大10%OFF」表示あり（コルディ30g等）。次回クーポンと定期購入の併用可否・案内の優先順位。</li>
       <li><b>開催期間・告知導線</b>同梱物／購入後メール／楽天クーポン配布などで導線が変わるため、方式決定後にSTEP2の文言を調整。</li>
