@@ -7,7 +7,7 @@
 <title>元気な今から始める健康習慣｜モノリス</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --green:#1f3a2c;
@@ -23,19 +23,19 @@
   --accent-ink:#a9552a;
   --accent-soft:#f3dccb;
   --sun:#e6b85c;
-  --serif:"Kaisei Opti",serif;
-  --sans:"Zen Kaku Gothic New",system-ui,sans-serif;
-  --en:"Josefin Sans",sans-serif;
+  --serif:"Noto Sans JP","游ゴシック体",YuGothic,"游ゴシック","Hiragino Sans",sans-serif;
+  --sans:"Noto Sans JP","游ゴシック体",YuGothic,"游ゴシック","Hiragino Sans",sans-serif;
+  --en:"Inter","Noto Sans JP",sans-serif;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.03em}
+body{margin:0;background:#93d2cd;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.03em}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.page{max-width:500px;margin:0 auto;background:var(--ivory);overflow:hidden;box-shadow:0 0 0 1px rgba(31,58,44,.06)}
 .pc{display:none}
-@media(min-width:900px){.pc{display:inline}.sp{display:none}}
 
 /* 確認用バンド */
 .draftband{background:#3b3b36;color:#f4efe2;font-size:12px;line-height:1.6;text-align:center;padding:8px 16px;letter-spacing:.05em}
@@ -51,7 +51,7 @@ a{color:inherit}
 .fv-photo{position:relative;height:min(132vw,560px);border-radius:0 120px 0 0;overflow:hidden}
 .fv-photo img{width:100%;height:100%;object-fit:cover;object-position:46% 50%}
 .fv-copy{display:flex;justify-content:center;padding-top:18px}
-.fv-copy h1{margin:0;writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;color:var(--green);font-size:31px;line-height:1.5;letter-spacing:.14em;white-space:nowrap}
+.fv-copy h1{margin:0;writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;color:var(--green);font-size:30px;line-height:1.5;letter-spacing:.12em;white-space:nowrap}
 .fv-copy h1 span{display:block}
 .fv-copy h1 span+span{margin-top:2.2em}
 .fv-under{padding:28px 20px 8px;display:grid;gap:18px}
@@ -63,24 +63,12 @@ a{color:inherit}
 .fv-nav a{text-decoration:none;color:var(--green);font-weight:500}
 .fv-nav a::after{content:"↓";margin-left:4px;color:var(--accent)}
 .fv-nav .plan{color:var(--muted)}
-@media(min-width:900px){
-  .fv{padding:10px 40px 30px}
-  .fv-stage{grid-template-columns:1fr 210px}
-  .fv-photo{height:620px;border-radius:0 220px 0 0}
-  .fv-copy{padding-top:36px}
-  .fv-copy h1{font-size:54px}
-  .fv-under{grid-template-columns:1.1fr 1fr;align-items:end;padding:44px 0 0;gap:40px}
-  .fv-sub{font-size:36px}
-  .fv-lead{font-size:16px}
-  .fv-nav{grid-column:1/-1}
-}
 
 /* 共通見出し */
 .sec{padding:84px 0}
 .num{font-family:var(--en);font-weight:600;font-size:13px;letter-spacing:.2em;color:var(--accent-ink)}
-.h2{margin:10px 0 0;font-family:var(--serif);font-weight:700;color:var(--green);font-size:30px;line-height:1.45;letter-spacing:.06em}
+.h2{margin:10px 0 0;font-family:var(--serif);font-weight:700;color:var(--green);font-size:28px;line-height:1.5;letter-spacing:.04em}
 .lead{margin:20px 0 0;font-size:16px;color:var(--muted)}
-@media(min-width:900px){.sec{padding:120px 0}.h2{font-size:44px}.lead{font-size:17px}}
 
 /* ===== ② 導入 ===== */
 .intro{background:var(--paper)}
@@ -101,11 +89,6 @@ a{color:inherit}
 .intro-photos .b img{height:190px}
 .intro-photos figcaption{font-size:12px;color:var(--muted);margin-top:6px}
 .intro-note{margin:26px 0 0;font-size:13px;color:var(--muted)}
-@media(min-width:900px){
-  .intro-grid{grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-  .intro-photos .a img{height:420px}
-  .intro-photos .b img{height:300px}
-}
 
 /* ===== ③ 商品 ===== */
 .pick-head{max-width:760px}
@@ -115,7 +98,6 @@ a{color:inherit}
 .chooser .p{grid-row:1;font-family:var(--serif);font-weight:700;color:var(--green);font-size:21px;margin-bottom:4px}
 .chooser .p::after{content:"→";margin-left:8px;color:var(--accent)}
 .chooser .k{font-size:18px;font-weight:700}
-@media(min-width:900px){.chooser{grid-template-columns:repeat(3,1fr);border-top:0}.chooser a{grid-template-columns:1fr;border-bottom:0;border-left:1px solid var(--line);padding:6px 28px}.chooser a:first-child{border-left:0;padding-left:0}.chooser .p{grid-row:auto;margin:8px 0 0;order:3}}
 
 .prod{margin-top:72px;background:var(--paper);border-radius:6px;overflow:hidden}
 .prod-top{padding:30px 20px 26px;color:#fff;background:var(--green);position:relative}
@@ -155,17 +137,6 @@ a{color:inherit}
 .btn.sub{background:transparent;border:1px dashed var(--line);color:var(--green);font-weight:500}
 .btn.sub .tg{background:var(--ivory-2);color:var(--muted)}
 .pricenote{font-size:12px;color:var(--muted);margin:10px 0 0;line-height:1.7}
-@media(min-width:900px){
-  .prod-top{padding:40px 48px}
-  .prod-top h3{font-size:40px}
-  .prod-body{grid-template-columns:400px 1fr;gap:40px;padding:0 48px 40px 0}
-  .prod-imgs{padding:40px 0 0 48px;align-content:start}
-  .prod-imgs.one{max-width:none}
-  .spec{padding:20px 0 0}
-  .spec .big{font-size:24px}
-  .buy{grid-template-columns:1fr 1fr}
-  .buy .btn.sub{grid-column:1/-1}
-}
 
 /* ===== ④ 目安量 ===== */
 .dose{background:var(--green);color:#f3efe4}
@@ -193,14 +164,6 @@ a{color:inherit}
 .tbl tr:last-child th,.tbl tr:last-child td{border-bottom:0}
 .dt .note{margin:10px 0 0;font-size:12.5px;color:#cfd8cc;line-height:1.8}
 .dt .note a{color:#fff}
-@media(min-width:900px){
-  .five{grid-template-columns:repeat(3,1fr)}
-  .five>div{grid-template-columns:1fr;padding:28px}
-  .five .v{font-size:40px;margin-top:10px}
-  .dtables{grid-template-columns:1fr 1fr;gap:56px 48px}
-  .dt.wide{grid-column:1/-1}
-  .tbl{font-size:15px}
-}
 
 /* ===== ⑤ お試し ===== */
 .trial{background:var(--ivory)}
@@ -221,13 +184,6 @@ a{color:inherit}
 .ti .go{display:inline-block;margin-top:4px;font-size:13px;font-weight:700;color:var(--green);border-bottom:1px solid var(--green)}
 .ti .alt{font-size:12px;color:var(--muted);margin-top:4px}
 .ti .alt a{color:var(--green)}
-@media(min-width:900px){
-  .trial-grid{grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
-  .trial-photo{margin:0;height:540px;border-radius:0 0 160px 0}
-  .trial-items{grid-template-columns:repeat(3,1fr);gap:24px}
-  .ti{grid-template-columns:1fr;padding:20px}
-  .ti img{width:100%;height:auto;aspect-ratio:1/1}
-}
 
 /* ===== ⑥ 次回特典（企画案） ===== */
 .next{background:var(--paper)}
@@ -249,12 +205,6 @@ a{color:inherit}
 .pairs li{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .pairs li span{background:#fff;padding:4px 10px;border-radius:999px;border:1px solid var(--line)}
 .pairs li i{font-style:normal;color:var(--accent)}
-@media(min-width:900px){
-  .plan-box{padding:64px 48px 40px}
-  .flow{grid-template-columns:repeat(3,1fr)}
-  .flow li{grid-template-columns:1fr;align-content:start}
-  .plan-cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-}
 
 /* ===== ⑦ FAQ ===== */
 .faq{background:var(--ivory)}
@@ -269,7 +219,6 @@ a{color:inherit}
 .faq .a p{margin:0 0 10px}
 .faq .a ul{margin:0 0 10px;padding-left:1.1em}
 .faq .a small{display:block;color:var(--muted);font-size:13px}
-@media(min-width:900px){.faq-in{display:grid;grid-template-columns:320px 1fr;gap:60px}.faq-list{margin-top:0}}
 
 /* 締め */
 .closing{background:var(--green);color:#fff;text-align:left}
@@ -277,7 +226,6 @@ a{color:inherit}
 .closing .links{margin-top:30px;display:grid;gap:10px}
 .closing .links a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.25);text-decoration:none;font-size:15px}
 .closing .links a::after{content:"→";color:var(--sun)}
-@media(min-width:900px){.closing .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:end}.closing p.big{font-size:40px}}
 
 /* ===== 制作確認メモ ===== */
 .memo{background:#e9e6dd;padding:64px 0 90px;font-size:14px;line-height:1.8}
@@ -294,6 +242,7 @@ a{color:inherit}
 </style>
 </head>
 <body>
+<div class="page">
 
 <div class="draftband"><b>確認用ページ</b>｜掲載前の制作案です。写真は仮素材、⑥の次回特典は開催前の企画案です。</div>
 
@@ -377,7 +326,7 @@ a{color:inherit}
           <div><dt><i>1</i>何歳から使える？</dt>
             <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応（商品ページ記載）。シニア期だけに限定した商品ではありません。</span></dd></div>
           <div><dt><i>2</i>どんな健康維持をサポートする？</dt>
-            <dd><span class="big">毎日の健康維持を通じて、<br class="sp">本来の免疫力を保つ</span><span class="sm">元気や食欲を保ちながら過ごす、毎日の健康管理に。免疫力を高めたり、病気の治療・予防を目的とした医薬品ではありません。</span></dd></div>
+            <dd><span class="big">毎日の健康維持を通じて、<br >本来の免疫力を保つ</span><span class="sm">元気や食欲を保ちながら過ごす、毎日の健康管理に。免疫力を高めたり、病気の治療・予防を目的とした医薬品ではありません。</span></dd></div>
           <div><dt><i>3</i>どんな形状？</dt>
             <dd><span class="big">粉末（30g・100g）</span><span class="sm">お試しサイズは「コルディカプセル」16粒（1粒：コルディG 0.25g）。</span>
               <div class="mg"><div><b>コルディM</b>冬虫夏草菌糸体粉末を使用。呼吸の早い子、てんかん経験のある子、短頭種の子にはMがおすすめ。</div><div><b>コルディG</b>冬虫夏草菌糸体粉末に、有機ゲルマニウムを配合。</div></div></dd></div>
@@ -409,7 +358,7 @@ a{color:inherit}
           <div><dt><i>1</i>何歳から使える？</dt>
             <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応（商品ページ記載）。</span></dd></div>
           <div><dt><i>2</i>どんな健康維持をサポートする？</dt>
-            <dd><span class="big">関節・心血管・脳の<br class="sp">健康維持</span><span class="sm">EPA・DHAなどのオメガ3脂肪酸、リン脂質、アスタキサンチンを含むクリルオイル。</span></dd></div>
+            <dd><span class="big">関節・心血管・脳の<br >健康維持</span><span class="sm">EPA・DHAなどのオメガ3脂肪酸、リン脂質、アスタキサンチンを含むクリルオイル。</span></dd></div>
           <div><dt><i>3</i>どんな形状？</dt>
             <dd><span class="big">ソフトカプセル</span><span class="sm">1粒410mg（クリルオイル250mg）。カプセルが苦手な子向けに、液体タイプ「クリルオイルEX」もあります。※甲殻類にアレルギーがある場合はご注意ください。</span></dd></div>
           <div><dt><i>4</i>どうやって与える？</dt>
@@ -439,7 +388,7 @@ a{color:inherit}
           <div><dt><i>1</i>何歳から使える？</dt>
             <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応（商品ページ記載）。</span></dd></div>
           <div><dt><i>2</i>どんな健康維持をサポートする？</dt>
-            <dd><span class="big">肝臓の健康、<br class="sp">皮膚・毛並み・毛艶の維持</span><span class="sm">元気や食欲の維持にも。ヒューマングレードの国産SPF豚プラセンタエキス末に、カキ肉エキスパウダー、サメ軟骨抽出物などを配合。</span></dd></div>
+            <dd><span class="big">肝臓の健康、<br >皮膚・毛並み・毛艶の維持</span><span class="sm">元気や食欲の維持にも。ヒューマングレードの国産SPF豚プラセンタエキス末に、カキ肉エキスパウダー、サメ軟骨抽出物などを配合。</span></dd></div>
           <div><dt><i>3</i>どんな形状？</dt>
             <dd><span class="big">粉末（5g・30g）</span><span class="sm">30gは付属スプーンを「白（約0.1g）」「緑（約1g）」から選べます。</span></dd></div>
           <div><dt><i>4</i>どうやって与える？</dt>
@@ -460,7 +409,7 @@ a{color:inherit}
 <section class="sec dose" id="dose" aria-labelledby="dose-h">
   <div class="wrap">
     <div class="num">03 ─ つづけるなら</div>
-    <h2 class="h2" id="dose-h">毎日続けるなら、<br class="sp">どのくらい？</h2>
+    <h2 class="h2" id="dose-h">毎日続けるなら、<br >どのくらい？</h2>
     <p class="lead">体重別の1日の目安量は、ショップの「与え方・目安量」ページに掲載している数値です。1袋で使える日数と1日あたりの金額は、その目安量と通常サイズの価格から計算した参考値です。</p>
 
     <div class="five" aria-label="体重5kgの子の場合">
@@ -698,5 +647,6 @@ a{color:inherit}
   </div>
 </section>
 
+</div>
 </body>
 </html>
