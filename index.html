@@ -355,6 +355,15 @@ a{color:inherit}
 /* 説明文は左揃え */
 .fv-lead,.lead,.five-cap,.intro-note,.cp-note{text-align:left}
 .lead br,.fv-lead br{display:none}
+
+/* クーポンは明るいオレンジ */
+:root{--orange:#ff8a1f;--orange-d:#e86a00;--orange-s:#f07300}
+.coupon,.cpn-hero,.cpn-bar,.fv-nav a.plan{background:var(--orange)!important;border-color:var(--orange)!important}
+.coupon,.cpn-hero{box-shadow:0 8px 0 -2px var(--orange-s)}
+.cpn-bar{box-shadow:0 6px 0 -2px var(--orange-s)}
+.cp-lab,.ch-lab,.ch-go,.cpn-bar .pct{color:var(--orange-d)!important}
+.next .h2 em{color:var(--orange-d)}
+.flow .st{color:var(--orange-d)}
 </style>
 </head>
 <body>
