@@ -443,6 +443,11 @@ section[id],header[id]{scroll-margin-top:62px}
 .sc-b .go .ic{font-size:15px}
 .ti-set{border:2px solid var(--orange)}
 .ti-tag{display:inline-block;background:var(--orange);color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:2px}
+
+.ti-sep{margin:14px 0 0;text-align:center;font-weight:700;font-size:15px}
+.ti-sep span{display:flex;align-items:center;gap:10px;justify-content:center}
+.ti-sep span::before,.ti-sep span::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.ti-sep small{display:block;margin-top:4px;font-size:12px;font-weight:500;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -480,12 +485,12 @@ section[id],header[id]{scroll-margin-top:62px}
   <nav class="fab-menu" aria-label="ページ内メニュー">
     <p class="fab-h">メニュー</p>
     <a href="#top" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-sun"/></svg>トップ</a>
+    <a href="#items" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>クーポン対象：お試し4点セット</a>
     <a href="#pick" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-paw"/></svg>うちの子には、どれがいい？</a>
     <a href="#dose" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-scale"/></svg>毎日続けるなら、どのくらい？</a>
     <a href="#trial" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>まずは、お試しサイズから</a>
     <a href="#next" class="cp" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポン</a>
     <a href="#faq" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-qa"/></svg>よくある質問</a>
-    <a href="#items" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>クーポン対象：お試し4点セット</a>
   </nav>
 </details>
 </div>
@@ -529,6 +534,28 @@ section[id],header[id]{scroll-margin-top:62px}
     </nav>
   </div>
 </header>
+
+<!-- クーポン対象商品（まとめ） -->
+<section class="sec cp-items" id="items" aria-labelledby="items-h">
+  <div class="wrap">
+    <span class="en">TRIAL</span>
+    <div class="num">5%OFFクーポンプレゼント対象</div>
+    <h2 class="h2" id="items-h">まずは、<br>お試し4点セットから<br>はじめてみませんか？</h2>
+    <a class="set-card" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
+      <span class="ci-badge">5%OFFクーポン プレゼント対象</span>
+      <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
+      <span class="sc-b">
+        <span class="n">サプリメント お試し4点セット</span>
+        <span class="d">4種類のサプリを少しずつ試せるセット</span>
+        <ul class="sc-list"><li>コルディM<b>3g</b></li><li>クリルオイル<b>6粒</b></li><li>アミノファイン<b>5g</b></li><li>プラセンタ12000<b>1g</b></li></ul>
+        <span class="pr">1,580<small>円</small></span>
+        <span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span>
+      </span>
+    </a>
+    <p class="pricenote">※価格は税込（配送方法：追跡可能メール便）。購入された方に、次回の通常商品に使える5%OFFクーポンをメールでお届けします（企画案・開催前）。</p>
+  </div>
+</section>
+
 
 <!-- ② 導入 -->
 <section class="sec intro" aria-labelledby="intro-h">
@@ -742,6 +769,7 @@ section[id],header[id]{scroll-margin-top:62px}
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
         <div><span class="ti-tag">5%OFFクーポン対象</span><div class="nm">お試し4点セット</div><div class="sz">コルディM・クリルオイル・アミノファイン・プラセンタ</div><div class="pr">1,580<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
       </a>
+      <p class="ti-sep"><span>単品のお試しサイズ</span><small>※こちらは5%OFFクーポンの対象外です</small></p>
       <a class="ti" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル お試し 犬パッケージ" loading="lazy">
         <div><div class="nm">コルディカプセル</div><div class="sz">16粒（コルディG）犬パッケージ</div><div class="pr">1,500<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
@@ -859,27 +887,6 @@ section[id],header[id]{scroll-margin-top:62px}
         </div>
       </details>
     </div>
-  </div>
-</section>
-
-<!-- クーポン対象商品（まとめ） -->
-<section class="sec cp-items" id="items" aria-labelledby="items-h">
-  <div class="wrap">
-    <span class="en">TRIAL</span>
-    <div class="num">5%OFFクーポンプレゼント対象</div>
-    <h2 class="h2" id="items-h">まずは、<br>お試し4点セットから<br>はじめてみませんか？</h2>
-    <a class="set-card" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
-      <span class="ci-badge">5%OFFクーポン プレゼント対象</span>
-      <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
-      <span class="sc-b">
-        <span class="n">サプリメント お試し4点セット</span>
-        <span class="d">4種類のサプリを少しずつ試せるセット</span>
-        <ul class="sc-list"><li>コルディM<b>3g</b></li><li>クリルオイル<b>6粒</b></li><li>アミノファイン<b>5g</b></li><li>プラセンタ12000<b>1g</b></li></ul>
-        <span class="pr">1,580<small>円</small></span>
-        <span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span>
-      </span>
-    </a>
-    <p class="pricenote">※価格は税込（配送方法：追跡可能メール便）。購入された方に、次回の通常商品に使える5%OFFクーポンをメールでお届けします（企画案・開催前）。</p>
   </div>
 </section>
 
