@@ -733,6 +733,12 @@ section[id],header[id]{scroll-margin-top:62px}
 .coupon.mini{margin-top:20px}
 .coupon.mini .cp-pre{margin-top:12px}
 .fv-nav a.plan span{text-align:center;letter-spacing:-.02em;font-size:clamp(11px,3vw,12px)}
+/* さらに！：吹き出し */
+.sarani{margin:26px 0 0!important}
+.sarani span{background:var(--orange-d);color:#fff!important;font-size:clamp(24px,7vw,32px)!important;padding:8px 30px 9px!important;border-radius:999px;letter-spacing:.08em!important;line-height:1.3}
+.sarani span::before{display:none}
+.sarani span::after{top:auto!important;bottom:-11px;right:auto!important;left:50%;width:22px!important;height:12px!important;border-radius:0!important;background:var(--orange-d);transform:translateX(-50%)!important;clip-path:polygon(0 0,100% 0,50% 100%)}
+.sarani+.coupon{margin-top:22px!important}
 </style>
 </head>
 <body>
