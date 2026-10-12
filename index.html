@@ -672,6 +672,13 @@ section[id],header[id]{scroll-margin-top:62px}
 .sp-new em{font-style:normal;font-size:.6em;color:var(--muted)}
 .bs-p s,.ti .pr s,.es-b .pr s{display:block;font-size:12px;color:var(--muted);font-weight:500;line-height:1.2}
 .bs-p,.ti-set .pr,.es-b .pr{color:#e8382f!important}
+.p999.sm{margin-top:24px}
+.p999.sm .p9-new{font-size:clamp(72px,22vw,100px)}
+.sarani{margin:18px 0 -4px;text-align:center}
+.sarani span{display:inline-block;position:relative;font-size:clamp(30px,9vw,40px);font-weight:900;color:var(--orange-d);letter-spacing:.06em;padding:0 22px}
+.sarani span::before,.sarani span::after{content:"";position:absolute;top:50%;width:16px;height:3px;background:var(--orange-d);border-radius:2px}
+.sarani span::before{left:0;transform:rotate(60deg)}
+.sarani span::after{right:0;transform:rotate(-60deg)}
 </style>
 </head>
 <body>
@@ -753,7 +760,7 @@ section[id],header[id]{scroll-margin-top:62px}
     <div class="p999" aria-label="お試しサプリメント4種セット 特別価格999円">
       <span class="p9-t">お試しサプリメント4種セットが</span>
       <span class="p9-row"><span class="p9-old">通常<s>1,580円</s></span><span class="p9-arw">▶</span><span class="p9-new">999<small>円</small></span></span>
-      <span class="p9-s">税込・特別価格</span>
+      <span class="p9-s">このキャンペーン限定・税込</span>
     </div>
     <a class="set-card" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
       <span class="ci-badge">いちばんおすすめ<br>次回使える5%OFFクーポンプレゼント対象</span>
@@ -762,7 +769,7 @@ section[id],header[id]{scroll-margin-top:62px}
         <span class="n">サプリメント お試し4点セット</span>
         <span class="d">4種類のサプリを少しずつ試せるセット</span>
         <p class="sc-h"><span>セット内容（4種類）</span></p><ul class="sc-list"><li><span class="sw" style="background:#e9eef7;color:#2a3f86">1</span><span class="nm"><b>コルディM</b><small>冬虫夏草で毎日の健康維持に</small></span><span class="am">3g</span></li><li><span class="sw" style="background:#1f6fd1;color:#fff">2</span><span class="nm"><b>アミノファイン</b><small>必須アミノ酸・BCAA</small></span><span class="am">5g</span></li><li><span class="sw" style="background:#d42a2a;color:#fff">3</span><span class="nm"><b>クリルオイル</b><small>関節・心血管・脳の健康維持に</small></span><span class="am">6粒</span></li><li><span class="sw" style="background:#8cc63f;color:#fff">4</span><span class="nm"><b>プラセンタ12000</b><small>肝臓・皮膚・毛並みの健康維持に</small></span><span class="am">1g</span></li></ul>
-        <span class="sp-price"><span class="sp-lab">特別価格</span><span class="sp-old">通常 <s>1,580円</s></span><span class="sp-new">999<small>円<em>（税込）</em></small></span></span>
+        <span class="sp-price"><span class="sp-lab">キャンペーン限定価格</span><span class="sp-old">通常 <s>1,580円</s></span><span class="sp-new">999<small>円<em>（税込）</em></small></span></span>
         <span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span>
       </span>
     </a>
@@ -946,11 +953,17 @@ section[id],header[id]{scroll-margin-top:62px}
     <span class="en">COUPON</span>
     <div class="num">04 つづけたい方へ</div>
     <h2 class="h2" id="next-h">お試しのあとは<span class="pe">、</span><br><em>対象サプリがおトク</em>に！</h2>
-    <p class="lead">気に入ってくれたら、次は続けやすいサイズで。お試しセットをご購入の方に、セットに入っている4種類のサプリに次回使えるクーポンをご用意します。</p>
+    <p class="lead">このキャンペーンの間だけ、お試し4種セットが999円。さらに、ご購入の方には、セットに入っている4種類のサプリに次回使えるクーポンをプレゼントします。</p>
+    <div class="p999 sm" aria-label="キャンペーン限定 お試しサプリメント4種セット 999円">
+      <span class="p9-t">キャンペーン限定！<br>お試し4種セットが</span>
+      <span class="p9-row"><span class="p9-old">通常<s>1,580円</s></span><span class="p9-arw">▶</span><span class="p9-new">999<small>円</small></span></span>
+      <span class="p9-s">このキャンペーン限定・税込</span>
+    </div>
+    <p class="sarani"><span>さらに！</span></p>
 
     <div class="coupon" role="img" aria-label="お試しセット購入で、次回対象サプリに使える5%OFFクーポン">
       <span class="cp-lab">お試しセット購入で</span>
-      <p class="cp-pre">次回対象サプリに使える</p>
+      <p class="cp-pre">次回使える</p>
       <div class="cp-val">5<small>%</small><span>OFF</span></div>
       <p class="cp-big">クーポン</p>
     </div>
