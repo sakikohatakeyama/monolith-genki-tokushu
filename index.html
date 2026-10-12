@@ -87,6 +87,19 @@ a{color:inherit}
 .cpn-bar .t1{display:block;font-size:12px;font-weight:700;opacity:.95}
 .cpn-bar .t2{display:block;font-size:16px;font-weight:700;line-height:1.4}
 .cpn-bar .ic{font-size:20px}
+.cpn-hero{position:relative;display:block;margin:28px 0 0;padding:34px 16px 22px;background:var(--coral);color:#fff;border-radius:24px;text-decoration:none;text-align:center;overflow:hidden;box-shadow:0 8px 0 -2px #d96a3c}
+.cpn-hero::before{content:"";position:absolute;inset:8px;border:2px dashed rgba(255,255,255,.55);border-radius:18px;pointer-events:none}
+.cpn-hero::after{content:"";position:absolute;top:0;bottom:0;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.3),transparent);animation:shine 3.2s ease-in-out infinite;pointer-events:none}
+.ch-flag{position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--lemon);color:var(--ink);font-family:var(--en);font-weight:800;font-size:12px;letter-spacing:.2em;padding:5px 18px 4px;border-radius:0 0 12px 12px}
+.ch-lab{display:inline-block;background:#fff;color:var(--coral-d);font-size:15px;font-weight:700;padding:5px 18px 4px;border-radius:999px}
+.ch-pre{display:block;margin-top:12px;font-size:18px;font-weight:700}
+.ch-val{display:block;width:max-content;margin:4px auto 0;font-family:var(--en);font-weight:800;font-size:80px;line-height:1;animation:beat 1.6s ease-in-out infinite}
+.ch-val small{font-size:38px}
+.ch-val b{font-size:44px;margin-left:8px}
+.ch-big{display:block;margin-top:4px;font-size:36px;font-weight:700;line-height:1.25;letter-spacing:.05em}
+.ch-big em{font-style:normal;display:block;font-size:18px;letter-spacing:.1em}
+.ch-go{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#fff;color:var(--coral-d);font-weight:700;font-size:14px;padding:8px 22px;border-radius:999px}
+.ch-go .ic{font-size:14px;animation:bob 1.6s ease-in-out infinite}
 /* ===== ② 導入 ===== */
 .intro .h2 em{font-style:normal;color:var(--teal);background:linear-gradient(transparent 62%,var(--lemon) 62%)}
 .day{list-style:none;margin:30px 0 0;padding:0;text-align:left}
@@ -310,8 +323,8 @@ a{color:inherit}
 .flow li.hl .ic{animation:floaty 2.4s ease-in-out infinite}
 
 /* 押したとき・ホバー */
-.btn,.ti,.chooser a,.cpn-bar,.fv-nav a,.closing .links a{transition:transform .2s ease,box-shadow .2s ease}
-.btn:hover,.ti:hover,.chooser a:hover,.cpn-bar:hover,.fv-nav a:hover,.closing .links a:hover{transform:translateY(-3px)}
+.btn,.ti,.chooser a,.cpn-bar,.cpn-hero,.fv-nav a,.closing .links a{transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover,.ti:hover,.chooser a:hover,.cpn-bar:hover,.cpn-hero:hover,.fv-nav a:hover,.closing .links a:hover{transform:translateY(-3px)}
 .btn:active,.ti:active,.chooser a:active,.cpn-bar:active{transform:translateY(1px) scale(.99)}
 
 /* スクロールで現れる（対応ブラウザのみ。非対応でも表示は崩れません） */
@@ -381,7 +394,14 @@ a{color:inherit}
       <li><svg class="ic"><use href="#i-bag"/></svg>お試しサイズ</li>
       <li><svg class="ic"><use href="#i-scale"/></svg>体重別の目安量</li>
     </ul>
-    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試しサイズ購入で</span><span class="t2">次回使える5%OFFクーポン</span></span><svg class="ic"><use href="#i-right"/></svg></a>
+    <a class="cpn-hero" href="#next">
+      <span class="ch-flag">CAMPAIGN</span>
+      <span class="ch-lab">お試しサイズ購入で</span>
+      <span class="ch-pre">次回通常商品に使える</span>
+      <span class="ch-val">5<small>%</small><b>OFF</b></span>
+      <span class="ch-big">クーポン<em>プレゼント</em></span>
+      <span class="ch-go">詳しく見る<svg class="ic"><use href="#i-down"/></svg></span>
+    </a>
     <nav class="fv-nav" aria-label="ページ内リンク">
       <a href="#pick">選び方<svg class="ic"><use href="#i-down"/></svg></a>
       <a href="#dose">目安量<svg class="ic"><use href="#i-down"/></svg></a>
