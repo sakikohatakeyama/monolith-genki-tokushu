@@ -712,6 +712,26 @@ section[id],header[id]{scroll-margin-top:62px}
 .p9-badge{width:clamp(74px,21vw,116px)!important;top:10px!important;right:10px!important;font-size:clamp(12px,3.5vw,18px)!important}
 .p9-main{margin-top:8px}
 .p9-badge{white-space:nowrap;font-size:clamp(11px,3.1vw,18px)!important;letter-spacing:-.02em}
+
+/* 999の調整・見出しを細く */
+.p9-t,.p9-old{font-weight:500!important;font-size:clamp(15px,4.3vw,25px)!important}
+.p9-old s{text-decoration-thickness:2px}
+.p9-new,.p999.sm .p9-new{letter-spacing:.02em!important;font-size:clamp(96px,29vw,150px)!important}
+.p9-main{gap:clamp(8px,2.6vw,16px)}
+/* セットカードの価格を大きく */
+.sp-lab{font-size:15px;padding:4px 18px}
+.sp-old{font-size:17px;margin-top:8px}
+.sp-new{font-size:clamp(84px,24vw,104px);line-height:1;letter-spacing:.01em}
+/* クーポン：チケット型 */
+.coupon{position:relative;border-radius:16px;padding:30px 30px 32px!important;
+ -webkit-mask:radial-gradient(circle 16px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 16px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+ mask:radial-gradient(circle 16px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 16px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;box-shadow:none!important}
+.coupon::before{content:"";position:absolute;inset:9px 26px;border:2px dashed rgba(255,255,255,.65);border-radius:10px;pointer-events:none}
+.cp-val{font-size:clamp(96px,28vw,146px)!important;margin-left:auto;margin-right:auto}
+.cp-val span{font-size:.66em!important;margin-left:.06em!important}
+.cp-big{font-size:clamp(34px,10vw,46px)!important;margin-top:4px!important}
+.coupon.mini{margin-top:20px}
+.coupon.mini .cp-pre{margin-top:12px}
 </style>
 </head>
 <body>
@@ -767,7 +787,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <img src="img/fv-168600257.jpg" alt="飼い主さんの腕の中でくつろぐ猫">
       <span class="fv-scrim" aria-hidden="true"></span>
       <h1 class="fv-h1"><span class="sr">これからも、一緒に元気な毎日を。お試しサプリ4点セット999円（税込）。さらに！お試し4点セット購入で次回対象サプリに使える5%OFFクーポンプレゼント！</span></h1>
-      <a class="fv-over" href="#items" aria-label="お試し4点セットへ"><img class="fv-top" src="img/fv-top.png?v=1" alt=""><img class="fv-bot" src="img/fv-bottom.png?v=2" alt=""></a>
+      <a class="fv-over" href="#items" aria-label="お試し4点セットへ"><img class="fv-top" src="img/fv-top.png?v=1" alt=""><img class="fv-bot" src="img/fv-bottom.png?v=3" alt=""></a>
     </div>
   </div>
   <div class="fv-under">
@@ -795,6 +815,13 @@ section[id],header[id]{scroll-margin-top:62px}
       <span class="p9-t">お試しサプリ4点セットが</span>
       <span class="p9-old"><s>通常価格1,580円</s></span>
       <span class="p9-main"><span class="p9-free">送料<br>無料</span><span class="p9-new">999</span><span class="p9-yen"><small>税込</small>円</span></span>
+    </div>
+    <p class="sarani"><span>さらに！</span></p>
+    <div class="coupon mini" role="img" aria-label="お試しセット購入で、次回対象サプリに使える5%OFFクーポン">
+      <span class="cp-lab">お試しセット購入で</span>
+      <p class="cp-pre">次回使える</p>
+      <div class="cp-val">5<small>%</small><span>OFF</span></div>
+      <p class="cp-big">クーポン</p>
     </div>
     <a class="set-card" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
       <span class="ci-badge">いちばんおすすめ<br>次回使える5%OFFクーポンプレゼント対象</span>
