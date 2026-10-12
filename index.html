@@ -701,7 +701,7 @@ section[id],header[id]{scroll-margin-top:62px}
 /* FV：上下分割の載せ画像 */
 .fv-over{inset:0!important;left:0!important;top:0!important;width:100%!important}
 .fv-over img{position:absolute;height:auto}
-.fv-over .fv-top{width:74%;left:13%;top:7%}
+.fv-over .fv-top{width:84%;left:8%;top:7%}
 .fv-over .fv-bot{width:84%;left:8%;bottom:3.5%}
 
 /* 999ブロック：参考の配置 */
@@ -772,6 +772,11 @@ section[id],header[id]{scroll-margin-top:62px}
 .intro-photos.slide figcaption{text-align:center}
 @keyframes slFlow{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.sl-track{animation:none}.intro-photos.slide{overflow-x:auto}}
+/* 999：丸バッジを枠外へはみ出す */
+.p999{overflow:visible!important;background:linear-gradient(100deg,#dd2a16 40%,#ef5a45 50%,#dd2a16 60%) 0 0/300% 100% #dd2a16!important;animation:p9shine 3.2s ease-in-out infinite}
+.p999::after{display:none!important}
+@keyframes p9shine{0%{background-position:100% 0}60%,100%{background-position:0 0}}
+.p9-badge{top:-22px!important;right:-14px!important;box-shadow:0 4px 0 rgba(0,0,0,.12)}
 </style>
 </head>
 <body>
@@ -827,7 +832,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <img src="img/fv-168600257.jpg" alt="飼い主さんの腕の中でくつろぐ猫">
       <span class="fv-scrim" aria-hidden="true"></span>
       <h1 class="fv-h1"><span class="sr">これからも、一緒に元気な毎日を。お試しサプリ4点セット999円（税込）。さらに！お試し4点セット購入で次回対象サプリに使える5%OFFクーポンプレゼント！</span></h1>
-      <a class="fv-over" href="#items" aria-label="お試し4点セットへ"><img class="fv-top" src="img/fv-top-eq.png?v=1" alt=""><img class="fv-bot" src="img/fv-bottom.png?v=3" alt=""></a>
+      <a class="fv-over" href="#items" aria-label="お試し4点セットへ"><img class="fv-top" src="img/fv-top.png?v=1" alt=""><img class="fv-bot" src="img/fv-bottom.png?v=3" alt=""></a>
     </div>
   </div>
   <div class="fv-under">
