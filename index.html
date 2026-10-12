@@ -739,6 +739,12 @@ section[id],header[id]{scroll-margin-top:62px}
 .sarani span::before{display:none}
 .sarani span::after{top:auto!important;bottom:-11px;right:auto!important;left:50%;width:22px!important;height:12px!important;border-radius:0!important;background:var(--orange-d);transform:translateX(-50%)!important;clip-path:polygon(0 0,100% 0,50% 100%)}
 .sarani+.coupon{margin-top:22px!important}
+/* キャンペーン詳細ボタン */
+.to-detail{position:relative;background:#dd2a16!important;border:0!important;color:#fff!important;font-size:clamp(16px,4.6vw,19px)!important;font-weight:800!important;padding:19px 56px 19px 20px!important;box-shadow:0 6px 0 #a81c0c!important;letter-spacing:.04em}
+.to-detail .arc{position:absolute;right:14px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;background:#fff;color:#dd2a16;display:grid;place-items:center}
+.to-detail .arc .ic{font-size:16px}
+.to-detail:hover{transform:translateY(-2px);box-shadow:0 8px 0 #a81c0c!important}
+.to-detail:active{transform:translateY(5px);box-shadow:0 1px 0 #a81c0c!important}
 </style>
 </head>
 <body>
@@ -842,7 +848,7 @@ section[id],header[id]{scroll-margin-top:62px}
       </span>
     </a>
     <p class="pricenote">※価格は税込（配送方法：追跡可能メール便）。購入された方に、次回セット内のサプリに使える5%OFFクーポンをメールでお届けします。※定期購入にはクーポンは使用できません（企画案・開催前）。</p>
-    <a class="to-detail" href="#next"><svg class="ic"><use href="#i-gift"/></svg>クーポンプレゼントキャンペーン詳細はこちら<svg class="ic ar"><use href="#i-down"/></svg></a>
+    <a class="to-detail" href="#next"><svg class="ic"><use href="#i-gift"/></svg>キャンペーン詳細はこちら<span class="arc"><svg class="ic ar"><use href="#i-down"/></svg></span></a>
   </div>
 </section>
 
