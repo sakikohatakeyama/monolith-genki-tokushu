@@ -622,6 +622,27 @@ section[id],header[id]{scroll-margin-top:62px}
 .btn small.cpn{display:block;font-size:11px;font-weight:700;color:var(--orange-d);margin-top:1px}
 .btn.try{grid-template-columns:1fr auto;grid-template-rows:auto auto;row-gap:6px;border-radius:18px;padding:12px 16px}
 .btn.try .tg{grid-column:1/-1;justify-self:start;font-size:11px}
+
+/* 商品画像入り・タイトル拡大 */
+.dt-img{width:64px;height:64px;border-radius:12px;object-fit:cover;flex:none;box-shadow:0 0 0 1px var(--line-soft)}
+.dt-head h3{font-size:20px}
+.pairs p{font-size:18px!important}
+.pairs ul.use{gap:10px}
+.pairs ul.use li a{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:var(--ink);background:var(--aqua);border-radius:14px;padding:10px 8px 12px;position:relative}
+.pairs ul.use li a img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#fff}
+.pairs ul.use li a span{background:none!important;padding:0!important;font-size:15px;font-weight:700}
+.pairs ul.use li a .ic{position:absolute;right:12px;bottom:14px;font-size:14px;color:var(--teal)}
+.elig-h{font-size:18px!important}
+.elig-sub{font-size:15px!important}
+.elig-mini a{display:flex!important;align-items:center;gap:8px;text-align:left!important;padding:6px!important}
+.elig-mini a img{width:44px;height:44px;object-fit:cover;border-radius:8px;flex:none}
+.elig-mini a span{font-size:12.5px;line-height:1.35}
+.tbd-cap{font-size:17px!important}
+.elig-h span{text-align:left;line-height:1.35}
+.elig-h .ic{font-size:30px!important}
+.elig-mini{grid-template-columns:1fr 1fr}
+.elig-mini a span{font-size:13px;white-space:nowrap}
+@media (max-width:420px){.elig-mini{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -864,7 +885,7 @@ section[id],header[id]{scroll-margin-top:62px}
     <p class="five-cap">※金額は1円未満を四捨五入した参考値です。実際の量はその子の体調・食欲に合わせて調整してください。</p>
 
     <div class="dt">
-      <div class="dt-head"><svg class="ic" style="background:var(--teal)"><use href="#i-leaf"/></svg><div><h3>コルディ 30g</h3><span class="dt-p">6,800円</span></div></div>
+      <div class="dt-head"><img class="dt-img" src="https://image.rakuten.co.jp/cordy/cabinet/item_img/cordymg/cordy_s1-m30.jpg" alt="" loading="lazy"><div><h3>コルディ 30g</h3><span class="dt-p">6,800円</span></div></div>
       <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v"><small>成長期</small>約45<small>円/日</small></span><span class="ex-v"><small>シニア期</small>約113<small>円/日</small></span></div>
       <p class="dt-sub"><span class="stg">幼少期・成長期</span></p>
       <table class="tbl">
@@ -887,7 +908,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <p class="note">付属の緑スプーンすりきり約1g、白スプーンすりきり約0.1g。ショップでは、1日の量を朝・昼・夜などに小分けして与えること、与え始めの時期はできる限り多めに与えることをおすすめしています（与え方ページの「おすすめ」量：2.5kgで1g、5kgで2g、10kgで4g）。10kgを超える子の量は<a href="https://www.rakuten.co.jp/cordy/contents/howtofeed/">与え方ページ</a>またはショップへご相談ください。</p>
     </div>
     <div class="dt">
-      <div class="dt-head"><svg class="ic" style="background:var(--coral)"><use href="#i-drop"/></svg><div><h3>クリルオイル 180粒</h3><span class="dt-p">6,700円</span></div></div>
+      <div class="dt-head"><img class="dt-img" src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil180sum3.jpg" alt="" loading="lazy"><div><h3>クリルオイル 180粒</h3><span class="dt-p">6,700円</span></div></div>
       <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v">約37〜74<small>円/日</small></span></div>
       <p class="dt-sub">1日の目安量</p>
       <table class="tbl">
@@ -902,7 +923,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <p class="note">体調に合わせて量を増減しても問題ありません（ショップ記載）。お試しの30粒（1,650円）なら、〜5kgの子で15〜30日分です。</p>
     </div>
     <div class="dt">
-      <div class="dt-head"><svg class="ic" style="background:var(--mustard)"><use href="#i-spark"/></svg><div><h3>プラセンタ12000 30g</h3><span class="dt-p">7,800円</span></div></div>
+      <div class="dt-head"><img class="dt-img" src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-30.jpg" alt="" loading="lazy"><div><h3>プラセンタ12000 30g</h3><span class="dt-p">7,800円</span></div></div>
       <div class="ex"><span class="ex-l">体重5kgの子なら</span><span class="ex-v">約26〜52<small>円/日</small></span></div>
       <p class="dt-sub">1日の目安量</p>
       <table class="tbl">
@@ -984,28 +1005,23 @@ section[id],header[id]{scroll-margin-top:62px}
     </ol>
 
     <div class="elig">
-      <p class="elig-h"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポンプレゼント対象商品</p>
+      <p class="elig-h"><svg class="ic"><use href="#i-gift"/></svg><span>5%OFFクーポン<br>プレゼント対象商品</span></p>
       <a class="elig-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
         <span class="es-b"><span class="n">サプリメント お試し4点セット</span><span class="d">コルディM 3g・クリルオイル 6粒・アミノファイン 5g・プラセンタ12000 1g</span><span class="pr">1,580<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
       </a>
       <p class="elig-sub">単品のお試しサイズも対象です</p>
       <div class="elig-mini">
-        <a href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">コルディカプセル（犬）</a>
-        <a href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/">コルディカプセル（猫）</a>
-        <a href="https://item.rakuten.co.jp/cordy/krilloil35/">クリルオイル 30粒</a>
-        <a href="https://item.rakuten.co.jp/cordy/placenta5g/">プラセンタ12000 5g</a>
+        <a href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/"><img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="" loading="lazy"><span>コルディカプセル（犬）</span></a>
+        <a href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/"><img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-cat1500.jpg" alt="" loading="lazy"><span>コルディカプセル（猫）</span></a>
+        <a href="https://item.rakuten.co.jp/cordy/krilloil35/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil30sum2.jpg" alt="" loading="lazy"><span>クリルオイル 30粒</span></a>
+        <a href="https://item.rakuten.co.jp/cordy/placenta5g/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-5.jpg" alt="" loading="lazy"><span>プラセンタ12000 5g</span></a>
       </div>
     </div>
 
     <div class="pairs">
       <p>クーポンが使える対象サプリ</p>
-      <ul class="use">
-        <li><span>コルディ</span></li>
-        <li><span>クリルオイル</span></li>
-        <li><span>アミノファイン</span></li>
-        <li><span>プラセンタ12000</span></li>
-      </ul>
+      <ul class="use"><li><a href="https://item.rakuten.co.jp/cordy/cordyg30/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/cordymg/cordy_s1-m30.jpg" alt="" loading="lazy"><span>コルディ</span><svg class="ic"><use href="#i-right"/></svg></a></li><li><a href="https://item.rakuten.co.jp/cordy/krilloil180/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil180sum3.jpg" alt="" loading="lazy"><span>クリルオイル</span><svg class="ic"><use href="#i-right"/></svg></a></li><li><a href="https://item.rakuten.co.jp/cordy/aminofine100/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/aminofine100-sam.jpg" alt="" loading="lazy"><span>アミノファイン</span><svg class="ic"><use href="#i-right"/></svg></a></li><li><a href="https://item.rakuten.co.jp/cordy/placenta30g/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-30.jpg" alt="" loading="lazy"><span>プラセンタ12000</span><svg class="ic"><use href="#i-right"/></svg></a></li></ul>
       <p class="pairs-note">お試し4点セットに入っている4種類が対象<span class="pe">。</span><br>容量・サイズは問いません<span class="pe">。</span></p>
       <p class="pairs-ng">※定期購入にはクーポンは使用できません<span class="pe">。</span></p>
     </div>
