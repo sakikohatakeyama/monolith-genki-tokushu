@@ -445,8 +445,8 @@ section[id],header[id]{scroll-margin-top:62px}
 .ti-tag{display:inline-block;background:var(--orange);color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:2px}
 
 .ti-sep{margin:14px 0 0;text-align:center;font-weight:700;font-size:15px}
-.ti-sep span{display:flex;align-items:center;gap:10px;justify-content:center}
-.ti-sep span::before,.ti-sep span::after{content:"";flex:1;height:1px;background:var(--line-soft)}
+.ti-sep > span{display:flex;align-items:center;gap:10px;justify-content:center}
+.ti-sep > span::before,.ti-sep > span::after{content:"";flex:1;height:1px;background:var(--line-soft)}
 .ti-sep small{display:block;margin-top:4px;font-size:12px;font-weight:500;color:var(--muted)}
 
 /* FV：支給の文字画像を写真に重ねる */
@@ -589,6 +589,11 @@ section[id],header[id]{scroll-margin-top:62px}
 .ti-sep small{color:var(--orange-d);font-weight:700}
 .items-also{line-height:1.5;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;margin:16px 0 0;padding:12px 10px;border:1.5px dashed var(--orange);border-radius:14px;background:#fff;color:var(--orange-d);font-size:14px;font-weight:700;text-decoration:none}
 .items-also .ic{font-size:14px;animation:bob 1.6s ease-in-out infinite}
+.items-sep{margin-top:30px}
+.ci-list .ci-card{border-width:1.5px}
+.ci-list .ci-card img{margin-top:0}
+.ci-body .n{font-size:14px}
+.ci-body .d{font-size:12px}
 </style>
 </head>
 <body>
@@ -680,7 +685,13 @@ section[id],header[id]{scroll-margin-top:62px}
         <span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span>
       </span>
     </a>
-    <a class="items-also" href="#trial"><span>単品のお試しサイズも<span class="pe">、</span><br>5%OFFクーポンプレゼントの対象です</span><svg class="ic"><use href="#i-down"/></svg></a>
+    <p class="ti-sep items-sep"><span>単品のお試しサイズ</span><small>単品のお試しサイズも<span class="pe">、</span><br>5%OFFクーポンプレゼントの対象です</small></p>
+    <div class="ci-list">
+      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/"><img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル 16粒・犬パッケージ" loading="lazy"><span class="ci-body"><span class="n">コルディカプセル</span><span class="d">16粒・犬パッケージ</span><span class="pr">1,500<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span></a>
+      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/"><img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-cat1500.jpg" alt="コルディカプセル 16粒・猫パッケージ" loading="lazy"><span class="ci-body"><span class="n">コルディカプセル</span><span class="d">16粒・猫パッケージ</span><span class="pr">1,500<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span></a>
+      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/krilloil35/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil30sum2.jpg" alt="クリルオイル 30粒" loading="lazy"><span class="ci-body"><span class="n">クリルオイル</span><span class="d">30粒</span><span class="pr">1,650<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span></a>
+      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/placenta5g/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-5.jpg" alt="プラセンタ12000 5g" loading="lazy"><span class="ci-body"><span class="n">プラセンタ12000</span><span class="d">5g</span><span class="pr">1,800<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span></a>
+    </div>
     <p class="pricenote">※価格は税込（配送方法：追跡可能メール便）。購入された方（単品のお試しサイズも対象）に、次回セット内のサプリ（容量問わず）に使える5%OFFクーポンをメールでお届けします。※定期購入にはクーポンは使用できません（企画案・開催前）。</p>
   </div>
 </section>
