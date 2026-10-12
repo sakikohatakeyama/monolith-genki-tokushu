@@ -496,6 +496,16 @@ section[id],header[id]{scroll-margin-top:62px}
 .plus-a .al{font-family:"Inter",sans-serif;font-weight:800;font-style:italic;font-size:1.02em;margin-left:0}
 .plus-a{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .4s both}
 .plus-a + .fv-lead{margin-top:26px}
+
+/* 選び方カードをボタンらしく */
+.chooser a{grid-template-columns:56px 1fr 36px;box-shadow:0 4px 0 var(--line);transition:transform .15s,box-shadow .15s}
+.chooser a:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--line)}
+.chooser a:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
+.chooser .go{width:36px;height:36px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--ink)}
+.chooser .go .ic{font-size:18px;padding:0;background:none!important;color:var(--ink);animation:bob 1.6s ease-in-out infinite}
+.chooser a:hover .go{background:var(--orange)}
+.chooser a:hover .go .ic{color:#fff}
+.chooser .k{word-break:normal;text-wrap:wrap;white-space:nowrap;font-size:13px}
 </style>
 </head>
 <body>
@@ -552,7 +562,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <img src="img/fv-168600257.jpg" alt="飼い主さんの腕の中でくつろぐ猫">
       <span class="fv-scrim" aria-hidden="true"></span>
       <h1 class="fv-h1"><span class="sr">これからも、一緒に元気な毎日を。お試し4点セット購入で、次回通常商品に使える5%OFFクーポンプレゼント！</span></h1>
-      <a class="fv-over" href="#items" aria-label="お試し4点セットへ"><img src="img/fv-overlay.png" alt=""></a>
+      <a class="fv-over" href="#items" aria-label="お試し4点セットへ"><img src="img/fv-overlay.png?v=2" alt=""></a>
     </div>
   </div>
   <div class="fv-under">
@@ -621,9 +631,9 @@ section[id],header[id]{scroll-margin-top:62px}
     <h2 class="h2" id="pick-h">うちの子には<span class="pe">、</span><br>どれがいい？</h2>
     <p class="lead">どんな健康維持を考えたいかで選んでみてください。3つのサプリを、同じ順番・同じ項目でご紹介します。</p>
     <div class="chooser">
-      <a href="#p-cordy"><svg class="ic" style="background:var(--teal)"><use href="#i-leaf"/></svg><span><span class="q">毎日の健康維持を通じて</span><span class="p">コルディM・G</span><span class="k">本来の免疫力を保ちたい</span></span><svg class="ic go"><use href="#i-down"/></svg></a>
-      <a href="#p-krill"><svg class="ic" style="background:var(--coral)"><use href="#i-drop"/></svg><span><span class="q">歩く・走る毎日のために</span><span class="p">クリルオイル</span><span class="k">関節・心血管・脳の健康維持</span></span><svg class="ic go"><use href="#i-down"/></svg></a>
-      <a href="#p-plac"><svg class="ic" style="background:var(--mustard)"><use href="#i-spark"/></svg><span><span class="q">内側と外側のために</span><span class="p">プラセンタ12000</span><span class="k">肝臓・皮膚・毛並みの健康維持</span></span><svg class="ic go"><use href="#i-down"/></svg></a>
+      <a href="#p-cordy"><svg class="ic" style="background:var(--teal)"><use href="#i-leaf"/></svg><span><span class="q">毎日の健康維持を通じて</span><span class="p">コルディM・G</span><span class="k">本来の免疫力を保ちたい</span></span><span class="go"><svg class="ic"><use href="#i-down"/></svg></span></a>
+      <a href="#p-krill"><svg class="ic" style="background:var(--coral)"><use href="#i-drop"/></svg><span><span class="q">歩く・走る毎日のために</span><span class="p">クリルオイル</span><span class="k">関節・心血管・脳の健康維持</span></span><span class="go"><svg class="ic"><use href="#i-down"/></svg></span></a>
+      <a href="#p-plac"><svg class="ic" style="background:var(--mustard)"><use href="#i-spark"/></svg><span><span class="q">内側と外側のために</span><span class="p">プラセンタ12000</span><span class="k">肝臓・皮膚・毛並みの健康維持</span></span><span class="go"><svg class="ic"><use href="#i-down"/></svg></span></a>
     </div>
 
     <!-- コルディ -->
