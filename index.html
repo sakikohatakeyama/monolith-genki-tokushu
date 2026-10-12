@@ -679,6 +679,24 @@ section[id],header[id]{scroll-margin-top:62px}
 .sarani span::before,.sarani span::after{content:"";position:absolute;top:50%;width:16px;height:3px;background:var(--orange-d);border-radius:2px}
 .sarani span::before{left:0;transform:rotate(60deg)}
 .sarani span::after{right:0;transform:rotate(-60deg)}
+
+/* 999円ブロック（参考デザイン） */
+.p999{position:relative;margin:26px 0 0;padding:26px 18px 22px 22px;border-radius:22px;background:#dd2a16;color:#fff;text-align:left;box-shadow:none;overflow:hidden}
+.p999::before{display:none}
+.p9-badge{position:absolute;top:14px;right:14px;width:clamp(92px,26vw,120px);aspect-ratio:1;border-radius:50%;background:#ffef2a;color:#dd2a16;display:grid;place-items:center;text-align:center;font-weight:900;font-size:clamp(14px,4.2vw,19px);line-height:1.25;transform:rotate(10deg);z-index:2}
+.p9-t{display:block;font-size:clamp(19px,5.6vw,27px);font-weight:900;line-height:1.35;padding-right:clamp(92px,26vw,120px)}
+.p9-old{display:block;margin-top:2px;font-size:clamp(16px,4.6vw,22px);font-weight:900;opacity:.95}
+.p9-old s{font-family:var(--num);text-decoration-thickness:2px;margin-left:4px}
+.p9-main{display:flex;align-items:flex-end;justify-content:center;gap:clamp(6px,2vw,12px);margin-top:4px}
+.p9-free{flex:none;background:#fff;color:#dd2a16;font-weight:900;font-size:clamp(18px,5.4vw,26px);line-height:1.2;padding:8px 8px;border-radius:8px;text-align:center;margin-bottom:clamp(8px,2.4vw,14px)}
+.p9-new{font-family:var(--num);font-weight:700;font-size:clamp(108px,34vw,160px);line-height:.85;color:#ffef2a;letter-spacing:-.04em;animation:none}
+.p9-yen{display:flex;flex-direction:column;color:#ffef2a;font-weight:900;font-size:clamp(34px,11vw,52px);line-height:1;margin-bottom:clamp(4px,1.6vw,10px)}
+.p9-yen small{font-size:.5em;margin-bottom:6px}
+.p999.sm .p9-new{font-size:clamp(108px,34vw,160px)}
+.p9-old s{display:inline!important;font-size:inherit!important}
+.p9-old{white-space:nowrap}
+.p9-yen,.p9-yen small{white-space:nowrap}
+.p9-t{padding-right:0;font-size:clamp(22px,6.4vw,30px)}
 </style>
 </head>
 <body>
@@ -757,10 +775,11 @@ section[id],header[id]{scroll-margin-top:62px}
     <span class="en">TRIAL</span>
     <div class="num">次回使える5%OFFクーポンプレゼント対象</div>
     <h2 class="h2" id="items-h">まずは、お試し4点セットから<br>はじめてみませんか？</h2>
-    <div class="p999" aria-label="お試しサプリメント4種セット 特別価格999円">
-      <span class="p9-t">お試しサプリメント4種セットが</span>
-      <span class="p9-row"><span class="p9-old">通常<s>1,580円</s></span><span class="p9-arw">▶</span><span class="p9-new">999<small>円</small></span></span>
-      <span class="p9-s">このキャンペーン限定・税込</span>
+    <div class="p999" aria-label="お試しサプリ4点セットがキャンペーン限定価格 999円（税込・送料無料）">
+      <span class="p9-badge">キャンペーン<br>限定価格</span>
+      <span class="p9-t">お試しサプリ<br>4点セットが</span>
+      <span class="p9-old">通常価格<s>1,580円</s></span>
+      <span class="p9-main"><span class="p9-free">送料<br>無料</span><span class="p9-new">999</span><span class="p9-yen"><small>税込</small>円</span></span>
     </div>
     <a class="set-card" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
       <span class="ci-badge">いちばんおすすめ<br>次回使える5%OFFクーポンプレゼント対象</span>
@@ -954,10 +973,11 @@ section[id],header[id]{scroll-margin-top:62px}
     <div class="num">04 つづけたい方へ</div>
     <h2 class="h2" id="next-h">お試しのあとは<span class="pe">、</span><br><em>対象サプリがおトク</em>に！</h2>
     <p class="lead">このキャンペーンの間だけ、お試し4種セットが999円。さらに、ご購入の方には、セットに入っている4種類のサプリに次回使えるクーポンをプレゼントします。</p>
-    <div class="p999 sm" aria-label="キャンペーン限定 お試しサプリメント4種セット 999円">
-      <span class="p9-t">キャンペーン限定！<br>お試し4種セットが</span>
-      <span class="p9-row"><span class="p9-old">通常<s>1,580円</s></span><span class="p9-arw">▶</span><span class="p9-new">999<small>円</small></span></span>
-      <span class="p9-s">このキャンペーン限定・税込</span>
+    <div class="p999 sm" aria-label="お試しサプリ4点セットがキャンペーン限定価格 999円（税込・送料無料）">
+      <span class="p9-badge">キャンペーン<br>限定価格</span>
+      <span class="p9-t">お試しサプリ<br>4点セットが</span>
+      <span class="p9-old">通常価格<s>1,580円</s></span>
+      <span class="p9-main"><span class="p9-free">送料<br>無料</span><span class="p9-new">999</span><span class="p9-yen"><small>税込</small>円</span></span>
     </div>
     <p class="sarani"><span>さらに！</span></p>
 
