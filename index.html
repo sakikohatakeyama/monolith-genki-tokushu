@@ -797,6 +797,15 @@ section[id],header[id]{scroll-margin-top:62px}
 .mg div:last-child b{color:#d97a00!important}
 .btn.sub{background:#fff!important;border:1.5px solid var(--line)!important;color:var(--ink)!important}
 .btn.sub .tg{background:#d42a2a!important;color:#fff!important}
+/* 999：スクロールで一度だけドーン */
+.p999{animation:none!important;background:#dd2a16!important}
+.p9-new,.bb-num{display:inline-block;transform-origin:50% 80%}
+.js-don .p9-new,.js-don .bb-num{opacity:0;transform:scale(2.6)}
+.js-don .don .p9-new,.js-don .don .bb-num{animation:don .7s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes don{0%{opacity:0;transform:scale(2.6)}55%{opacity:1;transform:scale(.88)}75%{transform:scale(1.08)}100%{opacity:1;transform:scale(1)}}
+.js-don .don.p999,.js-don .don.bs-big{animation:donShake .45s .3s ease-out both!important}
+@keyframes donShake{0%,100%{transform:none}20%{transform:translate(-4px,2px) rotate(-1deg)}45%{transform:translate(4px,-2px) rotate(1deg)}70%{transform:translate(-2px,1px)}}
+@media (prefers-reduced-motion:reduce){.js-don .p9-new,.js-don .bb-num{opacity:1;transform:none;animation:none!important}}
 </style>
 </head>
 <body>
@@ -1055,9 +1064,9 @@ section[id],header[id]{scroll-margin-top:62px}
     <div class="trial-items">
       <a class="ti ti-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
         <img src="img/set4.png?v=1" alt="サプリメント お試し4種セット" loading="lazy">
-        <div><span class="ti-tag">次回使える5%OFFクーポン<br>プレゼント対象</span><div class="nm">お試し4種セット</div><div class="sz">コルディM・クリルオイル・アミノファイン・プラセンタ</div><div class="pr"><s>1,580円</s>999<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
+        <div><span class="ti-tag">次回使える5%OFFクーポン<br>プレゼント対象商品</span><div class="nm">お試し4種セット</div><div class="sz">コルディM・クリルオイル・アミノファイン・プラセンタ</div><div class="pr"><s>1,580円</s>999<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
       </a>
-      <p class="ti-sep"><span>単品のお試しサイズ</span><small>※単品のお試しサイズは、次回使える5%OFFクーポンプレゼントの対象外です</small></p>
+      <p class="ti-sep"><span>単品のお試しサイズもあります</span><small>※単品のお試しサイズは、次回使える5%OFFクーポンプレゼントの対象外です</small></p>
       <a class="ti" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル お試し 犬パッケージ" loading="lazy">
         <div><div class="nm">コルディカプセル</div><div class="sz">16粒（コルディG）犬パッケージ</div><div class="pr">1,500<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
@@ -1199,5 +1208,13 @@ section[id],header[id]{scroll-margin-top:62px}
 
 
 </div>
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  document.documentElement.classList.add('js-don');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('don');io.unobserve(e.target);}});},{threshold:.5});
+  document.querySelectorAll('.p999,.bs-big').forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>
