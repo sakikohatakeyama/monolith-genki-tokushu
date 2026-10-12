@@ -212,7 +212,8 @@ a{color:inherit}
 .cp-val{margin-top:6px;font-family:var(--en);font-weight:800;font-size:64px;line-height:1;letter-spacing:-.01em}
 .cp-val small{font-size:30px;margin-left:2px}
 .cp-val span{font-family:var(--sans);font-size:24px;font-weight:700;margin-left:4px}
-.cp-txt{margin:8px 0 0;font-size:14px;font-weight:700;line-height:1.5}
+.cp-txt{margin:8px 0 0;font-size:15px;font-weight:700;line-height:1.5}
+.cp-txt small{display:block;font-size:12.5px;opacity:.95}
 .cp-side{border-left:2px dashed rgba(255,255,255,.7);display:grid;place-items:center;font-weight:700;font-size:14px;line-height:1.3;writing-mode:vertical-rl;letter-spacing:.2em;background:#e9733f}
 .cp-note{margin:14px 0 0;font-size:12px;color:var(--muted)}
 .cp-note b{display:inline-block;background:var(--ink);color:#fff;font-size:11px;padding:1px 8px;border-radius:999px;margin-right:6px}
@@ -308,7 +309,7 @@ a{color:inherit}
 .cpn-bar .pct{animation:beat 1.6s ease-in-out infinite}
 .cpn-bar>.ic,.closing .links a .ic,.ti .go .ic{animation:nudge 1.4s ease-in-out infinite}
 .coupon{animation:wiggle 5s ease-in-out infinite}
-.cp-val{display:inline-block;animation:beat 1.8s ease-in-out infinite;transform-origin:left center}
+.cp-val{display:block;width:max-content;animation:beat 1.8s ease-in-out infinite;transform-origin:left center}
 .btn.try{animation:ring 2s ease-out infinite}
 .flow li.hl .ic{animation:floaty 2.4s ease-in-out infinite}
 
@@ -384,7 +385,7 @@ a{color:inherit}
       <li><svg class="ic"><use href="#i-bag"/></svg>お試しサイズ</li>
       <li><svg class="ic"><use href="#i-scale"/></svg>体重別の目安量</li>
     </ul>
-    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試しのあとは、クーポンで</span><span class="t2">通常サイズが5%OFFに！</span></span><svg class="ic"><use href="#i-right"/></svg></a>
+    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試しサイズ購入で</span><span class="t2">次回使える5%OFFクーポン</span></span><svg class="ic"><use href="#i-right"/></svg></a>
     <nav class="fv-nav" aria-label="ページ内リンク">
       <a href="#pick">選び方<svg class="ic"><use href="#i-down"/></svg></a>
       <a href="#dose">目安量<svg class="ic"><use href="#i-down"/></svg></a>
@@ -592,7 +593,7 @@ a{color:inherit}
       <li><svg class="ic"><use href="#i-bowl"/></svg>いつものごはんと、合わせやすいか</li>
       <li><svg class="ic"><use href="#i-cal"/></svg>家族みんなで、毎日続けやすいか</li>
     </ul>
-    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試し購入の方に、次回使える</span><span class="t2">5%OFFクーポン進呈</span></span><svg class="ic"><use href="#i-right"/></svg></a>
+    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試しサイズ購入で</span><span class="t2">次回使える5%OFFクーポン</span></span><svg class="ic"><use href="#i-right"/></svg></a>
     <div class="trial-items">
       <a class="ti" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル お試し 犬パッケージ" loading="lazy">
@@ -623,11 +624,11 @@ a{color:inherit}
     <h2 class="h2" id="next-h">お試しのあとは、<br><em>通常サイズがおトク</em>に！</h2>
     <p class="lead">気に入ってくれたら、次は通常サイズで。<br>お試しサイズをご購入の方に、<br>次回使えるクーポンをご用意します。</p>
 
-    <div class="coupon" role="img" aria-label="次回、通常サイズに使える5%OFFクーポン">
+    <div class="coupon" role="img" aria-label="お試しサイズ購入で、次回使える5%OFFクーポン（通常商品に）">
       <div class="cp-main">
-        <span class="cp-lab">次回の通常サイズに使える</span>
+        <span class="cp-lab">お試しサイズ購入で</span>
         <div class="cp-val">5<small>%</small><span>OFF</span></div>
-        <p class="cp-txt">クーポンをプレゼント！</p>
+        <p class="cp-txt">次回使える5%OFFクーポン<small>（通常商品に）</small></p>
       </div>
       <div class="cp-side">COUPON</div>
     </div>
