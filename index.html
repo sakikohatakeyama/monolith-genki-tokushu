@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>元気な今から始める健康習慣｜モノリス</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1f3a2c;
+  --green-2:#2d5040;
+  --green-soft:#dfe6db;
+  --ivory:#f6f1e6;
+  --ivory-2:#ede5d3;
+  --paper:#fbf8f1;
+  --ink:#232a22;
+  --muted:#5d6457;
+  --line:#d8cdb6;
+  --accent:#cf7a4a;
+  --accent-ink:#a9552a;
+  --accent-soft:#f3dccb;
+  --sun:#e6b85c;
+  --serif:"Kaisei Opti",serif;
+  --sans:"Zen Kaku Gothic New",system-ui,sans-serif;
+  --en:"Josefin Sans",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.03em}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.pc{display:none}
+@media(min-width:900px){.pc{display:inline}.sp{display:none}}
+
+/* 確認用バンド */
+.draftband{background:#3b3b36;color:#f4efe2;font-size:12px;line-height:1.6;text-align:center;padding:8px 16px;letter-spacing:.05em}
+.draftband b{color:var(--sun);font-weight:700}
+
+/* 店舗バー */
+.shopbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;font-size:12px;color:var(--muted);max-width:1180px;margin:0 auto}
+.shopbar strong{font-weight:500;color:var(--green)}
+
+/* ===== ① FV ===== */
+.fv{position:relative;max-width:1180px;margin:0 auto;padding:0 0 8px}
+.fv-stage{display:grid;grid-template-columns:1fr 92px;align-items:stretch}
+.fv-photo{position:relative;height:min(132vw,560px);border-radius:0 120px 0 0;overflow:hidden}
+.fv-photo img{width:100%;height:100%;object-fit:cover;object-position:46% 50%}
+.fv-copy{display:flex;justify-content:center;padding-top:18px}
+.fv-copy h1{margin:0;writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;color:var(--green);font-size:31px;line-height:1.5;letter-spacing:.14em;white-space:nowrap}
+.fv-copy h1 span{display:block}
+.fv-copy h1 span+span{margin-top:2.2em}
+.fv-under{padding:28px 20px 8px;display:grid;gap:18px}
+.fv-tag{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--accent-ink);font-weight:700;letter-spacing:.12em}
+.fv-tag::before{content:"";width:28px;height:1px;background:currentColor}
+.fv-sub{margin:0;font-family:var(--serif);font-weight:700;font-size:26px;line-height:1.5;color:var(--green)}
+.fv-lead{margin:0;font-size:15px;color:var(--muted)}
+.fv-nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px;padding-top:18px;border-top:1px solid var(--line);font-size:14px}
+.fv-nav a{text-decoration:none;color:var(--green);font-weight:500}
+.fv-nav a::after{content:"↓";margin-left:4px;color:var(--accent)}
+.fv-nav .plan{color:var(--muted)}
+@media(min-width:900px){
+  .fv{padding:10px 40px 30px}
+  .fv-stage{grid-template-columns:1fr 210px}
+  .fv-photo{height:620px;border-radius:0 220px 0 0}
+  .fv-copy{padding-top:36px}
+  .fv-copy h1{font-size:54px}
+  .fv-under{grid-template-columns:1.1fr 1fr;align-items:end;padding:44px 0 0;gap:40px}
+  .fv-sub{font-size:36px}
+  .fv-lead{font-size:16px}
+  .fv-nav{grid-column:1/-1}
+}
+
+/* 共通見出し */
+.sec{padding:84px 0}
+.num{font-family:var(--en);font-weight:600;font-size:13px;letter-spacing:.2em;color:var(--accent-ink)}
+.h2{margin:10px 0 0;font-family:var(--serif);font-weight:700;color:var(--green);font-size:30px;line-height:1.45;letter-spacing:.06em}
+.lead{margin:20px 0 0;font-size:16px;color:var(--muted)}
+@media(min-width:900px){.sec{padding:120px 0}.h2{font-size:44px}.lead{font-size:17px}}
+
+/* ===== ② 導入 ===== */
+.intro{background:var(--paper)}
+.intro-grid{display:grid;gap:40px}
+.intro .h2 em{font-style:normal;color:var(--accent-ink)}
+.day{list-style:none;margin:34px 0 0;padding:0;position:relative}
+.day::before{content:"";position:absolute;left:43px;top:12px;bottom:12px;width:1px;background:var(--line)}
+.day li{display:grid;grid-template-columns:88px 1fr;align-items:baseline;padding:12px 0;position:relative}
+.day .t{font-size:13px;color:var(--muted);letter-spacing:.1em;text-align:center;background:var(--paper);position:relative;z-index:1;justify-self:center;padding:0 6px}
+.day .w{font-size:18px;font-weight:500}
+.day li.plus .w{color:var(--accent-ink);font-weight:700}
+.day li.plus .w small{display:block;font-size:13px;font-weight:400;color:var(--muted);margin-top:2px}
+.day li.plus .t{background:var(--accent);color:#fff;border-radius:999px;padding:1px 10px;font-weight:700}
+.intro-photos{display:grid;grid-template-columns:1.2fr 1fr;gap:10px;align-items:end}
+.intro-photos figure{margin:0}
+.intro-photos img{width:100%;object-fit:cover;border-radius:4px}
+.intro-photos .a img{height:260px}
+.intro-photos .b img{height:190px}
+.intro-photos figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+.intro-note{margin:26px 0 0;font-size:13px;color:var(--muted)}
+@media(min-width:900px){
+  .intro-grid{grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .intro-photos .a img{height:420px}
+  .intro-photos .b img{height:300px}
+}
+
+/* ===== ③ 商品 ===== */
+.pick-head{max-width:760px}
+.chooser{margin:40px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.chooser a{display:grid;grid-template-columns:1fr;gap:2px;padding:18px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+.chooser .q{font-size:15px;color:var(--muted)}
+.chooser .p{grid-row:1;font-family:var(--serif);font-weight:700;color:var(--green);font-size:21px;margin-bottom:4px}
+.chooser .p::after{content:"→";margin-left:8px;color:var(--accent)}
+.chooser .k{font-size:18px;font-weight:700}
+@media(min-width:900px){.chooser{grid-template-columns:repeat(3,1fr);border-top:0}.chooser a{grid-template-columns:1fr;border-bottom:0;border-left:1px solid var(--line);padding:6px 28px}.chooser a:first-child{border-left:0;padding-left:0}.chooser .p{grid-row:auto;margin:8px 0 0;order:3}}
+
+.prod{margin-top:72px;background:var(--paper);border-radius:6px;overflow:hidden}
+.prod-top{padding:30px 20px 26px;color:#fff;background:var(--green);position:relative}
+.prod.krill .prod-top{background:#7a3f22}
+.prod.plac .prod-top{background:#6b5a2a}
+.prod-top .no{font-family:var(--en);font-size:12px;letter-spacing:.22em;opacity:.8}
+.prod-top h3{margin:6px 0 0;font-family:var(--serif);font-size:30px;line-height:1.35;letter-spacing:.05em}
+.prod-top .catch{margin:8px 0 0;font-size:14px;opacity:.9}
+.prod-body{display:grid;gap:0}
+.prod-imgs{padding:22px 20px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.prod-imgs.one{grid-template-columns:1fr;max-width:420px}
+.prod-imgs img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;border-radius:4px}
+.prod-imgs figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:4px}
+.prod-imgs figure{margin:0}
+.spec{margin:0;padding:8px 20px 4px}
+.spec>div{padding:20px 0;border-bottom:1px solid var(--line)}
+.spec>div:last-child{border-bottom:0}
+.spec dt{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--accent-ink);letter-spacing:.08em}
+.spec dt i{font-style:normal;font-family:var(--en);font-weight:600;font-size:12px;width:24px;height:24px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;padding-top:2px}
+.spec dd{margin:10px 0 0}
+.spec .big{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.5;color:var(--green)}
+.spec .sm{display:block;font-size:13px;color:var(--muted);margin-top:6px;line-height:1.75}
+.spec ul{margin:8px 0 0;padding-left:1.1em}
+.spec li{margin:3px 0}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.mg div{background:var(--ivory);padding:14px;border-radius:4px;font-size:14px;line-height:1.7}
+.mg b{display:block;font-family:var(--serif);font-size:17px;color:var(--green)}
+.buy{display:grid;gap:10px;margin-top:12px}
+.btn{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:15px 18px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;line-height:1.4}
+.btn .tg{font-size:11px;letter-spacing:.1em;padding:3px 8px 2px;border-radius:999px;font-weight:700}
+.btn .pr{font-family:var(--en);font-weight:600;font-size:17px;white-space:nowrap}
+.btn .pr small{font-family:var(--sans);font-size:11px;font-weight:500}
+.btn.try{background:var(--accent);color:#fff}
+.btn.try .tg{background:#fff;color:var(--accent-ink)}
+.btn.reg{background:#fff;color:var(--green);border:1.5px solid var(--green)}
+.btn.reg .tg{background:var(--green);color:#fff}
+.btn.sub{background:transparent;border:1px dashed var(--line);color:var(--green);font-weight:500}
+.btn.sub .tg{background:var(--ivory-2);color:var(--muted)}
+.pricenote{font-size:12px;color:var(--muted);margin:10px 0 0;line-height:1.7}
+@media(min-width:900px){
+  .prod-top{padding:40px 48px}
+  .prod-top h3{font-size:40px}
+  .prod-body{grid-template-columns:400px 1fr;gap:40px;padding:0 48px 40px 0}
+  .prod-imgs{padding:40px 0 0 48px;align-content:start}
+  .prod-imgs.one{max-width:none}
+  .spec{padding:20px 0 0}
+  .spec .big{font-size:24px}
+  .buy{grid-template-columns:1fr 1fr}
+  .buy .btn.sub{grid-column:1/-1}
+}
+
+/* ===== ④ 目安量 ===== */
+.dose{background:var(--green);color:#f3efe4}
+.dose .h2{color:#fff}
+.dose .num{color:var(--sun)}
+.dose .lead{color:#cfd8cc}
+.five{margin:44px 0 0;display:grid;gap:1px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.18)}
+.five>div{background:var(--green);padding:20px 18px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px 14px}
+.five .n{font-size:14px;color:#cfd8cc}
+.five .n b{display:block;font-family:var(--serif);font-size:19px;color:#fff;font-weight:700}
+.five .v{font-family:var(--en);font-weight:600;font-size:30px;color:#fff;white-space:nowrap;line-height:1}
+.five .v small{font-family:var(--sans);font-size:13px;font-weight:500;margin-left:2px}
+.five .c{grid-column:1/-1;font-size:12px;color:#b9c5b6}
+.five-cap{margin:12px 0 0;font-size:12px;color:#b9c5b6}
+.dtables{margin-top:56px;display:grid;gap:44px}
+.dt h3{margin:0;font-family:var(--serif);font-size:22px;color:#fff;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.dt h3 span{font-family:var(--sans);font-size:13px;color:#cfd8cc;font-weight:400}
+.tbl{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px;background:var(--paper);color:var(--ink);border-radius:4px;overflow:hidden}
+.tbl th,.tbl td{padding:12px 8px;text-align:center;border-bottom:1px solid var(--line);line-height:1.5}
+.tbl thead th{background:var(--ivory-2);font-size:12px;font-weight:700;color:var(--muted)}
+.tbl tbody th{font-weight:500;font-size:13px;text-align:left;padding-left:12px;white-space:nowrap}
+.tbl td b{display:block;font-size:15px;color:var(--green)}
+.tbl td em{font-style:normal;display:block;font-size:12px;color:var(--muted)}
+.tbl tr.hl{background:#fff6ec}
+.tbl tr:last-child th,.tbl tr:last-child td{border-bottom:0}
+.dt .note{margin:10px 0 0;font-size:12.5px;color:#cfd8cc;line-height:1.8}
+.dt .note a{color:#fff}
+@media(min-width:900px){
+  .five{grid-template-columns:repeat(3,1fr)}
+  .five>div{grid-template-columns:1fr;padding:28px}
+  .five .v{font-size:40px;margin-top:10px}
+  .dtables{grid-template-columns:1fr 1fr;gap:56px 48px}
+  .dt.wide{grid-column:1/-1}
+  .tbl{font-size:15px}
+}
+
+/* ===== ⑤ お試し ===== */
+.trial{background:var(--ivory)}
+.trial-grid{display:grid;gap:34px}
+.trial-photo{margin:0 -20px;height:300px;overflow:hidden}
+.trial-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+.trial .h2 .s{display:block;font-size:.62em;color:var(--ink);margin-top:10px;font-weight:500}
+.checks{list-style:none;margin:28px 0 0;padding:0;counter-reset:c}
+.checks li{counter-increment:c;display:grid;grid-template-columns:44px 1fr;align-items:center;padding:14px 0;border-bottom:1px dashed var(--line);font-size:17px;font-weight:500}
+.checks li::before{content:counter(c);font-family:var(--en);font-weight:600;font-size:22px;color:var(--accent)}
+.trial-items{margin-top:48px;display:grid;gap:16px}
+.ti{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;background:var(--paper);padding:14px;border-radius:6px;text-decoration:none}
+.ti img{width:120px;height:120px;object-fit:contain;background:#fff;border-radius:4px}
+.ti .nm{font-weight:700;font-size:16px;line-height:1.5}
+.ti .sz{font-size:13px;color:var(--muted)}
+.ti .pr{font-family:var(--en);font-weight:600;font-size:22px;color:var(--accent-ink);margin-top:2px}
+.ti .pr small{font-family:var(--sans);font-size:12px;font-weight:500}
+.ti .go{display:inline-block;margin-top:4px;font-size:13px;font-weight:700;color:var(--green);border-bottom:1px solid var(--green)}
+.ti .alt{font-size:12px;color:var(--muted);margin-top:4px}
+.ti .alt a{color:var(--green)}
+@media(min-width:900px){
+  .trial-grid{grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+  .trial-photo{margin:0;height:540px;border-radius:0 0 160px 0}
+  .trial-items{grid-template-columns:repeat(3,1fr);gap:24px}
+  .ti{grid-template-columns:1fr;padding:20px}
+  .ti img{width:100%;height:auto;aspect-ratio:1/1}
+}
+
+/* ===== ⑥ 次回特典（企画案） ===== */
+.next{background:var(--paper)}
+.plan-box{position:relative;margin-top:40px;border:2px dashed #b9ad94;border-radius:8px;padding:56px 20px 28px;background:repeating-linear-gradient(-45deg,transparent 0 14px,rgba(185,173,148,.08) 14px 28px)}
+.plan-flag{position:absolute;top:-16px;left:16px;background:#3b3b36;color:#f4efe2;font-size:13px;font-weight:700;letter-spacing:.08em;padding:6px 14px;border-radius:4px}
+.plan-warn{margin:0;font-size:15px;font-weight:700;color:#7a3f22;line-height:1.7}
+.flow{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px}
+.flow li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:#fff;border-radius:6px;padding:14px 16px;font-size:15px}
+.flow .st{font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.15em;color:var(--accent-ink)}
+.flow b{font-weight:700}
+.flow small{display:block;font-size:12px;color:var(--muted)}
+.tbd{margin:26px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.tbd div{display:grid;grid-template-columns:7.5em 1fr;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.tbd dt{color:var(--muted)}
+.tbd dd{margin:0;font-weight:700;color:#8a7f69}
+.pairs{margin:26px 0 0;font-size:14px}
+.pairs p{margin:0 0 8px;font-weight:700}
+.pairs ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.pairs li{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pairs li span{background:#fff;padding:4px 10px;border-radius:999px;border:1px solid var(--line)}
+.pairs li i{font-style:normal;color:var(--accent)}
+@media(min-width:900px){
+  .plan-box{padding:64px 48px 40px}
+  .flow{grid-template-columns:repeat(3,1fr)}
+  .flow li{grid-template-columns:1fr;align-content:start}
+  .plan-cols{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+}
+
+/* ===== ⑦ FAQ ===== */
+.faq{background:var(--ivory)}
+.faq-list{margin-top:36px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:32px 1fr 20px;gap:8px;align-items:start;padding:20px 0;font-size:17px;font-weight:700;line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";font-family:var(--en);font-weight:600;font-size:20px;color:var(--accent);line-height:1.4}
+.faq summary::after{content:"+";font-family:var(--en);font-size:22px;color:var(--green);line-height:1.2;text-align:right}
+.faq details[open] summary::after{content:"−"}
+.faq .a{padding:0 0 22px 40px;font-size:15px;color:var(--ink)}
+.faq .a p{margin:0 0 10px}
+.faq .a ul{margin:0 0 10px;padding-left:1.1em}
+.faq .a small{display:block;color:var(--muted);font-size:13px}
+@media(min-width:900px){.faq-in{display:grid;grid-template-columns:320px 1fr;gap:60px}.faq-list{margin-top:0}}
+
+/* 締め */
+.closing{background:var(--green);color:#fff;text-align:left}
+.closing p.big{margin:0;font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.6}
+.closing .links{margin-top:30px;display:grid;gap:10px}
+.closing .links a{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.25);text-decoration:none;font-size:15px}
+.closing .links a::after{content:"→";color:var(--sun)}
+@media(min-width:900px){.closing .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:end}.closing p.big{font-size:40px}}
+
+/* ===== 制作確認メモ ===== */
+.memo{background:#e9e6dd;padding:64px 0 90px;font-size:14px;line-height:1.8}
+.memo h2{margin:0;font-size:22px;letter-spacing:.06em}
+.memo .memo-lead{margin:10px 0 0;color:var(--muted)}
+.memo h3{margin:36px 0 10px;font-size:16px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.memo ol{margin:0;padding-left:1.4em}
+.memo li{margin:0 0 12px}
+.memo li b{display:block}
+.memo .src{color:var(--muted);font-size:12.5px}
+.memo table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;margin-top:8px}
+.memo th,.memo td{border:1px solid #cfc8b8;padding:8px;text-align:left;vertical-align:top}
+.memo th{background:#f3f0e8;font-weight:700}
+</style>
+</head>
+<body>
+
+<div class="draftband"><b>確認用ページ</b>｜掲載前の制作案です。写真は仮素材、⑥の次回特典は開催前の企画案です。</div>
+
+<div class="shopbar"><strong>人とペットのサプリ専門店 モノリス</strong><span>特集</span></div>
+
+<!-- ① FV -->
+<header class="fv">
+  <div class="fv-stage">
+    <div class="fv-photo">
+      <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1600&q=75&auto=format&fit=crop" alt="草の上で寄り添ってくつろぐ犬と猫">
+    </div>
+    <div class="fv-copy">
+      <h1><span>これからも、</span><span>一緒に元気な毎日を。</span></h1>
+    </div>
+  </div>
+  <div class="wrap fv-under">
+    <div>
+      <div class="fv-tag">元気な今から始める健康習慣</div>
+      <p class="fv-sub" style="margin-top:12px">おさんぽも、ごはんも、<br>いつものままで。</p>
+    </div>
+    <p class="fv-lead">サプリメントは、体調が気になってから探すものだけではありません。元気な今だからこそ、いつものごはんにひとつ足して、毎日の健康維持に。うちの子に合うものを、まずは小さなサイズから選んでみませんか。</p>
+    <nav class="fv-nav" aria-label="ページ内リンク">
+      <a href="#pick">選び方</a>
+      <a href="#dose">目安量と1日あたり</a>
+      <a href="#trial">お試し</a>
+      <a href="#next" class="plan">次回特典（企画案）</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ② 導入 -->
+<section class="sec intro" aria-labelledby="intro-h">
+  <div class="wrap intro-grid">
+    <div>
+      <div class="num">01 ─ はじめに</div>
+      <h2 class="h2" id="intro-h">「ずっと元気で<br>いてね」を、<br>毎日の<em>小さな習慣</em>に。</h2>
+      <p class="lead">健康づくりの土台は、いつものごはん、散歩や遊び、ぐっすり眠る時間。サプリメントは、その毎日にそっと添える“もうひとつの習慣”です。特別なことを始めるのではなく、ごはんにひと振り、おやつ感覚でひと粒から。</p>
+      <ol class="day" aria-label="いつもの一日">
+        <li class="plus"><span class="t">あさ</span><span class="w">ごはん<small>＋ いつものフードに、サプリをひとつ</small></span></li>
+        <li><span class="t">ひる</span><span class="w">おさんぽ・あそび</span></li>
+        <li><span class="t">ゆうがた</span><span class="w">ひなたで、ひとやすみ</span></li>
+        <li><span class="t">よる</span><span class="w">ごはん、そしてぐっすり</span></li>
+      </ol>
+      <p class="intro-note">※サプリメントはペット用の健康補助食品です。医薬品ではありません。</p>
+    </div>
+    <div class="intro-photos">
+      <figure class="a"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=900&q=75&auto=format&fit=crop" alt="並んで小道を歩く2匹の犬"><figcaption>いつものおさんぽ道も、</figcaption></figure>
+      <figure class="b"><img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=700&q=75&auto=format&fit=crop" alt="階段でくつろぐ猫"><figcaption>お気に入りの場所も。</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 商品 -->
+<section class="sec" id="pick" aria-labelledby="pick-h">
+  <div class="wrap">
+    <div class="pick-head">
+      <div class="num">02 ─ えらびかた</div>
+      <h2 class="h2" id="pick-h">うちの子には、どれがいい？</h2>
+      <p class="lead">どんな健康維持を考えたいかで選んでみてください。3つのサプリを、同じ順番・同じ項目でご紹介します。</p>
+    </div>
+    <div class="chooser">
+      <a href="#p-cordy"><span class="q">毎日の健康維持を通じて</span><span class="k">本来の免疫力を保ちたい</span><span class="p">コルディ</span></a>
+      <a href="#p-krill"><span class="q">歩く・走る毎日のために</span><span class="k">関節・心血管・脳の健康維持</span><span class="p">クリルオイル</span></a>
+      <a href="#p-plac"><span class="q">内側と外側のために</span><span class="k">肝臓・皮膚・毛並みの健康維持</span><span class="p">プラセンタ12000</span></a>
+    </div>
+
+    <!-- コルディ -->
+    <article class="prod cordy" id="p-cordy">
+      <div class="prod-top">
+        <div class="no">ITEM 01</div>
+        <h3>コルディM・G</h3>
+        <p class="catch">日本産冬虫夏草を使った、犬・猫用サプリメント</p>
+      </div>
+      <div class="prod-body">
+        <div class="prod-imgs">
+          <figure><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/cordymg/cordy_s1-m30.jpg" alt="コルディM 30g パッケージ" loading="lazy"><figcaption>コルディM（ブルーラベル）</figcaption></figure>
+          <figure><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/cordymg/cordy_s1-g30.jpg" alt="コルディG 30g パッケージ" loading="lazy"><figcaption>コルディG（オレンジラベル）</figcaption></figure>
+        </div>
+        <dl class="spec">
+          <div><dt><i>1</i>何歳から使える？</dt>
+            <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応（商品ページ記載）。シニア期だけに限定した商品ではありません。</span></dd></div>
+          <div><dt><i>2</i>どんな健康維持をサポートする？</dt>
+            <dd><span class="big">毎日の健康維持を通じて、<br class="sp">本来の免疫力を保つ</span><span class="sm">元気や食欲を保ちながら過ごす、毎日の健康管理に。免疫力を高めたり、病気の治療・予防を目的とした医薬品ではありません。</span></dd></div>
+          <div><dt><i>3</i>どんな形状？</dt>
+            <dd><span class="big">粉末（30g・100g）</span><span class="sm">お試しサイズは「コルディカプセル」16粒（1粒：コルディG 0.25g）。</span>
+              <div class="mg"><div><b>コルディM</b>冬虫夏草菌糸体粉末を使用。呼吸の早い子、てんかん経験のある子、短頭種の子にはMがおすすめ。</div><div><b>コルディG</b>冬虫夏草菌糸体粉末に、有機ゲルマニウムを配合。</div></div></dd></div>
+          <div><dt><i>4</i>どうやって与える？</dt>
+            <dd><ul><li>いつものフードに混ぜる・振りかける</li><li>1日数回に小分けして与えるのがおすすめ</li><li>食べにくそうなら少量の水でお団子状にして、上あごに</li></ul></dd></div>
+          <div><dt><i>5</i>サイズとリンク</dt>
+            <dd><div class="buy">
+              <a class="btn try" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/"><span class="tg">お試し</span><span>コルディカプセル 16粒<br><small style="font-weight:500">犬パッケージ</small></span><span class="pr">1,500<small>円</small></span></a>
+              <a class="btn try" href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/"><span class="tg">お試し</span><span>コルディカプセル 16粒<br><small style="font-weight:500">猫パッケージ</small></span><span class="pr">1,500<small>円</small></span></a>
+              <a class="btn reg" href="https://item.rakuten.co.jp/cordy/cordyg30/"><span class="tg">通常</span><span>コルディM／G 30g</span><span class="pr">6,800<small>円</small></span></a>
+              <a class="btn reg" href="https://item.rakuten.co.jp/cordy/cordyg100/"><span class="tg">大容量</span><span>コルディM／G 100g</span><span class="pr">21,000<small>円</small></span></a>
+            </div></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- クリルオイル -->
+    <article class="prod krill" id="p-krill">
+      <div class="prod-top">
+        <div class="no">ITEM 02</div>
+        <h3>クリルオイル</h3>
+        <p class="catch">走る喜び、ずっと一緒に。南極オキアミ由来のオメガ3</p>
+      </div>
+      <div class="prod-body">
+        <div class="prod-imgs one">
+          <figure><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil180sum3.jpg" alt="クリルオイル 180粒" loading="lazy"><figcaption>クリルオイル（ソフトカプセル）</figcaption></figure>
+        </div>
+        <dl class="spec">
+          <div><dt><i>1</i>何歳から使える？</dt>
+            <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応（商品ページ記載）。</span></dd></div>
+          <div><dt><i>2</i>どんな健康維持をサポートする？</dt>
+            <dd><span class="big">関節・心血管・脳の<br class="sp">健康維持</span><span class="sm">EPA・DHAなどのオメガ3脂肪酸、リン脂質、アスタキサンチンを含むクリルオイル。</span></dd></div>
+          <div><dt><i>3</i>どんな形状？</dt>
+            <dd><span class="big">ソフトカプセル</span><span class="sm">1粒410mg（クリルオイル250mg）。カプセルが苦手な子向けに、液体タイプ「クリルオイルEX」もあります。※甲殻類にアレルギーがある場合はご注意ください。</span></dd></div>
+          <div><dt><i>4</i>どうやって与える？</dt>
+            <dd><ul><li>まずはそのまま、おやつ感覚で</li><li>警戒心の強い子は、いつものごはんと一緒に</li><li>カプセルが大きい子は、40℃くらいのお湯で柔らかくして中身だけを</li></ul></dd></div>
+          <div><dt><i>5</i>サイズとリンク</dt>
+            <dd><div class="buy">
+              <a class="btn try" href="https://item.rakuten.co.jp/cordy/krilloil35/"><span class="tg">お試し</span><span>クリルオイル 30粒</span><span class="pr">1,650<small>円</small></span></a>
+              <a class="btn reg" href="https://item.rakuten.co.jp/cordy/krilloil180/"><span class="tg">通常</span><span>クリルオイル 180粒</span><span class="pr">6,700<small>円</small></span></a>
+              <a class="btn sub" href="https://item.rakuten.co.jp/cordy/krilloil_ex/"><span class="tg">液体</span><span>クリルオイルEX（ポンプ式）</span><span class="pr">4,200<small>円</small></span></a>
+            </div></dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- プラセンタ -->
+    <article class="prod plac" id="p-plac">
+      <div class="prod-top">
+        <div class="no">ITEM 03</div>
+        <h3>プラセンタ12000</h3>
+        <p class="catch">ふわっと毛並み＆肝臓サポート。国産SPF豚プラセンタ</p>
+      </div>
+      <div class="prod-body">
+        <div class="prod-imgs one">
+          <figure><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-30.jpg" alt="プラセンタ12000 30g" loading="lazy"><figcaption>プラセンタ12000（粉末）</figcaption></figure>
+        </div>
+        <dl class="spec">
+          <div><dt><i>1</i>何歳から使える？</dt>
+            <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応（商品ページ記載）。</span></dd></div>
+          <div><dt><i>2</i>どんな健康維持をサポートする？</dt>
+            <dd><span class="big">肝臓の健康、<br class="sp">皮膚・毛並み・毛艶の維持</span><span class="sm">元気や食欲の維持にも。ヒューマングレードの国産SPF豚プラセンタエキス末に、カキ肉エキスパウダー、サメ軟骨抽出物などを配合。</span></dd></div>
+          <div><dt><i>3</i>どんな形状？</dt>
+            <dd><span class="big">粉末（5g・30g）</span><span class="sm">30gは付属スプーンを「白（約0.1g）」「緑（約1g）」から選べます。</span></dd></div>
+          <div><dt><i>4</i>どうやって与える？</dt>
+            <dd><ul><li>付属スプーンで量って、いつものフードにトッピング</li><li>目安量の1.5〜2倍を与えても問題ありません（ショップ記載）</li></ul></dd></div>
+          <div><dt><i>5</i>サイズとリンク</dt>
+            <dd><div class="buy">
+              <a class="btn try" href="https://item.rakuten.co.jp/cordy/placenta5g/"><span class="tg">お試し</span><span>プラセンタ12000 5g</span><span class="pr">1,800<small>円</small></span></a>
+              <a class="btn reg" href="https://item.rakuten.co.jp/cordy/placenta30g/"><span class="tg">通常</span><span>プラセンタ12000 30g</span><span class="pr">7,800<small>円</small></span></a>
+            </div></dd></div>
+        </dl>
+      </div>
+    </article>
+    <p class="pricenote">※価格は税込、配送方法「追跡可能メール便」選択時（2026年10月12日時点の商品ページ表示）。「宅配便」選択時は＋600円です。最新の価格・在庫は各商品ページでご確認ください。</p>
+  </div>
+</section>
+
+<!-- ④ 目安量 -->
+<section class="sec dose" id="dose" aria-labelledby="dose-h">
+  <div class="wrap">
+    <div class="num">03 ─ つづけるなら</div>
+    <h2 class="h2" id="dose-h">毎日続けるなら、<br class="sp">どのくらい？</h2>
+    <p class="lead">体重別の1日の目安量は、ショップの「与え方・目安量」ページに掲載している数値です。1袋で使える日数と1日あたりの金額は、その目安量と通常サイズの価格から計算した参考値です。</p>
+
+    <div class="five" aria-label="体重5kgの子の場合">
+      <div><span class="n">体重5kgの子なら<b>コルディ 30g</b></span><span class="v">約45〜113<small>円/日</small></span><span class="c">元気いっぱいな成長期〜シニア期の目安量 0.2〜0.5g/日</span></div>
+      <div><span class="n">体重5kgの子なら<b>クリルオイル 180粒</b></span><span class="v">約37〜74<small>円/日</small></span><span class="c">1日1〜2粒（体重5kgあたり1〜2粒が基準）</span></div>
+      <div><span class="n">体重5kgの子なら<b>プラセンタ12000 30g</b></span><span class="v">約26〜52<small>円/日</small></span><span class="c">1日0.1〜0.2g（白スプーン約1〜2杯）</span></div>
+    </div>
+    <p class="five-cap">※1円未満は四捨五入した参考値です。実際の量はその子の体調・食欲に合わせて調整してください。</p>
+
+    <div class="dtables">
+      <div class="dt wide">
+        <h3>コルディ 30g（6,800円）<span>元気いっぱいな子の1日の目安量</span></h3>
+        <table class="tbl">
+          <thead><tr><th>体重</th><th>元気いっぱいな<br>幼少期・成長期</th><th>元気いっぱいな<br>シニア期</th></tr></thead>
+          <tbody>
+            <tr><th>2.5kg</th><td><b>0.1g</b><em>約300日分</em><em>約23円/日</em></td><td><b>0.25g</b><em>約120日分</em><em>約57円/日</em></td></tr>
+            <tr class="hl"><th>5kg</th><td><b>0.2g</b><em>約150日分</em><em>約45円/日</em></td><td><b>0.5g</b><em>約60日分</em><em>約113円/日</em></td></tr>
+            <tr><th>10kg</th><td><b>0.4g</b><em>約75日分</em><em>約91円/日</em></td><td><b>1g</b><em>約30日分</em><em>約227円/日</em></td></tr>
+          </tbody>
+        </table>
+        <p class="note">付属の緑スプーンすりきり約1g、白スプーンすりきり約0.1g。ショップでは、1日の量を朝・昼・夜などに小分けして与えること、与え始めの時期はできる限り多めに与えることをおすすめしています（与え方ページの「おすすめ」量：2.5kgで1g、5kgで2g、10kgで4g）。10kgを超える子の量は<a href="https://www.rakuten.co.jp/cordy/contents/howtofeed/">与え方ページ</a>またはショップへご相談ください。</p>
+      </div>
+      <div class="dt">
+        <h3>クリルオイル 180粒（6,700円）<span>1日の目安量</span></h3>
+        <table class="tbl">
+          <thead><tr><th>体格・体重</th><th>1日</th><th>180粒で</th><th>1日あたり</th></tr></thead>
+          <tbody>
+            <tr class="hl"><th>超小型犬・猫<br>〜5kg</th><td><b>1〜2粒</b></td><td>90〜180日</td><td>約37〜74円</td></tr>
+            <tr><th>小〜中型犬<br>〜10kg</th><td><b>2〜4粒</b></td><td>45〜90日</td><td>約74〜149円</td></tr>
+            <tr><th>中〜大型犬<br>〜20kg</th><td><b>4〜8粒</b></td><td>22〜45日</td><td>約149〜298円</td></tr>
+            <tr><th>大〜超大型犬<br>30kg〜</th><td><b>6〜12粒</b></td><td>15〜30日</td><td>約223〜447円</td></tr>
+          </tbody>
+        </table>
+        <p class="note">体調に合わせて量を増減しても問題ありません（ショップ記載）。お試しの30粒（1,650円）なら、〜5kgの子で15〜30日分です。</p>
+      </div>
+      <div class="dt">
+        <h3>プラセンタ12000 30g（7,800円）<span>1日の目安量</span></h3>
+        <table class="tbl">
+          <thead><tr><th>体重</th><th>1日</th><th>30gで</th><th>1日あたり</th></tr></thead>
+          <tbody>
+            <tr class="hl"><th>〜5kg</th><td><b>0.1〜0.2g</b><em>白 約1〜2杯</em></td><td>150〜300日</td><td>約26〜52円</td></tr>
+            <tr><th>5〜10kg</th><td><b>0.2〜0.3g</b><em>白 約2〜3杯</em></td><td>100〜150日</td><td>約52〜78円</td></tr>
+            <tr><th>10〜20kg</th><td><b>0.3〜0.5g</b><em>白 約3〜5杯</em></td><td>60〜100日</td><td>約78〜130円</td></tr>
+            <tr><th>20〜40kg</th><td><b>0.5〜1.0g</b><em>緑 約0.5〜1杯</em></td><td>30〜60日</td><td>約130〜260円</td></tr>
+            <tr><th>40kg〜</th><td><b>1.0g〜</b><em>緑 約1杯〜</em></td><td>〜30日</td><td>約260円〜</td></tr>
+          </tbody>
+        </table>
+        <p class="note">お試しの5g（1,800円）は、5kg程度の子で約1ヶ月、20kgの子で約2週間使えます（商品ページ記載）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ お試し -->
+<section class="sec trial" id="trial" aria-labelledby="trial-h">
+  <div class="wrap">
+    <div class="trial-grid">
+      <figure class="trial-photo"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1200&q=75&auto=format&fit=crop" alt="こちらを見上げて笑うビーグル犬"></figure>
+      <div>
+        <div class="num">04 ─ はじめての方へ</div>
+        <h2 class="h2" id="trial-h">まずは、<br>食べてくれるか。<span class="s">与えやすさを確かめる、<br>小さなサイズから。</span></h2>
+        <p class="lead">お試しサイズは、短い期間で何かを判断するためのものではありません。うちの子が嫌がらずに食べてくれるか、いつものごはんに合わせやすいか。毎日続けられそうかを確かめる入口です。</p>
+        <ol class="checks">
+          <li>においや食感を、嫌がらないか</li>
+          <li>いつものごはんと、合わせやすいか</li>
+          <li>家族みんなで、毎日続けやすいか</li>
+        </ol>
+      </div>
+    </div>
+    <div class="trial-items">
+      <a class="ti" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
+        <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル お試し 犬パッケージ" loading="lazy">
+        <div><div class="nm">コルディカプセル</div><div class="sz">16粒（コルディG）</div><div class="pr">1,500<small>円</small></div><span class="go">犬パッケージを見る</span>
+        <div class="alt">猫パッケージもあります（下記）</div></div>
+      </a>
+      <a class="ti" href="https://item.rakuten.co.jp/cordy/krilloil35/">
+        <img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil30sum2.jpg" alt="クリルオイル 30粒" loading="lazy">
+        <div><div class="nm">クリルオイル</div><div class="sz">30粒</div><div class="pr">1,650<small>円</small></div><span class="go">商品を見る</span></div>
+      </a>
+      <a class="ti" href="https://item.rakuten.co.jp/cordy/placenta5g/">
+        <img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-5.jpg" alt="プラセンタ12000 5g" loading="lazy">
+        <div><div class="nm">プラセンタ12000</div><div class="sz">5g</div><div class="pr">1,800<small>円</small></div><span class="go">商品を見る</span></div>
+      </a>
+    </div>
+    <p class="pricenote" style="margin-top:14px">コルディカプセル猫パッケージ：<a href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/">商品ページへ</a>（1,500円）　※価格は追跡可能メール便選択時の税込価格。</p>
+  </div>
+</section>
+
+<!-- ⑥ 次回特典（企画案） -->
+<section class="sec next" id="next" aria-labelledby="next-h">
+  <div class="wrap">
+    <div class="num">05 ─ つづけたい方へ</div>
+    <h2 class="h2" id="next-h">気に入ってくれたら、<br>次は通常サイズで。</h2>
+    <div class="plan-box">
+      <div class="plan-flag">開催前の企画案</div>
+      <p class="plan-warn">このセクションは、開催を検討している特典の企画案です。現在ご利用いただける特典ではありません。内容はすべて未確定です。</p>
+      <ol class="flow">
+        <li><span class="st">STEP 1</span><span><b>お試しサイズを購入</b><small>食べてくれるか・与えやすいかを確認</small></span></li>
+        <li><span class="st">STEP 2</span><span><b>次回クーポンを受け取る</b><small>配布方法は検討中</small></span></li>
+        <li><span class="st">STEP 3</span><span><b>通常サイズで使う</b><small>同じ商品の通常サイズが対象（条件は検討中）</small></span></li>
+      </ol>
+      <div class="plan-cols">
+        <dl class="tbd">
+          <div><dt>割引額</dt><dd>未定</dd></div>
+          <div><dt>対象商品</dt><dd>未定</dd></div>
+          <div><dt>最低購入金額</dt><dd>未定</dd></div>
+          <div><dt>配布方法</dt><dd>未定</dd></div>
+          <div><dt>利用期限</dt><dd>未定</dd></div>
+        </dl>
+        <div class="pairs">
+          <p>想定している組み合わせ（案）</p>
+          <ul>
+            <li><span>コルディカプセル</span><i>→</i><span>コルディ 30g／100g</span></li>
+            <li><span>クリルオイル 30粒</span><i>→</i><span>クリルオイル 180粒</span></li>
+            <li><span>プラセンタ12000 5g</span><i>→</i><span>プラセンタ12000 30g</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ FAQ -->
+<section class="sec faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-in">
+    <div>
+      <div class="num">06 ─ よくある質問</div>
+      <h2 class="h2" id="faq-h">はじめる前に、<br>気になること。</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>元気なうちから使える？</summary>
+        <div class="a"><p>はい。いずれもペット用の健康補助食品で、毎日の健康維持のためにお使いいただけます。コルディはシニア期だけに限定した商品ではなく、全犬種・全猫種、幅広いライフステージの犬・猫の毎日の健康維持にお使いいただけます。</p></div>
+      </details>
+      <details>
+        <summary>何歳から使える？</summary>
+        <div class="a"><p>コルディ・クリルオイル・プラセンタ12000は、いずれも商品ページで「オールステージ対応（幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫）」としています。具体的な月齢の記載はありませんので、小さな子に与える場合はショップへご相談ください。</p></div>
+      </details>
+      <details>
+        <summary>粉末やカプセルが苦手な場合は？</summary>
+        <div class="a">
+          <ul>
+            <li><b>コルディ（粉末）</b>：少量の水を加えてお団子状にし、上あごに付ける方法があります。香りの強い食べ物やチュールに混ぜている飼い主さまもいらっしゃいます。液体タイプの「コルディEX」もあります。</li>
+            <li><b>クリルオイル（カプセル）</b>：40℃くらいのお湯にカプセルを入れ、柔らかくなったら中身だけを与える方法があります。ポンプ式の液体タイプ「クリルオイルEX」もあります。</li>
+          </ul>
+          <small>※楊枝などでカプセルに穴を開ける際は、ケガをしないようご注意ください。</small>
+        </div>
+      </details>
+      <details>
+        <summary>コルディMとGの違いは？</summary>
+        <div class="a"><p>どちらも冬虫夏草菌糸体粉末を使用しています。コルディGには有機ゲルマニウムを配合しています。呼吸の早い子やてんかん経験のある子、短頭種の子はMがおすすめです。迷った場合はショップへご相談ください。</p><small>※お試しサイズの「コルディカプセル」はコルディGです。</small></div>
+      </details>
+      <details>
+        <summary>通院中、服薬中の相談先は？</summary>
+        <div class="a"><p>治療内容や服用している薬、ペットの状態はそれぞれ異なります。通院中・服薬中の場合は自己判断で変更せず、かかりつけの獣医師にご相談のうえご使用ください。商品についてのご相談は、モノリスでも受け付けています。</p></div>
+      </details>
+      <details>
+        <summary>継続するときの容量の選び方は？</summary>
+        <div class="a">
+          <p>まずはお試しサイズで与えやすさを確かめ、続けられそうなら通常サイズへ。体重と1日の目安量から、1袋で何日使えるかを目安に選ぶのがおすすめです（<a href="#dose">目安量の表</a>）。</p>
+          <ul>
+            <li>コルディ：30g（6,800円）／100g（21,000円）</li>
+            <li>クリルオイル：30粒（1,650円）／180粒（6,700円）</li>
+            <li>プラセンタ12000：5g（1,800円）／30g（7,800円）</li>
+          </ul>
+          <p>定期購入も用意しています（対象商品・割引率は各商品ページでご確認ください）。</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec closing">
+  <div class="wrap">
+    <p class="big">いつもの散歩道を、<br>これからも一緒に。</p>
+    <div class="links">
+      <a href="https://www.rakuten.co.jp/cordy/contents/howtofeed/">与え方・1日の目安量を見る</a>
+      <a href="https://www.rakuten.co.jp/cordy/contents/allitem/">商品一覧を見る</a>
+      <a href="https://www.rakuten.co.jp/cordy/">モノリス トップへ</a>
+    </div>
+  </div>
+</section>
+
+<!-- 制作確認メモ -->
+<section class="memo" aria-labelledby="memo-h">
+  <div class="wrap">
+    <h2 id="memo-h">制作確認メモ（掲載時は削除）</h2>
+    <p class="memo-lead">2026年10月12日時点の楽天市場 商品ページ・与え方ページ（/contents/howtofeed/）を確認して作成しています。下記は先方確認が必要な事項です。</p>
+
+    <h3>A. 次回特典（⑥）── すべて未確定</h3>
+    <ol>
+      <li><b>割引額・対象商品・最低購入金額・配布方法・利用期限</b>ページ上はすべて「未定」表示。確定後に差し替え、「開催前の企画案」表示と確認用バンドを外します。</li>
+      <li><b>対象商品の範囲</b>お試しの「コルディカプセル」はコルディGのみ。通常サイズのコルディM（ブルーラベル）も「同じ商品」として対象にするか。100gも対象か。</li>
+      <li><b>定期購入との関係</b>商品ページに「定期購入なら最大10%OFF」表示あり（コルディ30g等）。次回クーポンと定期購入の併用可否・案内の優先順位。</li>
+      <li><b>開催期間・告知導線</b>同梱物／購入後メール／楽天クーポン配布などで導線が変わるため、方式決定後にSTEP2の文言を調整。</li>
+    </ol>
+
+    <h3>B. 健康維持目的の目安量・価格</h3>
+    <ol>
+      <li><b>コルディの目安量の見せ方</b>与え方ページの表には「おすすめ（ほとんどの方はこの量）」列と「元気いっぱいな幼少期・成長期」「元気いっぱいなシニア期」列があります。本特集は元気な子向けのため後者2列を主に掲載し、「おすすめ」量と「与え始めは多めに」は注記にしました。この見せ方でよいか。<span class="src">（表内「ほとんどの方は子の量を」は「この量」の誤記と思われます）</span></li>
+      <li><b>コルディ 10kg超の目安量</b>表は2.5kg・5kg・10kgのみ。中・大型犬の健康維持量が必要な場合はご提供ください（数字は作成していません）。</li>
+      <li><b>クリルオイル・プラセンタ12000</b>与え方ページの目安量には目的別（健康維持／その他）の区分がありません。健康維持目的でもこの目安量で案内してよいか。</li>
+      <li><b>日数・1日あたりの金額</b>「目安量 × 通常サイズ価格」からの試算です。開封後の推奨使用期間の記載がないため、300日分など長期になる場合の注意書きの要否。</li>
+      <li><b>価格の前提</b>税込・追跡可能メール便選択時の価格で表示（宅配便は＋600円）。送料の扱い、セール時の価格変動時の更新ルール。</li>
+      <li><b>コルディカプセルの与え方・目安</b>商品ページに与え方（カプセルのまま／開けて粉末で等）と1日の粒数の記載が見当たりません。お試し訴求で必要なためご提供ください。</li>
+    </ol>
+
+    <h3>C. 商品情報・表現</h3>
+    <ol>
+      <li><b>対象年齢</b>全商品「オールステージ対応（幼犬・幼猫〜老犬・老猫）」の記載のみ。「生後○か月から」とは推測せず、そのまま掲載しています。月齢の目安があればご提供ください。</li>
+      <li><b>クリルオイルのサポート表現</b>店舗内で表記が分かれています。<br>カテゴリ名「関節・心血管の健康維持」／与え方ページ「関節・心血管・脳の健康維持」／30粒ページ「関節・皮膚・被毛の健康維持」／画像内「関節 腎臓 背骨 皮膚 目 心血管」。本ページは与え方ページの「関節・心血管・脳」を採用。統一表現をご指定ください。</li>
+      <li><b>クリルオイルの画像</b>商品サムネイル画像内に「関節 腎臓の健康維持」の文字があり、本ページ本文（関節・心血管・脳）と表現が異なります。また30粒のサムネイル画像のパッケージに「クリルオイル180」と表記されています。画像は加工せずそのまま使用中のため、差し替え要否をご確認ください。</li>
+      <li><b>クリルオイル30粒の内容量表記</b>「オイル250ml」（180粒ページは「250mg」）。誤記の可能性。</li>
+      <li><b>「お試しサイズ」の呼称</b>店舗カテゴリで「お試しサイズ」と明記されているのはコルディカプセル。クリルオイル30粒・プラセンタ5g（商品名は「小さいサイズ」）を「お試し」と案内してよいか。</li>
+      <li><b>プラセンタ12000の与え方</b>商品ページの「フードにトッピング」と、与え方ページの「1.5〜2倍の量でも問題ない」のみ記載。粉末が苦手な子向けの与え方があればFAQに追加します。</li>
+      <li><b>相談窓口の電話番号</b>与え方ページ「048-474-813」（桁不足の可能性）、商品ページの広告文責「048-474-0884」。本ページでは番号を出していません。掲載する番号と受付時間をご指定ください。</li>
+      <li><b>使っていない表現</b>商品ページにある病名を挙げた説明、「短期間で違いを実感」「吸収率 魚油の約3倍」などの比較・体感表現は、本特集の趣旨（元気な今からの健康維持）と表現ルールに合わせて使用していません。</li>
+    </ol>
+
+    <h3>D. 素材・実装</h3>
+    <ol>
+      <li><b>写真</b>FV・導入・お試しの犬猫写真はUnsplashの仮素材です。実際に使う写真（店舗所有・購入素材）のご支給をお願いします。</li>
+      <li><b>商品画像</b>楽天キャビネット内の既存画像をトリミング・加工なしで表示しています。</li>
+      <li><b>楽天掲載時</b>JavaScriptは使用していません（FAQは開閉のみHTML標準機能）。掲載方式（R-Storefront／GOLD／画像化）に合わせて組み直します。</li>
+    </ol>
+
+    <h3>確認した掲載情報（参照元）</h3>
+    <table>
+      <tr><th>商品</th><th>サイズ・価格（メール便・税込）</th><th>URL</th></tr>
+      <tr><td>コルディカプセル（お試し）</td><td>16粒（1粒 コルディG 0.25g）1,500円</td><td>/cordy/cordycapsule-dog/ ・ /cordy/cordycapsule-cat/</td></tr>
+      <tr><td>コルディM／G</td><td>30g 6,800円 ／ 100g 21,000円</td><td>/cordy/cordyg30/ ・ /cordy/cordyg100/</td></tr>
+      <tr><td>クリルオイル</td><td>30粒 1,650円 ／ 180粒 6,700円 ／ EX 4,200円</td><td>/cordy/krilloil35/ ・ /cordy/krilloil180/ ・ /cordy/krilloil_ex/</td></tr>
+      <tr><td>プラセンタ12000</td><td>5g 1,800円 ／ 30g 7,800円</td><td>/cordy/placenta5g/ ・ /cordy/placenta30g/</td></tr>
+    </table>
+  </div>
+</section>
+
+</body>
+</html>
