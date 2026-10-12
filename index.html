@@ -81,6 +81,12 @@ a{color:inherit}
 .fv-nav a .ic{font-size:13px;color:var(--coral)}
 .fv-nav a.plan{background:var(--coral);border-color:var(--coral);color:#fff}.fv-nav a.plan .ic{color:#fff}
 
+.cpn-bar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;margin:22px 0 0;padding:12px 14px;background:var(--coral);color:#fff;border-radius:16px;text-decoration:none;text-align:left;position:relative;box-shadow:0 6px 0 -2px #d96a3c}
+.cpn-bar .pct{font-family:var(--en);font-weight:800;font-size:34px;line-height:1;background:#fff;color:var(--coral-d);border-radius:12px;padding:8px 8px 6px}
+.cpn-bar .pct small{font-size:16px}
+.cpn-bar .t1{display:block;font-size:12px;font-weight:700;opacity:.95}
+.cpn-bar .t2{display:block;font-size:16px;font-weight:700;line-height:1.4}
+.cpn-bar .ic{font-size:20px}
 /* ===== ② 導入 ===== */
 .intro .h2 em{font-style:normal;color:var(--teal);background:linear-gradient(transparent 62%,var(--lemon) 62%)}
 .day{list-style:none;margin:30px 0 0;padding:0;text-align:left}
@@ -319,9 +325,10 @@ a{color:inherit}
     <ul class="points">
       <li><svg class="ic"><use href="#i-sun"/></svg>元気な今から</li>
       <li><svg class="ic"><use href="#i-bowl"/></svg>ごはんにプラス</li>
-      <li><svg class="ic"><use href="#i-bag"/></svg>お試しサイズあり</li>
+      <li><svg class="ic"><use href="#i-bag"/></svg>お試しサイズ</li>
       <li><svg class="ic"><use href="#i-scale"/></svg>体重別の目安量</li>
     </ul>
+    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試しのあとは、クーポンで</span><span class="t2">通常サイズが5%OFFに！</span></span><svg class="ic"><use href="#i-right"/></svg></a>
     <nav class="fv-nav" aria-label="ページ内リンク">
       <a href="#pick">選び方<svg class="ic"><use href="#i-down"/></svg></a>
       <a href="#dose">目安量<svg class="ic"><use href="#i-down"/></svg></a>
@@ -529,6 +536,7 @@ a{color:inherit}
       <li><svg class="ic"><use href="#i-bowl"/></svg>いつものごはんと、合わせやすいか</li>
       <li><svg class="ic"><use href="#i-cal"/></svg>家族みんなで、毎日続けやすいか</li>
     </ul>
+    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試し購入の方に、次回使える</span><span class="t2">5%OFFクーポン進呈</span></span><svg class="ic"><use href="#i-right"/></svg></a>
     <div class="trial-items">
       <a class="ti" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル お試し 犬パッケージ" loading="lazy">
