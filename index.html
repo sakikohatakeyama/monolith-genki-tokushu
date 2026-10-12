@@ -786,6 +786,17 @@ section[id],header[id]{scroll-margin-top:62px}
 .set-card .ci-badge{display:table;margin:0 auto;padding:6px 16px;border-radius:999px;font-size:clamp(12px,3.4vw,14px)}
 .set-card img{width:100%!important;margin-top:14px!important}
 .set-card .sc-b{padding-left:0!important;padding-right:0!important}
+/* 項目見出し（何歳から使える？等）を大きく */
+.spec>div{grid-template-columns:50px 1fr!important;column-gap:12px!important}
+.spec .ci{width:50px!important;height:50px!important;font-size:26px!important;border-width:2px!important;border-color:var(--teal)!important;color:var(--teal)}
+.spec dt{word-break:keep-all;overflow-wrap:anywhere;text-wrap:balance;font-size:clamp(20px,5.8vw,24px)!important;font-weight:900!important;letter-spacing:.04em!important;line-height:1.35!important}
+/* コルディM・Gをパッケージ色に／液体はクリルオイルの赤 */
+.mg div:first-child{background:#e6f4fb!important;border-left:5px solid #1e9ad6}
+.mg div:first-child b{color:#1580bd!important}
+.mg div:last-child{background:#fff3e2!important;border-left:5px solid #f39200}
+.mg div:last-child b{color:#d97a00!important}
+.btn.sub{background:#fff!important;border:1.5px solid var(--line)!important;color:var(--ink)!important}
+.btn.sub .tg{background:#d42a2a!important;color:#fff!important}
 </style>
 </head>
 <body>
@@ -942,7 +953,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <dl class="spec">
         <div><span class="ci"><svg class="ic"><use href="#i-cal"/></svg></span><span><dt>何歳から使える？</dt>
           <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応。シニア期だけに限定した商品ではありません。</span></dd></span></div>
-        <div><span class="ci"><svg class="ic"><use href="#i-heart"/></svg></span><span><dt>どんな健康維持をサポートする？</dt>
+        <div><span class="ci"><svg class="ic"><use href="#i-heart"/></svg></span><span><dt>どんな健康維持を<wbr>サポートする？</dt>
           <dd><span class="big">毎日の健康維持を通じて<span class="pe">、</span><br>本来の免疫力を保つ</span><span class="sm">元気や食欲を保ちながら過ごす、毎日の健康管理に。免疫力を高めたり、病気の治療・予防を目的とした医薬品ではありません。</span></dd></span></div>
         <div><span class="ci"><svg class="ic"><use href="#i-spoon"/></svg></span><span><dt>どんな形状？</dt>
           <dd><span class="big">粉末（30g・100g）</span><span class="sm">お試しサイズは「コルディカプセル」16粒（1粒：コルディG 0.25g）。</span>
@@ -973,7 +984,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <dl class="spec">
         <div><span class="ci"><svg class="ic"><use href="#i-cal"/></svg></span><span><dt>何歳から使える？</dt>
           <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応。</span></dd></span></div>
-        <div><span class="ci"><svg class="ic"><use href="#i-heart"/></svg></span><span><dt>どんな健康維持をサポートする？</dt>
+        <div><span class="ci"><svg class="ic"><use href="#i-heart"/></svg></span><span><dt>どんな健康維持を<wbr>サポートする？</dt>
           <dd><span class="big">関節・心血管・脳の健康維持</span><span class="sm">EPA・DHAなどのオメガ3脂肪酸、リン脂質、アスタキサンチンを含むクリルオイル。</span></dd></span></div>
         <div><span class="ci"><svg class="ic"><use href="#i-capsule"/></svg></span><span><dt>どんな形状？</dt>
           <dd><span class="big">ソフトカプセル</span><span class="sm">1粒410mg（クリルオイル250mg）。カプセルが苦手な子向けに、液体タイプ「クリルオイルEX」もあります。※甲殻類にアレルギーがある場合はご注意ください。</span></dd></span></div>
@@ -1002,7 +1013,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <dl class="spec">
         <div><span class="ci"><svg class="ic"><use href="#i-cal"/></svg></span><span><dt>何歳から使える？</dt>
           <dd><span class="big">オールステージ対応</span><span class="sm">幼犬・幼猫・子犬・子猫・成犬・成猫・老犬・老猫に対応。</span></dd></span></div>
-        <div><span class="ci"><svg class="ic"><use href="#i-heart"/></svg></span><span><dt>どんな健康維持をサポートする？</dt>
+        <div><span class="ci"><svg class="ic"><use href="#i-heart"/></svg></span><span><dt>どんな健康維持を<wbr>サポートする？</dt>
           <dd><span class="big">肝臓の健康<span class="pe">、</span><br>皮膚・毛並み・毛艶の維持</span><span class="sm">元気や食欲の維持にも。ヒューマングレードの国産SPF豚プラセンタエキス末に、カキ肉エキスパウダー、サメ軟骨抽出物などを配合。</span></dd></span></div>
         <div><span class="ci"><svg class="ic"><use href="#i-spoon"/></svg></span><span><dt>どんな形状？</dt>
           <dd><span class="big">粉末（5g・30g）</span><span class="sm">30gは付属スプーンを「白（約0.1g）」「緑（約1g）」から選べます。</span></dd></span></div>
