@@ -142,12 +142,13 @@ a{color:inherit}
 .prod-imgs img{width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:10px}
 .prod-imgs figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:4px}
 .spec{margin:0;padding:0 18px 6px}
-.spec>div{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:18px 0;border-bottom:1px dashed #b9b0a1}
+.spec>div{display:grid;grid-template-columns:40px 1fr;column-gap:10px;row-gap:10px;align-items:center;padding:18px 0;border-bottom:1px dashed #b9b0a1}
+.spec>div>span:not(.ci){display:contents}
 .spec>div:last-child{border-bottom:0}
-.spec .ci{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:24px;background:#fff}
-.spec dt{font-size:13px;font-weight:700;color:var(--teal);letter-spacing:.06em;line-height:1.5}
+.spec .ci{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:21px;background:#fff}
+.spec dt{font-size:14px;font-weight:700;color:var(--teal);letter-spacing:.06em;line-height:1.5}
 .spec dt b{font-family:var(--en);margin-right:6px;color:var(--coral)}
-.spec dd{margin:4px 0 0}
+.spec dd{margin:0;grid-column:1/-1}
 .spec .big{display:block;font-weight:700;font-size:19px;line-height:1.5}
 .spec .sm{display:block;font-size:13px;color:var(--muted);margin-top:4px;line-height:1.75}
 .spec ul{margin:2px 0 0;padding:0;list-style:none}
@@ -156,7 +157,7 @@ a{color:inherit}
 .mg{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}
 .mg div{background:var(--aqua);padding:12px;border-radius:12px;font-size:13px;line-height:1.65}
 .mg b{display:block;font-size:15px;color:var(--teal)}
-.buy{display:grid;gap:10px;margin:38px 0 4px -60px}
+.buy{display:grid;gap:10px;margin:2px 0 4px}
 .btn{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:13px 16px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14.5px;line-height:1.35}
 .btn .tg{font-size:11px;padding:3px 9px 2px;border-radius:999px}
 .btn .pr{font-family:var(--en);font-weight:700;font-size:17px;white-space:nowrap}
