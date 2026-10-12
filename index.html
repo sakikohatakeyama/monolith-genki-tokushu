@@ -372,7 +372,7 @@ a{color:inherit}
 .fab summary .ic{font-size:22px;transition:transform .25s}
 .fab-t{font-family:var(--en);font-weight:800;font-size:7.5px;letter-spacing:.1em;line-height:1}
 .fab[open] summary{background:var(--ink)}
-.fab[open] summary .ic{transform:rotate(-20deg)}
+
 .fab-menu{position:absolute;right:-4px;top:56px;width:min(300px,calc(100vw - 24px));background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);animation:fadeUp .25s ease both;text-align:left}
 .fab-h{margin:2px 6px 8px;font-family:var(--en);font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--muted)}
 .fab-menu a{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:12px;text-decoration:none;font-size:14.5px;font-weight:700;line-height:1.4;color:var(--ink)}
@@ -408,6 +408,11 @@ section[id],header[id]{scroll-margin-top:62px}
 .ci-body .pr small{font-family:var(--sans);font-size:12px}
 .ci-body .go{display:inline-flex;align-items:center;justify-content:center;gap:4px;margin-top:8px;background:var(--orange);color:#fff;font-size:12.5px;font-weight:700;padding:8px;border-radius:999px}
 .ci-body .go .ic{font-size:13px}
+
+.fab .cl{display:none}
+.fab[open] .op{display:none}
+.fab[open] .cl{display:block}
+.fab[open] summary .ic.cl{transform:none;stroke-width:2.6}
 </style>
 </head>
 <body>
@@ -430,6 +435,7 @@ section[id],header[id]{scroll-margin-top:62px}
   <symbol id="i-spark" viewBox="0 0 32 32"><path d="M14 5l2.3 7.7L24 15l-7.7 2.3L14 25l-2.3-7.7L4 15l7.7-2.3z"/><path d="M24.5 21.5l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/></symbol>
   <symbol id="i-gift" viewBox="0 0 32 32"><rect x="6.5" y="13" width="19" height="13" rx="1.5"/><rect x="5" y="9" width="22" height="4" rx="1"/><path d="M16 9v17M16 9c-1.5-3.8-6.5-4.3-6-.5M16 9c1.5-3.8 6.5-4.3 6-.5"/></symbol>
   <symbol id="i-qa" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M12.5 13a3.5 3.5 0 1 1 5 3.2c-1 .5-1.5 1.2-1.5 2.3v.5"/><circle cx="16" cy="22.5" r=".6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 32 32"><path d="M9 9l14 14M23 9L9 23"/></symbol>
   <symbol id="i-down" viewBox="0 0 32 32"><path d="M16 6v20M8 18l8 8 8-8"/></symbol>
   <symbol id="i-right" viewBox="0 0 32 32"><path d="M6 16h20M18 8l8 8-8 8"/></symbol>
   <symbol id="i-nose" viewBox="0 0 32 32"><path d="M8 17c0-4 3.6-7 8-7s8 3 8 7-3.6 6-8 6-8-2-8-6z"/><path d="M12.5 17.5c1 .8 2 1.2 3.5 1.2s2.5-.4 3.5-1.2"/><path d="M16 10V6M11 11l-2-3M21 11l2-3"/></symbol>
@@ -440,7 +446,7 @@ section[id],header[id]{scroll-margin-top:62px}
 <div class="draftband"><b>確認用ページ</b>｜掲載前の制作案です。FV以外の写真は仮素材、⑥の5%OFFクーポンは開催前の企画案です。</div>
 <div class="shopbar"><strong>人とペットのサプリ専門店 モノリス</strong>
 <details class="fab" id="fab">
-  <summary aria-label="メニューを開く"><svg class="ic"><use href="#i-paw"/></svg><span class="fab-t">MENU</span></summary>
+  <summary aria-label="メニューを開閉"><svg class="ic op"><use href="#i-paw"/></svg><svg class="ic cl"><use href="#i-close"/></svg><span class="fab-t op">MENU</span><span class="fab-t cl">CLOSE</span></summary>
   <nav class="fab-menu" aria-label="ページ内メニュー">
     <p class="fab-h">メニュー</p>
     <a href="#top" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-sun"/></svg>トップ</a>
