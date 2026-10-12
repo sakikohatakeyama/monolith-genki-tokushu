@@ -508,6 +508,17 @@ section[id],header[id]{scroll-margin-top:62px}
 .chooser .k{word-break:normal;text-wrap:wrap;white-space:nowrap;font-size:13px}
 .plus-a{display:block!important;font-size:0}
 .plus-a img{display:block;width:88%;max-width:440px;height:auto;margin:6px auto 0}
+
+/* 単品お試しはクーポンと区別 */
+.btn.try{background:#fff;color:var(--ink);border:1.5px solid var(--line);animation:none!important}
+.btn.try .tg{background:var(--sand);color:var(--muted)}
+.buy-set{display:grid;grid-template-columns:1fr auto 18px;grid-template-rows:auto auto;gap:2px 10px;align-items:center;margin-top:12px;padding:12px 14px;border:2px solid var(--orange);border-radius:16px;background:#fff6ee;text-decoration:none;color:var(--ink)}
+.bs-tag{grid-column:1/-1;justify-self:start;background:var(--orange);color:#fff;font-size:11px;font-weight:700;padding:2px 10px;border-radius:999px}
+.bs-t{font-size:12px;color:var(--muted);line-height:1.4}
+.bs-t b{display:block;font-size:15px;color:var(--ink)}
+.bs-p{font-family:var(--num);font-weight:700;font-size:20px;color:var(--orange-d)}
+.bs-p small{font-family:var(--sans);font-size:11px}
+.buy-set .ic{font-size:16px;color:var(--orange-d);animation:nudge 1.4s ease-in-out infinite}
 </style>
 </head>
 <body>
@@ -662,11 +673,11 @@ section[id],header[id]{scroll-margin-top:62px}
           <dd><ul><li>いつものフードに混ぜる・振りかける</li><li>1日数回に小分けして与えるのがおすすめ</li><li>食べにくそうなら少量の水でお団子状にして、上あごに</li></ul></dd></span></div>
         <div><span class="ci"><svg class="ic"><use href="#i-cart"/></svg></span><span><dt><b>5</b>サイズとリンク</dt>
           <dd><div class="buy">
-            <a class="btn try" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/"><span class="tg">お試し</span><span>コルディカプセル 16粒<small class="v">犬パッケージ</small></span><span class="pr">1,500<small>円</small></span></a>
-            <a class="btn try" href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/"><span class="tg">お試し</span><span>コルディカプセル 16粒<small class="v">猫パッケージ</small></span><span class="pr">1,500<small>円</small></span></a>
+            <a class="btn try" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/"><span class="tg">単品お試し</span><span>コルディカプセル 16粒<small class="v">犬パッケージ</small></span><span class="pr">1,500<small>円</small></span></a>
+            <a class="btn try" href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/"><span class="tg">単品お試し</span><span>コルディカプセル 16粒<small class="v">猫パッケージ</small></span><span class="pr">1,500<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/cordyg30/"><span class="tg">通常</span><span>コルディM／G 30g</span><span class="pr">6,800<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/cordyg100/"><span class="tg">大容量</span><span>コルディM／G 100g</span><span class="pr">21,000<small>円</small></span></a>
-          </div></dd></span></div>
+          </div><a class="buy-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">5%OFFクーポン対象</span><span class="bs-t">4種類まとめて試すなら<b>お試し4点セット</b></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a></dd></span></div>
       </dl>
     </article>
 
@@ -692,10 +703,10 @@ section[id],header[id]{scroll-margin-top:62px}
           <dd><ul><li>まずはそのまま、おやつ感覚で</li><li>警戒心の強い子は、いつものごはんと一緒に</li><li>カプセルが大きい子は、40℃くらいのお湯で柔らかくして中身だけを</li></ul></dd></span></div>
         <div><span class="ci"><svg class="ic"><use href="#i-cart"/></svg></span><span><dt><b>5</b>サイズとリンク</dt>
           <dd><div class="buy">
-            <a class="btn try" href="https://item.rakuten.co.jp/cordy/krilloil35/"><span class="tg">お試し</span><span>クリルオイル 30粒</span><span class="pr">1,650<small>円</small></span></a>
+            <a class="btn try" href="https://item.rakuten.co.jp/cordy/krilloil35/"><span class="tg">単品お試し</span><span>クリルオイル 30粒</span><span class="pr">1,650<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/krilloil180/"><span class="tg">通常</span><span>クリルオイル 180粒</span><span class="pr">6,700<small>円</small></span></a>
             <a class="btn sub" href="https://item.rakuten.co.jp/cordy/krilloil_ex/"><span class="tg">液体</span><span>クリルオイルEX（ポンプ式）</span><span class="pr">4,200<small>円</small></span></a>
-          </div></dd></span></div>
+          </div><a class="buy-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">5%OFFクーポン対象</span><span class="bs-t">4種類まとめて試すなら<b>お試し4点セット</b></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a></dd></span></div>
       </dl>
     </article>
 
@@ -721,9 +732,9 @@ section[id],header[id]{scroll-margin-top:62px}
           <dd><ul><li>付属スプーンで量って、いつものフードにトッピング</li><li>目安量の1.5〜2倍を与えても問題ありません（ショップ記載）</li></ul></dd></span></div>
         <div><span class="ci"><svg class="ic"><use href="#i-cart"/></svg></span><span><dt><b>5</b>サイズとリンク</dt>
           <dd><div class="buy">
-            <a class="btn try" href="https://item.rakuten.co.jp/cordy/placenta5g/"><span class="tg">お試し</span><span>プラセンタ12000 5g</span><span class="pr">1,800<small>円</small></span></a>
+            <a class="btn try" href="https://item.rakuten.co.jp/cordy/placenta5g/"><span class="tg">単品お試し</span><span>プラセンタ12000 5g</span><span class="pr">1,800<small>円</small></span></a>
             <a class="btn reg" href="https://item.rakuten.co.jp/cordy/placenta30g/"><span class="tg">通常</span><span>プラセンタ12000 30g</span><span class="pr">7,800<small>円</small></span></a>
-          </div></dd></span></div>
+          </div><a class="buy-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">5%OFFクーポン対象</span><span class="bs-t">4種類まとめて試すなら<b>お試し4点セット</b></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a></dd></span></div>
       </dl>
     </article>
     <p class="pricenote">※価格は税込、配送方法「追跡可能メール便」選択時（2026年10月12日時点の商品ページ表示）。「宅配便」選択時は＋600円です。最新の価格・在庫は各商品ページでご確認ください。</p>
