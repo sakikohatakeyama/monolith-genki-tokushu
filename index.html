@@ -328,11 +328,11 @@ a{color:inherit}
 
 /* スクロールで現れる（対応ブラウザのみ。非対応でも表示は崩れません） */
 @supports (animation-timeline: view()){
-  .en{animation:slideL linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
-  .num,.h2,.lead,.chooser a,.prod,.prod-imgs,.spec>div,.dt,.trial-photo,.checks li,.trial-items .ti,.coupon,.flow li,.pairs,.tbd,.faq details,.closing .links a,.intro-photos figure,.day li,.cpn-bar,.five-cap,.pricenote{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
-  .day .c,.spec .ci,.dt-head .ic,.chooser>a>.ic:first-child{animation:popIn linear both;animation-timeline:view();animation-range:entry 10% cover 30%}
-  .coupon{animation:fadeUp linear both,wiggle 5s ease-in-out 1s infinite;animation-timeline:view(),auto;animation-range:entry 0% cover 25%,normal}
-  .cpn-bar{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0% cover 20%}
+  .en{animation:slideL linear both;animation-timeline:view();animation-range:entry 0px entry 160px}
+  .num,.h2,.lead,.chooser a,.prod,.prod-imgs,.spec>div,.dt,.trial-photo,.checks li,.trial-items .ti,.coupon,.flow li,.pairs,.tbd,.faq details,.closing .links a,.intro-photos figure,.day li,.cpn-bar,.five-cap,.pricenote{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0px entry 140px}
+  .day .c,.spec .ci,.dt-head .ic,.chooser>a>.ic:first-child{animation:popIn linear both;animation-timeline:view();animation-range:entry 20px entry 160px}
+  .coupon{animation:fadeUp linear both,wiggle 5s ease-in-out 1s infinite;animation-timeline:view(),auto;animation-range:entry 0px entry 140px,normal}
+  .cpn-bar{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0px entry 140px}
 }
 
 @media (prefers-reduced-motion:reduce){
