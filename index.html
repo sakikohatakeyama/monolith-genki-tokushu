@@ -340,7 +340,7 @@ a{color:inherit}
 /* スクロールで現れる（対応ブラウザのみ。非対応でも表示は崩れません） */
 @supports (animation-timeline: view()){
   .en{animation:slideL linear both;animation-timeline:view();animation-range:entry 0px entry 160px}
-  .num,.h2,.lead,.chooser a,.prod,.prod-imgs,.spec>div,.dt,.trial-photo,.checks li,.trial-items .ti,.coupon,.flow li,.pairs,.tbd,.faq details,.closing .links a,.intro-photos figure,.ci-card,.elig,.day li,.cpn-bar,.five-cap,.pricenote{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0px entry 140px}
+  .num,.h2,.lead,.chooser a,.prod,.prod-imgs,.spec>div,.dt,.trial-photo,.checks li,.trial-items .ti,.coupon,.flow li,.pairs,.tbd,.faq details,.closing .links a,.intro-photos figure,.ci-card,.elig,.set-card,.day li,.cpn-bar,.five-cap,.pricenote{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0px entry 140px}
   .day .c,.spec .ci,.dt-head .ic,.chooser>a>.ic:first-child{animation:popIn linear both;animation-timeline:view();animation-range:entry 20px entry 160px}
   .coupon{animation:fadeUp linear both,wiggle 5s ease-in-out 1s infinite;animation-timeline:view(),auto;animation-range:entry 0px entry 140px,normal}
   .cpn-bar{animation:fadeUp linear both;animation-timeline:view();animation-range:entry 0px entry 140px}
@@ -413,6 +413,36 @@ section[id],header[id]{scroll-margin-top:62px}
 .fab[open] .op{display:none}
 .fab[open] .cl{display:block}
 .fab[open] summary .ic.cl{transform:none;stroke-width:2.6}
+
+/* お試し4点セット */
+.elig-set{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:center;text-decoration:none;text-align:left;background:var(--sand);border-radius:14px;padding:10px}
+.elig-set img{width:110px;height:110px;object-fit:contain;border-radius:10px;background:#fff}
+.es-b{display:flex;flex-direction:column}
+.es-b .n{font-weight:700;font-size:15px;line-height:1.4}
+.es-b .d{font-size:11.5px;color:var(--muted);line-height:1.5;margin-top:2px}
+.es-b .pr{font-family:var(--en);font-weight:800;font-size:22px;color:var(--orange-d);margin-top:2px}
+.es-b .pr small{font-family:var(--sans);font-size:12px}
+.es-b .go{display:inline-flex;align-items:center;gap:4px;font-size:12.5px;font-weight:700;color:var(--teal)}
+.es-b .go .ic{font-size:13px}
+.pairs ul.use{grid-template-columns:1fr}
+.pairs ul.use li{justify-content:center}
+.pairs ul.use li span{background:var(--aqua);padding:8px 12px;border-radius:10px;width:100%;text-align:center}
+.pairs-note{margin:10px 0 0!important;font-size:12px!important;font-weight:500!important;color:var(--muted);text-align:center}
+.set-card{position:relative;display:block;margin-top:28px;background:#fff;border:2px solid var(--orange);border-radius:22px;overflow:hidden;text-decoration:none;text-align:left}
+.set-card .ci-badge{margin:0;font-size:13px;padding:8px}
+.set-card img{width:100%;aspect-ratio:1/1;object-fit:contain;display:block}
+.sc-b{display:flex;flex-direction:column;padding:16px 18px 20px}
+.sc-b .n{font-weight:700;font-size:20px;line-height:1.4}
+.sc-b .d{font-size:13px;color:var(--muted)}
+.sc-list{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sc-list li{display:flex;justify-content:space-between;background:var(--sand);border-radius:10px;padding:7px 10px;font-size:13px;font-weight:700}
+.sc-list li b{color:var(--teal)}
+.sc-b .pr{font-family:var(--en);font-weight:800;font-size:34px;color:var(--orange-d);margin-top:10px;text-align:center}
+.sc-b .pr small{font-family:var(--sans);font-size:15px}
+.sc-b .go{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;background:var(--orange);color:#fff;font-size:15px;font-weight:700;padding:13px;border-radius:999px}
+.sc-b .go .ic{font-size:15px}
+.ti-set{border:2px solid var(--orange)}
+.ti-tag{display:inline-block;background:var(--orange);color:#fff;font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:2px}
 </style>
 </head>
 <body>
@@ -455,7 +485,7 @@ section[id],header[id]{scroll-margin-top:62px}
     <a href="#trial" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>まずは、お試しサイズから</a>
     <a href="#next" class="cp" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポン</a>
     <a href="#faq" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-qa"/></svg>よくある質問</a>
-    <a href="#items" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>クーポン対象のお試し商品</a>
+    <a href="#items" onclick="this.closest('details').open=false"><svg class="ic"><use href="#i-bag"/></svg>クーポン対象：お試し4点セット</a>
   </nav>
 </details>
 </div>
@@ -484,7 +514,7 @@ section[id],header[id]{scroll-margin-top:62px}
     </ul>
     <a class="cpn-hero" href="#next">
       <span class="ch-flag">CAMPAIGN</span>
-      <span class="ch-lab">お試しサイズ購入で</span>
+      <span class="ch-lab">お試し4点セット購入で</span>
       <span class="ch-pre">次回通常商品に使える</span>
       <span class="ch-val">5<small>%</small><b>OFF</b></span>
       <span class="ch-big">クーポン<em>プレゼント</em></span>
@@ -706,8 +736,12 @@ section[id],header[id]{scroll-margin-top:62px}
       <li><svg class="ic"><use href="#i-bowl"/></svg>いつものごはんと、合わせやすいか</li>
       <li><svg class="ic"><use href="#i-cal"/></svg>家族みんなで、毎日続けやすいか</li>
     </ul>
-    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試しサイズ購入で</span><span class="t2">次回使える5%OFFクーポン</span></span><svg class="ic"><use href="#i-right"/></svg></a>
+    <a class="cpn-bar" href="#next"><span class="pct">5<small>%</small></span><span><span class="t1">お試し4点セット購入で</span><span class="t2">次回使える5%OFFクーポン</span></span><svg class="ic"><use href="#i-right"/></svg></a>
     <div class="trial-items">
+      <a class="ti ti-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
+        <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
+        <div><span class="ti-tag">5%OFFクーポン対象</span><div class="nm">お試し4点セット</div><div class="sz">コルディM・クリルオイル・アミノファイン・プラセンタ</div><div class="pr">1,580<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
+      </a>
       <a class="ti" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル お試し 犬パッケージ" loading="lazy">
         <div><div class="nm">コルディカプセル</div><div class="sz">16粒（コルディG）犬パッケージ</div><div class="pr">1,500<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
@@ -735,10 +769,10 @@ section[id],header[id]{scroll-margin-top:62px}
     <span class="en">COUPON</span>
     <div class="num">05 つづけたい方へ</div>
     <h2 class="h2" id="next-h">お試しのあとは、<br><em>通常サイズがおトク</em>に！</h2>
-    <p class="lead">気に入ってくれたら、次は通常サイズで。<br>お試しサイズをご購入の方に、<br>次回使えるクーポンをご用意します。</p>
+    <p class="lead">気に入ってくれたら、次は通常サイズで。「お試し4点セット」をご購入の方に、次回の通常商品に使えるクーポンをご用意します。</p>
 
-    <div class="coupon" role="img" aria-label="お試しサイズ購入で、次回通常商品に使える5%OFFクーポン">
-      <span class="cp-lab">お試しサイズ購入で</span>
+    <div class="coupon" role="img" aria-label="お試し4点セット購入で、次回通常商品に使える5%OFFクーポン">
+      <span class="cp-lab">お試し4点セット購入で</span>
       <p class="cp-pre">次回通常商品に使える</p>
       <div class="cp-val">5<small>%</small><span>OFF</span></div>
       <p class="cp-big">クーポン</p>
@@ -746,35 +780,33 @@ section[id],header[id]{scroll-margin-top:62px}
     <p class="cp-note"><b>企画案</b>開催前の内容です。利用期限などの条件は決まり次第ご案内します。</p>
 
     <ol class="flow">
-      <li><svg class="ic"><use href="#i-bag"/></svg><span><span class="st">STEP 1</span><b>お試しサイズを購入</b><small>食べてくれるか・与えやすいかを確認</small></span></li>
+      <li><svg class="ic"><use href="#i-bag"/></svg><span><span class="st">STEP 1</span><b>お試し4点セットを購入</b><small>4種類を少しずつ、食べてくれるか確認</small></span></li>
       <li class="hl"><svg class="ic"><use href="#i-gift"/></svg><span><span class="st">STEP 2</span><b>5%OFFクーポンをお届け</b><small>次回のお買い物で使えるクーポン<br>クーポンはメールでお届けします</small></span></li>
-      <li><svg class="ic"><use href="#i-cart"/></svg><span><span class="st">STEP 3</span><b>通常サイズがおトクに</b><small>同じ商品の通常サイズで使えます</small></span></li>
+      <li><svg class="ic"><use href="#i-cart"/></svg><span><span class="st">STEP 3</span><b>通常商品がおトクに</b><small>次回のお買い物で、通常商品に使えます</small></span></li>
     </ol>
 
     <div class="elig">
       <p class="elig-h"><svg class="ic"><use href="#i-gift"/></svg>5%OFFクーポンプレゼント対象商品</p>
-      <div class="elig-grid">
-        <a href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/"><img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル 16粒・犬パッケージ" loading="lazy"><span class="n">コルディカプセル</span><span class="d">16粒・犬パッケージ</span></a>
-        <a href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/"><img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-cat1500.jpg" alt="コルディカプセル 16粒・猫パッケージ" loading="lazy"><span class="n">コルディカプセル</span><span class="d">16粒・猫パッケージ</span></a>
-        <a href="https://item.rakuten.co.jp/cordy/krilloil35/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil30sum2.jpg" alt="クリルオイル 30粒" loading="lazy"><span class="n">クリルオイル</span><span class="d">30粒</span></a>
-        <a href="https://item.rakuten.co.jp/cordy/placenta5g/"><img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-5.jpg" alt="プラセンタ12000 5g" loading="lazy"><span class="n">プラセンタ12000</span><span class="d">5g</span></a>
-      </div>
-      <p class="elig-note">お試しサイズのご購入が対象です。</p>
+      <a class="elig-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
+        <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
+        <span class="es-b"><span class="n">サプリメント お試し4点セット</span><span class="d">コルディM 3g・クリルオイル 6粒・アミノファイン 5g・プラセンタ12000 1g</span><span class="pr">1,580<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
+      </a>
     </div>
 
     <div class="pairs">
-      <p>クーポンが使える通常商品</p>
-      <ul>
-        <li><span>コルディカプセル<br>（お試し）</span><svg class="ic"><use href="#i-right"/></svg><span class="to">コルディ<br>30g／100g</span></li>
-        <li><span>クリルオイル<br>30粒</span><svg class="ic"><use href="#i-right"/></svg><span class="to">クリルオイル<br>180粒</span></li>
-        <li><span>プラセンタ12000<br>5g</span><svg class="ic"><use href="#i-right"/></svg><span class="to">プラセンタ12000<br>30g</span></li>
+      <p>クーポンが使える通常商品（例）</p>
+      <ul class="use">
+        <li><span>コルディM／G 30g・100g</span></li>
+        <li><span>クリルオイル 180粒</span></li>
+        <li><span>プラセンタ12000 30g</span></li>
       </ul>
+      <p class="pairs-note">対象となる通常商品の範囲は調整中です。</p>
     </div>
 
     <p class="tbd-cap">クーポンの条件（企画中）</p>
     <dl class="tbd">
       <div><dt>割引</dt><dd>5%OFF</dd></div>
-      <div><dt>対象の方</dt><dd>お試し商品を購入された方</dd></div>
+      <div><dt>対象の方</dt><dd>お試し4点セットを購入された方</dd></div>
       <div><dt>配布方法</dt><dd>メールでお届け</dd></div>
       <div><dt>利用期限</dt><dd class="u">調整中</dd></div>
     </dl>
@@ -835,30 +867,19 @@ section[id],header[id]{scroll-margin-top:62px}
   <div class="wrap">
     <span class="en">TRIAL</span>
     <div class="num">5%OFFクーポンプレゼント対象</div>
-    <h2 class="h2" id="items-h">まずは、お試しサイズから<br>はじめてみませんか？</h2>
-    <div class="ci-list">
-      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
-        <span class="ci-badge">5%OFFクーポン<br>プレゼント対象</span>
-        <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-dog1500.jpg" alt="コルディカプセル 16粒・犬パッケージ" loading="lazy">
-        <span class="ci-body"><span class="n">コルディカプセル</span><span class="d">16粒・犬パッケージ（お試しサイズ）</span><span class="pr">1,500<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
-      </a>
-      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/cordycapsule-cat/">
-        <span class="ci-badge">5%OFFクーポン<br>プレゼント対象</span>
-        <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/capsule/otameshi-cat1500.jpg" alt="コルディカプセル 16粒・猫パッケージ" loading="lazy">
-        <span class="ci-body"><span class="n">コルディカプセル</span><span class="d">16粒・猫パッケージ（お試しサイズ）</span><span class="pr">1,500<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
-      </a>
-      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/krilloil35/">
-        <span class="ci-badge">5%OFFクーポン<br>プレゼント対象</span>
-        <img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/sam/nml/krilloil30sum2.jpg" alt="クリルオイル 30粒" loading="lazy">
-        <span class="ci-body"><span class="n">クリルオイル</span><span class="d">30粒（お試しサイズ）</span><span class="pr">1,650<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
-      </a>
-      <a class="ci-card" href="https://item.rakuten.co.jp/cordy/placenta5g/">
-        <span class="ci-badge">5%OFFクーポン<br>プレゼント対象</span>
-        <img src="https://image.rakuten.co.jp/cordy/cabinet/item_img/placenta/placenta-01-5.jpg" alt="プラセンタ12000 5g" loading="lazy">
-        <span class="ci-body"><span class="n">プラセンタ12000</span><span class="d">5g（お試しサイズ）</span><span class="pr">1,800<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
-      </a>
-    </div>
-    <p class="pricenote">※価格は追跡可能メール便選択時の税込価格です。クーポンは次回、同じ商品の通常サイズにご利用いただけます（企画案・開催前）。</p>
+    <h2 class="h2" id="items-h">まずは、<br>お試し4点セットから<br>はじめてみませんか？</h2>
+    <a class="set-card" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
+      <span class="ci-badge">5%OFFクーポン プレゼント対象</span>
+      <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
+      <span class="sc-b">
+        <span class="n">サプリメント お試し4点セット</span>
+        <span class="d">4種類のサプリを少しずつ試せるセット</span>
+        <ul class="sc-list"><li>コルディM<b>3g</b></li><li>クリルオイル<b>6粒</b></li><li>アミノファイン<b>5g</b></li><li>プラセンタ12000<b>1g</b></li></ul>
+        <span class="pr">1,580<small>円</small></span>
+        <span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span>
+      </span>
+    </a>
+    <p class="pricenote">※価格は税込（配送方法：追跡可能メール便）。購入された方に、次回の通常商品に使える5%OFFクーポンをメールでお届けします（企画案・開催前）。</p>
   </div>
 </section>
 
@@ -883,7 +904,8 @@ section[id],header[id]{scroll-margin-top:62px}
     <h3>A. 次回特典（⑥）── 割引額以外は未確定</h3>
     <ol>
       <li><b>割引額</b>5%OFFで掲載（2026年10月12日ご指示）。</li>
-      <li><b>対象の方</b>「お試し商品を購入された方」で掲載（最低購入金額の条件は設けない／2026年10月12日ご指示）。</li>
+      <li><b>対象の方</b>「お試し4点セット（https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set／1,580円・メール便のみ）を購入された方」に変更（2026年10月12日ご指示）。単品のお試しサイズ（コルディカプセル・クリルオイル30粒・プラセンタ5g）は対象外の扱いです。</li>
+      <li><b>クーポンが使える通常商品の範囲</b>ページ上は「例」としてコルディM／G・クリルオイル180粒・プラセンタ30gを掲載。セットに含まれるアミノファインを含めるか、全通常商品対象かをご確認ください。</li>
       <li><b>配布方法</b>「メールでお届け」で掲載（2026年10月12日ご指示）。送信タイミング（購入後すぐ／発送後など）と、楽天のメール配信の仕組みでの運用方法をご確認ください。</li>
       <li><b>利用期限・開催期間</b>ページ上は「調整中」表示。確定後に差し替え、「企画案」表記と確認用バンドを外します。</li>
       <li><b>対象商品の組み合わせ</b>「お試し→同じ商品の通常サイズ」の3組で掲載中（コルディは30g・100gとも対象としています）。</li>
