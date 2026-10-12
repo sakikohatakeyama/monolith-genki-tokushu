@@ -49,7 +49,20 @@ a{color:inherit}
 .fv{position:relative;max-width:1180px;margin:0 auto;padding:0 0 8px}
 .fv-stage{display:grid;grid-template-columns:1fr 92px;align-items:stretch}
 .fv-photo{position:relative;height:min(132vw,560px);border-radius:0 120px 0 0;overflow:hidden}
-.fv-photo img{width:100%;height:100%;object-fit:cover;object-position:46% 50%}
+.fv-photo{background:var(--green-soft)}
+.fv-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform-origin:50% 45%;animation:fvShow 24s linear infinite}
+.fv-photo img:nth-child(1){object-position:46% 50%;transform-origin:45% 55%;animation-delay:-1s}
+.fv-photo img:nth-child(2){object-position:72% 40%;transform-origin:60% 45%;animation-delay:5s}
+.fv-photo img:nth-child(3){object-position:50% 45%;transform-origin:45% 40%;animation-delay:11s}
+.fv-photo img:nth-child(4){object-position:42% 60%;transform-origin:40% 55%;animation-delay:17s}
+@keyframes fvShow{
+  0%{opacity:0;transform:scale(1)}
+  5%{opacity:1}
+  25%{opacity:1}
+  30%{opacity:0;transform:scale(1.16)}
+  100%{opacity:0;transform:scale(1.16)}
+}
+@media (prefers-reduced-motion:reduce){.fv-photo img{animation:none}.fv-photo img:first-child{opacity:1}}
 .fv-copy{display:flex;justify-content:center;padding-top:18px}
 .fv-copy h1{margin:0;writing-mode:vertical-rl;font-family:var(--serif);font-weight:700;color:var(--green);font-size:30px;line-height:1.5;letter-spacing:.12em;white-space:nowrap}
 .fv-copy h1 span{display:block}
@@ -253,6 +266,9 @@ a{color:inherit}
   <div class="fv-stage">
     <div class="fv-photo">
       <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1600&q=75&auto=format&fit=crop" alt="草の上で寄り添ってくつろぐ犬と猫">
+      <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=1200&q=75&auto=format&fit=crop" alt="芝生の上を元気に走る白い犬">
+      <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=1200&q=75&auto=format&fit=crop" alt="前足を上げてじゃれる子猫">
+      <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1200&q=75&auto=format&fit=crop" alt="波打ち際を駆ける犬">
     </div>
     <div class="fv-copy">
       <h1><span>これからも、</span><span>一緒に元気な毎日を。</span></h1>
