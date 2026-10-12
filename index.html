@@ -650,6 +650,28 @@ section[id],header[id]{scroll-margin-top:62px}
 .btn.try .tg{background:var(--sand)!important;color:var(--muted)!important;grid-column:auto;border-radius:999px}
 .btn.try .pr{color:var(--ink)}
 .ti-sep small{color:var(--muted)!important;font-weight:500!important}
+
+/* 999円の特別価格 */
+.p999{position:relative;margin:26px 0 0;padding:22px 16px 20px;border-radius:24px;background:#e8382f;color:#fff;text-align:center;box-shadow:0 8px 0 -2px #b9241c;overflow:hidden}
+.p999::before{content:"";position:absolute;inset:8px;border:2px dashed rgba(255,255,255,.5);border-radius:18px;pointer-events:none}
+.p999::after{content:"";position:absolute;top:0;bottom:0;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.3),transparent);animation:shine 3s ease-in-out infinite;pointer-events:none}
+.p9-t{display:block;font-size:clamp(17px,5vw,22px);font-weight:800}
+.p9-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:4px}
+.p9-old{font-size:14px;font-weight:700;line-height:1.3;opacity:.95}
+.p9-old s{display:block;font-family:var(--num);font-size:20px}
+.p9-arw{font-size:18px;color:#ffe14d}
+.p9-new{font-family:var(--num);font-weight:700;font-size:clamp(84px,26vw,120px);line-height:1;color:#ffe14d;letter-spacing:-.03em;animation:beat 1.6s ease-in-out infinite}
+.p9-new small{font-family:var(--sans);font-size:.34em;font-weight:800;color:#fff;margin-left:2px}
+.p9-s{display:inline-block;margin-top:6px;background:#fff;color:#e8382f;font-size:13px;font-weight:800;padding:3px 14px;border-radius:999px}
+.sp-price{display:flex;flex-direction:column;align-items:center;margin-top:14px}
+.sp-lab{background:#e8382f;color:#fff;font-size:13px;font-weight:800;padding:3px 14px;border-radius:999px}
+.sp-old{margin-top:6px;font-size:14px;color:var(--muted);font-weight:700}
+.sp-old s{font-family:var(--num)}
+.sp-new{font-family:var(--num);font-weight:700;font-size:64px;line-height:1.05;color:#e8382f;letter-spacing:-.02em}
+.sp-new small{font-family:var(--sans);font-size:.34em;font-weight:800;margin-left:2px}
+.sp-new em{font-style:normal;font-size:.6em;color:var(--muted)}
+.bs-p s,.ti .pr s,.es-b .pr s{display:block;font-size:12px;color:var(--muted);font-weight:500;line-height:1.2}
+.bs-p,.ti-set .pr,.es-b .pr{color:#e8382f!important}
 </style>
 </head>
 <body>
@@ -728,6 +750,11 @@ section[id],header[id]{scroll-margin-top:62px}
     <span class="en">TRIAL</span>
     <div class="num">次回使える5%OFFクーポンプレゼント対象</div>
     <h2 class="h2" id="items-h">まずは、お試し4点セットから<br>はじめてみませんか？</h2>
+    <div class="p999" aria-label="お試しサプリメント4種セット 特別価格999円">
+      <span class="p9-t">お試しサプリメント4種セットが</span>
+      <span class="p9-row"><span class="p9-old">通常<s>1,580円</s></span><span class="p9-arw">▶</span><span class="p9-new">999<small>円</small></span></span>
+      <span class="p9-s">税込・特別価格</span>
+    </div>
     <a class="set-card" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
       <span class="ci-badge">いちばんおすすめ<br>次回使える5%OFFクーポンプレゼント対象</span>
       <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
@@ -735,7 +762,7 @@ section[id],header[id]{scroll-margin-top:62px}
         <span class="n">サプリメント お試し4点セット</span>
         <span class="d">4種類のサプリを少しずつ試せるセット</span>
         <p class="sc-h"><span>セット内容（4種類）</span></p><ul class="sc-list"><li><span class="sw" style="background:#e9eef7;color:#2a3f86">1</span><span class="nm"><b>コルディM</b><small>冬虫夏草で毎日の健康維持に</small></span><span class="am">3g</span></li><li><span class="sw" style="background:#1f6fd1;color:#fff">2</span><span class="nm"><b>アミノファイン</b><small>必須アミノ酸・BCAA</small></span><span class="am">5g</span></li><li><span class="sw" style="background:#d42a2a;color:#fff">3</span><span class="nm"><b>クリルオイル</b><small>関節・心血管・脳の健康維持に</small></span><span class="am">6粒</span></li><li><span class="sw" style="background:#8cc63f;color:#fff">4</span><span class="nm"><b>プラセンタ12000</b><small>肝臓・皮膚・毛並みの健康維持に</small></span><span class="am">1g</span></li></ul>
-        <span class="pr">1,580<small>円</small></span>
+        <span class="sp-price"><span class="sp-lab">特別価格</span><span class="sp-old">通常 <s>1,580円</s></span><span class="sp-new">999<small>円<em>（税込）</em></small></span></span>
         <span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span>
       </span>
     </a>
@@ -867,7 +894,7 @@ section[id],header[id]{scroll-margin-top:62px}
           </div></dd></span></div>
       </dl>
     </article>
-    <a class="buy-set wide" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">次回使える5%OFFクーポンプレゼント対象商品</span><span class="bs-t">迷ったら、まとめて試せる<b>お試し4点セット</b><small>コルディM・クリルオイル・アミノファイン・プラセンタ</small></span><span class="bs-p">1,580<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a>
+    <a class="buy-set wide" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set"><span class="bs-tag">次回使える5%OFFクーポンプレゼント対象商品</span><span class="bs-t">迷ったら、まとめて試せる<b>お試し4点セット</b><small>コルディM・クリルオイル・アミノファイン・プラセンタ</small></span><span class="bs-p"><s>1,580円</s>999<small>円</small></span><svg class="ic"><use href="#i-right"/></svg></a>
     <p class="pricenote">※価格は税込、配送方法「追跡可能メール便」選択時（2026年10月12日時点の商品ページ表示）。「宅配便」選択時は＋600円です。最新の価格・在庫は各商品ページでご確認ください。</p>
   </div>
 </section>
@@ -889,7 +916,7 @@ section[id],header[id]{scroll-margin-top:62px}
     <div class="trial-items">
       <a class="ti ti-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
-        <div><span class="ti-tag">次回使える5%OFFクーポン<br>プレゼント対象</span><div class="nm">お試し4点セット</div><div class="sz">コルディM・クリルオイル・アミノファイン・プラセンタ</div><div class="pr">1,580<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
+        <div><span class="ti-tag">次回使える5%OFFクーポン<br>プレゼント対象</span><div class="nm">お試し4点セット</div><div class="sz">コルディM・クリルオイル・アミノファイン・プラセンタ</div><div class="pr"><s>1,580円</s>999<small>円</small></div><span class="go">商品を見る<svg class="ic"><use href="#i-right"/></svg></span></div>
       </a>
       <p class="ti-sep"><span>単品のお試しサイズ</span><small>※単品のお試しサイズは、次回使える5%OFFクーポンプレゼントの対象外です</small></p>
       <a class="ti" href="https://item.rakuten.co.jp/cordy/cordycapsule-dog/">
@@ -938,7 +965,7 @@ section[id],header[id]{scroll-margin-top:62px}
       <p class="elig-h"><svg class="ic"><use href="#i-gift"/></svg><span>次回使える5%OFFクーポン<br>プレゼント対象商品</span></p>
       <a class="elig-set" href="https://item.rakuten.co.jp/cordy/cordy-set/?variantId=cordy-set">
         <img src="https://tshop.r10s.jp/cordy/cabinet/item_img/sam/nml/trial-sum.jpg" alt="サプリメント お試し4点セット" loading="lazy">
-        <span class="es-b"><span class="n">サプリメント お試し4点セット</span><span class="d">コルディM 3g・クリルオイル 6粒・アミノファイン 5g・プラセンタ12000 1g</span><span class="pr">1,580<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
+        <span class="es-b"><span class="n">サプリメント お試し4点セット</span><span class="d">コルディM 3g・クリルオイル 6粒・アミノファイン 5g・プラセンタ12000 1g</span><span class="pr"><s>1,580円</s>999<small>円</small></span><span class="go">商品ページへ<svg class="ic"><use href="#i-right"/></svg></span></span>
       </a>
     </div>
 
