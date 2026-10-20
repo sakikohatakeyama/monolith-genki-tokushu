@@ -840,6 +840,11 @@ section[id],header[id]{scroll-margin-top:62px}
 /* アミノファイン */
 .prod.amino .prod-top{background:#e6eefb}
 .prod.amino .pen{color:#1f6fd1}
+/* クーポンの動きを止める（スクロール時の表示のみ残す） */
+.cp-val,.cpn-bar .pct{animation:none!important}
+.cpn-hero::after,.cpn-bar::after{display:none!important}
+.coupon{animation:none!important}
+@supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){.coupon{animation:fadeUp linear both!important;animation-timeline:view()!important;animation-range:entry 0px entry 140px!important}}}
 </style>
 </head>
 <body>
